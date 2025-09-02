@@ -1,0 +1,89 @@
+<h1>Sponsors</h1>
+
+<p>
+	FAIR DAY SPONSORS Wednesday: Opening at the Fair proudly sponsored by Joyce Construction Thursday:
+	Military Day proudly sponsored by Geico Local Friday: Day at the Fair proudly sponsored by Kitsap
+	Credit Union Saturday: Kids Day at the Fair – Kids 12 and under come to the Fair free! proudly
+	sponsored Haselwood Auto Group Sunday: Senior Day at the Fair – 62 and older come to the Fair
+	free! proudly sponsored Kitsap Credit Union
+</p>
+
+<p>
+	​KITSAP STAMPEDE SPONSORS Wednesday: Opening Night proudly sponsored by Agate Asphalt Thursday:
+	Patriot Night proudly sponsored by Virginia Mason Franciscan Health Friday: Tough Enough to Wear
+	Pink proudly sponsored Kitsap Credit Union Saturday: Kids Day proudly sponsored by Haselwood Auto
+	Group​ ​​​XTREME BULLS SPONSOR Sunday: proudly sponsored by Hanley Construction
+</p>
+
+<p>
+	Visit the websites of our generous sponsors. Learn more about these amazing companies that are
+	supporting our Fair and your community.​​
+</p>
+
+<ul>
+	<li><button>19th Hole Bar and Grill</button></li>
+	<li><button>Admiral Theater Foundation</button></li>
+	<li><button>Agate Asphalt</button></li>
+	<li><button>Ahoy Kitsap Playland</button></li>
+	<li><button>All In Septic & Excavation</button></li>
+	<li><button>AllCounty Operations</button></li>
+	<li><button>Bagwell Law</button></li>
+	<li><button>Bankrock Corp</button></li>
+	<li><button>BJC Group Inc</button></li>
+	<li><button>Boot Barn</button></li>
+	<li><button>Brothers Powersports</button></li>
+	<li><button>Budget Blinds</button></li>
+	<li><button>C B Farrier Services</button></li>
+	<li><button>C & C Development & Trucking</button></li>
+	<li><button>Camp Union Properties</button></li>
+	<li><button>Cascade Diesel</button></li>
+	<li><button>Cornerstone Cleaning</button></li>
+	<li><button>Dana's Heating & Cooling</button></li>
+	<li><button>Destination Harley Davidson</button></li>
+	<li><button>Diane K. Golbeck, PLLC</button></li>
+	<li><button>Fife RV</button></li>
+	<li><button>Geico, Silverdale Office (Kevin Krieger)</button></li>
+	<li><button>Gresham Pump & Drilling</button></li>
+	<li><button>Grey Miles Co</button></li>
+	<li><button>Hanley Constructions</button></li>
+	<li><button>Haselwood Auto Group</button></li>
+	<li><button>Herdman Plumbing</button></li>
+	<li><button>Horsepower Machine</button></li>
+	<li><button>Integrity Roofing & Construction</button></li>
+	<li><button>Jensen Realtor Group</button></li>
+	<li><button>Joyce Construction</button></li>
+	<li><button>Kahn Industries</button></li>
+	<li><button>Kitsap Credit Union</button></li>
+	<li><button>Kitsap Golf and Country Club</button></li>
+	<li><button>Kitsap Roof Pros</button></li>
+	<li><button>Land Title</button></li>
+	<li><button>Lone Star Donuts</button></li>
+	<li><button>Mathews Electric</button></li>
+	<li><button>Mayda Mechanical</button></li>
+	<li><button>Mitchell Lumber</button></li>
+	<li><button>Mountain View Plumbing</button></li>
+	<li><button>Olympic Ridge</button></li>
+	<li><button>Our Place Pub & Eatery</button></li>
+	<li><button>PacWest Motocross</button></li>
+	<li><button>Pendleton Whiskey</button></li>
+	<li><button>Peninsula Community Health Services</button></li>
+	<li><button>Pickett Property Management</button></li>
+	<li><button>PSE</button></li>
+	<li><button>Puget Fence</button></li>
+	<li><button>Rebecca Gore/Windemere</button></li>
+	<li><button>Robison Plumbing</button></li>
+	<li><button>Sandi Johnson - Realtor</button></li>
+	<li><button>Sherlock Equipment</button></li>
+	<li><button>Sound Pest Control</button></li>
+	<li><button>Stokes Auction</button></li>
+	<li><button>Suquamish Clearwater Casino</button></li>
+	<li><button>Talbot Excavating</button></li>
+	<li><button>Tim's Home Medical Supplies</button></li>
+	<li><button>Tracyton Public House</button></li>
+	<li><button>Umpqua Bank</button></li>
+	<li><button>Viking Fence</button></li>
+	<li><button>Virginia Mason Franciscan Health</button></li>
+	<li><button>Westbay Auto Parts</button></li>
+	<li><button>Whitworth Excavating</button></li>
+	<li><button>Wilco</button></li>
+</ul>

@@ -1,6 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 
+	import img0 from '$lib/imgs/fairPlay.jpg';
 	import img1 from '$lib/imgs/1.jpg';
 	import img2 from '$lib/imgs/2.jpg';
 	import img3 from '$lib/imgs/3.jpg';
@@ -39,6 +40,36 @@
 	//  🦕  🦖🦖🦖 🦕 🦕  Extras/ Debug 💀= 💣 🌠
 </script>
 
+<div class="entryBanner">
+	<img src={img0} alt="kitsap fair and rodeo logo" />
+
+	<div class="entry-poa-container">
+		<article class="entry-poa">
+			<p>
+				Hours:
+				<br />
+				Wednesday/Thursday 10am–9pm Friday/Saturday 10am–10pm Sunday 10am–6pm
+			</p>
+
+			<button class="pulse-button">Full event Button</button>
+		</article>
+		<article class="entry-poa">
+			<p>
+				<strong>Admission</strong>
+				<br /> General Admission: $12 Senior/kids: $5 Under 5: Free Parking $10 per day per vehicle
+			</p>
+		</article>
+	</div>
+</div>
+
+<article class="warningBanner">
+	<p>
+		IMPORTANT MESSAGE: We are aware of fraudulent links to purchase tickets for the Kitsap Fair &
+		Stampede. ALL tickets to the fair and rodeo should only be purchased on this site or at the
+		venue during the fair.
+	</p>
+</article>
+
 <div
 	class="slider"
 	tabindex="0"
@@ -58,23 +89,7 @@
 		<img src={images[index]} alt="Slide" />
 	{/key}
 
-	<div class="slider-poa-container">
-		<article class="slider-poa">
-			<p>
-				Hours:
-				<br />
-				Wednesday/Thursday 10am–9pm Friday/Saturday 10am–10pm Sunday 10am–6pm
-			</p>
-
-			<button class="pulse-button">Full event Button</button>
-		</article>
-		<article class="slider-poa">
-			<p>
-				Admission: General Admission: $12 Senior/kids: $5 Under 5: Free Parking $10 per day per
-				vehicle
-			</p>
-		</article>
-	</div>
+	<button class="btn-Wave"> Credit union discount button</button>
 
 	<div class="dots" role="tablist" aria-label="Slide selector">
 		{#each images as _, i}
@@ -90,16 +105,6 @@
 		{/each}
 	</div>
 </div>
-
-<article class="warningBanner">
-	<p>
-		IMPORTANT MESSAGE: We are aware of fraudulent links to purchase tickets for the Kitsap Fair &
-		Stampede. ALL tickets to the fair and rodeo should only be purchased on this site or at the
-		venue during the fair.
-	</p>
-</article>
-
-<button class="btn-Wave"> Credit union discount button</button>
 
 <article class="warningBannerAlt">
 	<p>
@@ -134,7 +139,19 @@
 
 		<button>Full event Button</button>
 	</section>
-	<section class="grid-content-box">Box B</section>
+
+	<section class="things-content-box">
+		<ul>
+			<li><a href="/Rodeo">Rodeo & Bulls</a></li>
+			<li><a href="/Entertainment">Entertainment</a></li>
+			<li><a href="/Carnival">Carnival</a></li>
+			<li><a href="/JrLivestockAuction">Jr Livestock Auction</a></li>
+			<li><a href="/FairFood">Fair Food</a></li>
+			<li><a href="/CommercialVendors">Commercial Vendors</a></li>
+			<li>Submit to be a: Vendor Exhibitor Sponsor</li>
+		</ul>
+	</section>
+
 	<section class="grid-content-box">Box C</section>
 
 	<div></div>
@@ -199,6 +216,48 @@
 </p>
 
 <style>
+	.entryBanner {
+		background-color: var(--accent-2);
+
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		aspect-ratio: 16 / 9;
+		z-index: 950;
+	}
+
+	.entry-poa-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		position: absolute;
+		bottom: var(--size-10);
+		left: 0;
+		right: 0;
+		margin: 2rem;
+
+		@media screen and (max-width: 768px) {
+			gap: 1rem;
+		}
+	}
+
+	.entry-poa {
+		flex: 1;
+		max-width: 400px;
+		max-height: fit-content;
+		background: var(--accent-1);
+		border-radius: 8px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+
+		& p {
+			margin: 0;
+			padding: var(--size-4);
+		}
+	}
+
 	.slider {
 		position: relative;
 		width: 100vw;
@@ -209,20 +268,28 @@
 		outline: none;
 		z-index: 950;
 
+		& img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			user-select: none;
+			pointer-events: none;
+		}
+
+		& button {
+			position: absolute;
+			bottom: var(--size-10);
+			left: 0;
+			right: 0;
+		}
+
 		@media (min-width: 768px) {
 			height: 100vh;
 		}
 	}
 
-	img {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		user-select: none;
-		pointer-events: none;
-	}
 	.nav {
 		position: absolute;
 		top: 50%;
@@ -237,15 +304,16 @@
 		color: white;
 		background: color-mix(in srgb, black 55%, transparent);
 		cursor: pointer;
+
+		&&:hover {
+			background: var(--hover);
+		}
 	}
 	.nav.left {
 		left: 10px;
 	}
 	.nav.right {
 		right: 10px;
-	}
-	.nav:hover {
-		background: color-mix(in srgb, black 70%, transparent);
 	}
 
 	.dots {
@@ -262,37 +330,11 @@
 		height: 10px;
 		border-radius: 999px;
 		border: none;
-		background: #ffffff66;
+		background: var(--accent-1);
 		cursor: pointer;
 	}
 	.dot.active {
-		background: white;
-	}
-
-	.slider-poa-container {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: 2rem;
-	}
-
-	.slider-poa {
-		flex: 1;
-		max-width: 400px;
-		max-height: fit-content;
-		background: var(--accent-1);
-		border-radius: 8px;
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-		text-align: center;
-
-		& p {
-			margin: 0;
-			padding: var(--size-4);
-		}
+		background: var(--txt-1);
 	}
 
 	.warningBanner {
@@ -303,6 +345,11 @@
 		text-align: center;
 		font-weight: bold;
 		box-shadow: var(--box-shadow);
+
+		& p {
+			margin: 0;
+			padding: var(--size-4);
+		}
 	}
 
 	.warningBannerAlt {
@@ -313,5 +360,74 @@
 		text-align: center;
 		font-weight: bold;
 		box-shadow: var(--box-shadow);
+
+		& p {
+			margin: 0;
+			padding: var(--size-4);
+
+			font-size: var(--size-3);
+		}
+	}
+
+	.things-content-box {
+		position: relative;
+		display: inline-block;
+		font-family: sans-serif;
+	}
+
+	/* Dropdown trigger label */
+	.things-content-box::before {
+		content: 'Menu ▾';
+		display: block;
+		background: var(--accent, #4caf50);
+		color: white;
+		padding: 0.75rem 1rem;
+		border-radius: 6px;
+		cursor: pointer;
+		font-weight: 600;
+	}
+
+	/* Hide the list by default */
+	.things-content-box ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: var(--bg-1, #fff);
+		border-radius: 6px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		min-width: 220px;
+		display: none;
+		z-index: 1000;
+	}
+
+	/* Show on hover */
+	.things-content-box:hover ul {
+		display: block;
+	}
+
+	/* List items */
+	.things-content-box li {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	.things-content-box li:last-child {
+		border-bottom: none;
+	}
+
+	.things-content-box li a,
+	.things-content-box li {
+		display: block;
+		padding: 0.75rem 1rem;
+		color: var(--txt-1, #333);
+		text-decoration: none;
+		transition: background 0.2s ease;
+	}
+
+	.things-content-box li a:hover,
+	.things-content-box li:hover {
+		background: color-mix(in srgb, var(--accent) 15%, white);
 	}
 </style>

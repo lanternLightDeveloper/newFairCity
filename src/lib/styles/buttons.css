@@ -86,9 +86,9 @@
 
 /* Animated button */
 .btn-Animated {
-	background-color: #e7e7e7;
-	color: black;
-	border: 2px solid #555555;
+	background-color: var(--bg-2);
+	color: var(--txt-2);
+	border: var(--bord);
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
@@ -100,8 +100,13 @@
 }
 
 .btn-Animated:hover {
-	background-color: #555555;
-	color: white;
+	background-color: var(--hover);
+	color: var(--txt-1);
+}
+
+.btn-Animated:active {
+	background-color: var(--color-active);
+	color: var(--txt-1);
 }
 
 /* Ghost button */
@@ -131,9 +136,9 @@
 
 /* Bouncing */
 .btn-Pulse {
-	background-color: var(--txt-1);
+	background-color: var(--bg-1);
 	border: var(--bord);
-	color: var(--bg-2);
+	color: var(--txt-2);
 	padding: var(--size-4);
 	text-align: center;
 	text-decoration: underline;
@@ -146,6 +151,7 @@
 		background-color: var(--hover);
 		animation: pulse 0.5s infinite;
 		color: var(--txt-1);
+		box-shadow: var(--);
 	}
 }
 

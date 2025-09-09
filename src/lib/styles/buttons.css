@@ -1,5 +1,5 @@
 /* Ripple button */
-.ripple-btn {
+.btn-Ripple {
 	background-color: var(--txt-1);
 	color: var(--bg-2);
 	box-shadow: var(--box-Shadow);
@@ -16,7 +16,7 @@
 	}
 }
 
-.ripple-btn::after {
+.btn-Ripple::after {
 	content: '';
 	position: absolute;
 	background: var(---1-2);
@@ -31,13 +31,13 @@
 	transition: transform 0.5s, opacity 0.5s;
 }
 
-.ripple-btn:active::after {
+.btn-Ripple:active::after {
 	transform: translate(-50%, -50%) scale(1);
 	opacity: 1;
 }
 
 /* Gradient button */
-.button-gradient {
+.btn-Gradient {
 	background: linear-gradient(to right, #ff7e5f, #feb47b);
 	border: none;
 	color: white;
@@ -51,32 +51,41 @@
 }
 
 /* Shadow button */
-.button-shadow {
-	background-color: #555555;
+.btn-Shadow {
+	background-color: var(--accent-1);
 	border: none;
-	color: white;
+	border-radius: var(--rad-Sm);
 	padding: 15px 32px;
+	color: var(--txt-1);
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	box-shadow: 0 9px #999;
+
+	/* raised button look */
+	box-shadow: 0 6px 0 var(--hover);
+	transition: all 0.15s ease;
 }
 
-.button-shadow:hover {
-	background-color: #3e8e41;
+.btn-Shadow:hover {
+	background-color: var(--hover);
 }
 
-.button-shadow:active {
-	background-color: #3e8e41;
-	box-shadow: 0 5px #666;
+.btn-Shadow:active {
+	background-color: var(--color-active);
+
+	/* push it down */
 	transform: translateY(4px);
+
+	/* flatten shadow */
+	box-shadow: 0 2px 0 var(--hover);
 }
+
 
 /* Animated button */
-.button-animated {
+.btn-Animated {
 	background-color: #e7e7e7;
 	color: black;
 	border: 2px solid #555555;
@@ -90,13 +99,13 @@
 	transition: all 0.3s ease;
 }
 
-.button-animated:hover {
+.btn-Animated:hover {
 	background-color: #555555;
 	color: white;
 }
 
 /* Ghost button */
-.button-Ghost {
+.btn-Ghost {
 	background-color: transparent;
 	border: 2px solid var(--accent-1);
 	color: var(--accent-1);
@@ -108,7 +117,7 @@
 }
 
 /* Slant */
-.button-Skew {
+.btn-Skew {
 	background-color: var(--accent-1);
 	border: none;
 	padding: 15px 32px;
@@ -121,7 +130,7 @@
 }
 
 /* Bouncing */
-.pulse-button {
+.btn-Pulse {
 	background-color: var(--txt-1);
 	border: var(--bord);
 	color: var(--bg-2);
@@ -188,7 +197,7 @@
 
 /* Magnet btn  */
 
-.magnetic-button {
+.btn-Magnet {
   position: relative;
   background: var(--bg-2);
   color: var(--txt-1);
@@ -196,13 +205,13 @@
   border-radius: var(--rad-Sm);
   transition: transform 0.2s ease;
 }
-.magnetic-button:hover {
+.btn-Magnet:hover {
   transform: translateY(-2px) scale(1.05);
 }
 
 
 /* Glow Btn */
-.glow-button {
+.btn-Glow {
   background: var(--bg-1);
   color: var(--txt-1);
   padding: var(--size-4);
@@ -211,6 +220,6 @@
   box-shadow: 0 0 0 transparent;
   transition: box-shadow 0.3s ease;
 }
-.glow-button:hover {
+.btn-Glow:hover {
   box-shadow: 0 0 12px var(--accent-1);
 }

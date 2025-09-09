@@ -33,7 +33,7 @@
 		{#each menuItems as item, i}
 			<div
 				class="menu-dot"
-				style={`transform: rotate(${(360 / menuItems.length) * i}deg) translate(8rem);`}
+				style={`transform: rotate(${(360 / menuItems.length) * i}deg) translate(7rem);`}
 			>
 				<a
 					href={item.href}
@@ -79,12 +79,12 @@
 
 	.position-ring {
 		position: absolute;
-		top: 48%;
-		left: 45%;
-		width: 0;
-		height: 0;
+		top: 51%;
+		left: 43%;
+		/* transform: translate(-50%, -50%); */
 		transition: transform 0.4s ease;
 	}
+
 	.menu-dot {
 		position: absolute;
 		top: 0;
@@ -112,7 +112,7 @@
 		border: 2px solid var(--txt-1);
 	}
 	.dot-label {
-		margin-top: 0.4rem;
+		position: relative;
 		background: var(--txt-1);
 		padding: 0.2rem;
 		border-radius: 12px;
@@ -124,11 +124,9 @@
 	@keyframes fadeIn {
 		from {
 			opacity: 0;
-			transform: translateY(-5px);
 		}
 		to {
 			opacity: 1;
-			transform: translateY(0);
 		}
 	}
 	a.current .dot-circle {

@@ -1,11 +1,19 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import img0 from '$lib/imgs/fairPlay.jpg';
-	import img1 from '$lib/imgs/1.JPG';
-	import img2 from '$lib/imgs/2.JPG';
-	import img3 from '$lib/imgs/3.JPG';
-	import img4 from '$lib/imgs/4.JPG';
-	import img5 from '$lib/imgs/5.JPG';
+	import img1 from '$lib/imgs/1.jpg';
+	import img2 from '$lib/imgs/2.jpg';
+	import img3 from '$lib/imgs/3.jpg';
+	import img4 from '$lib/imgs/4.jpg';
+	import img5 from '$lib/imgs/5.jpg';
+
+	import imgRodeo from '$lib/imgs/rodeo.jpg';
+	import imgEntertainment from '$lib/imgs/entertainment.jpg';
+	import imgCarnival from '$lib/imgs/carnival.jpg';
+	import imgAuction from '$lib/imgs/auction.jpg';
+	import imgFood from '$lib/imgs/food.jpg';
+	import imgCommercial from '$lib/imgs/commercial.jpg';
+	import imgSubmit from '$lib/imgs/submit.jpg';
 
 	const images = [img1, img2, img3, img4, img5];
 	let index = $state(0);
@@ -21,6 +29,7 @@
 	}
 
 	const intervalMs = 5000;
+
 	$effect(() => {
 		if (!playing) return;
 		const id = setInterval(next, intervalMs);
@@ -31,6 +40,23 @@
 		if (e.key === 'ArrowRight') next();
 		if (e.key === 'ArrowLeft') prev();
 	}
+
+	let items = [
+		{ label: 'Rodeo & Bulls', href: '/Rodeo', img: imgRodeo },
+		{ label: 'Entertainment', href: '/Entertainment', img: imgEntertainment },
+		{ label: 'Carnival', href: '/Carnival', img: imgCarnival },
+		{ label: 'Jr Livestock Auction', href: '/Auction', img: imgAuction },
+		{ label: 'Fair Food', href: '/Food', img: imgFood },
+		{ label: 'Commercial Vendors', href: '/Vendors', img: imgCommercial },
+		{ label: 'Submit: Vendor, Exhibitor, Sponsor', href: '/Submissions', img: imgSubmit }
+	];
+
+	let open = $state(1);
+
+	let backgroundImage = $derived.by(() => {
+		const selected = items[open];
+		return selected?.img ?? null;
+	});
 </script>
 
 <header class="header">
@@ -124,16 +150,34 @@
 	</section>
 
 	<h2>Points of interest</h2>
-	<section class="quick-links">
-		<ul>
-			<li><a href="/Rodeo">Rodeo & Bulls</a></li>
-			<li><a href="/Entertainment">Entertainment</a></li>
-			<li><a href="/Carnival">Carnival</a></li>
-			<li><a href="/JrLivestockAuction">Jr Livestock Auction</a></li>
-			<li><a href="/FairFood">Fair Food</a></li>
-			<li><a href="/CommercialVendors">Commercial Vendors</a></li>
-			<li><a href="/Vendors">Submit: Vendor, Exhibitor, Sponsor</a></li>
-		</ul>
+	<section class="glass-flip-grid" style={`background-image: url('${backgroundImage}');`}>
+		{#each items as item, i}
+			<div
+				class="glass-flip-card"
+				tabindex="0"
+				role="button"
+				aria-label={`Details for ${item.label}`}
+				onmouseenter={() => (open = i)}
+				onmouseleave={() => (open = 0)}
+				onfocus={() => (open = i)}
+				onblur={() => (open = 1)}
+				onkeydown={(e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						open = i;
+						e.preventDefault();
+					}
+				}}
+			>
+				<div class="glass-flip-inner" aria-hidden={open !== i}>
+					<div class="glass-front">
+						<h3>{item.label}</h3>
+					</div>
+					<div class="glass-back">
+						<a href={item.href}>Visit {item.label}</a>
+					</div>
+				</div>
+			</div>
+		{/each}
 	</section>
 
 	<h2>Fair Day Sponsors</h2>
@@ -274,20 +318,6 @@
 		padding: 1rem;
 	}
 
-	.quick-links ul {
-		margin-top: var(--size-3);
-		list-style: none;
-		padding: 0;
-	}
-	.quick-links li {
-		margin: 0.5rem 0;
-		padding-left: 1.25rem;
-	}
-	.quick-links a {
-		text-decoration: none;
-		color: #0077cc;
-		font-weight: 600;
-	}
 	h2 {
 		border-top: var(--bord);
 	}

@@ -351,6 +351,7 @@
 	{/each}
 </div>
 
+<!--svelte-ignore css_unused_selector -->
 <style>
 	button {
 		all: unset;
@@ -394,7 +395,7 @@
 	}
 
 	.genre-tag {
-		background: var(--accent, #4caf50);
+		background: var(--accent-1, #4caf50);
 		color: white;
 		padding: 0.25rem 0.5rem;
 		border-radius: 6px;
@@ -417,7 +418,7 @@
 	}
 
 	a {
-		color: var(--accent);
+		color: var(--accent-1);
 		text-decoration: underline;
 		font-weight: 500;
 	}

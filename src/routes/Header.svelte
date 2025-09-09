@@ -1,328 +1,141 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-
 	let isMenuOpen = $state(false);
-	let current = $state(0);
+	let current = $state(1);
 
-	// Function to navigate to a specified URL without scrolling
-	function navigateTo(url: string) {
-		// Validate URL to prevent open redirects
-		if (url.startsWith('/') || url.startsWith('http')) {
-			goto(url, { noScroll: true });
-		} else {
-			console.error('Invalid URL:', url);
-		}
+	const menuItems = [
+		{ label: 'Home', href: '/', id: 1, degree: 0 },
+		{ label: 'Sponsors', href: '/Sponsors', id: 2, degree: 36 },
+		{ label: 'Rodeo', href: '/Rodeo', id: 3, degree: 72 },
+		{ label: 'Entertainment', href: '/Entertainment', id: 4, degree: 108 },
+		{ label: 'Carnival', href: '/Carnival', id: 5, degree: 144 },
+		{ label: 'Auction', href: '/Auction', id: 6, degree: 180 },
+		{ label: 'Food', href: '/Food', id: 7, degree: 216 },
+		{ label: 'Vendors', href: '/Vendors', id: 8, degree: 252 },
+		{ label: 'Pictures', href: '/Pictures', id: 9, degree: 288 },
+		{ label: 'Submissions', href: '/Submissions', id: 10, degree: 324 }
+	];
+
+	function navigateTo(href) {
+		console.log('navigate', href);
 	}
 
-	function toggleMenu() {
-		isMenuOpen = !isMenuOpen;
-	}
+	let rotation = $derived.by(() => {
+		const selected = menuItems.find((item) => item.id === current);
+		return selected ? -selected.degree : 0;
+	});
 </script>
 
-<div class="navbar">
-	<nav class:open={isMenuOpen}>
-		<ul>
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 11}
-						onclick={() => {
-							current = 11;
-							navigateTo('/Extra');
-						}}
-						href="/Extra">Extra</a
-					>
-				</button>
-			</li>
-
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 10}
-						onclick={() => {
-							current = 10;
-							navigateTo('/Submissions');
-						}}
-						href="/Submissions">Submissions</a
-					>
-				</button>
-			</li>
-
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 9}
-						onclick={() => {
-							current = 9;
-							navigateTo('/Pictures');
-						}}
-						href="/Pictures">Pictures</a
-					>
-				</button>
-			</li>
-
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 8}
-						onclick={() => {
-							current = 8;
-							navigateTo('/Vendors');
-						}}
-						href="/Vendors">Vendors</a
-					>
-				</button>
-			</li>
-
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 7}
-						onclick={() => {
-							current = 7;
-							navigateTo('/Food');
-						}}
-						href="/Food">Food</a
-					>
-				</button>
-			</li>
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 6}
-						onclick={() => {
-							current = 6;
-							navigateTo('/Auction');
-						}}
-						href="/Auction">Auction</a
-					>
-				</button>
-			</li>
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 5}
-						onclick={() => {
-							current = 5;
-							navigateTo('/Carnival');
-						}}
-						href="/Carnival">Carnival</a
-					>
-				</button>
-			</li>
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 4}
-						onclick={() => {
-							current = 4;
-							navigateTo('/Entertainment');
-						}}
-						href="/Entertainment">Entertainment</a
-					>
-				</button>
-			</li>
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 3}
-						onclick={() => {
-							current = 3;
-							navigateTo('/Rodeo');
-						}}
-						href="/Rodeo">Rodeo</a
-					>
-				</button>
-			</li>
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 2}
-						onclick={() => {
-							current = 2;
-							navigateTo('/Sponsors');
-						}}
-						href="/Sponsors">Sponsors</a
-					>
-				</button>
-			</li>
-
-			<li>
-				<button onclick={() => (isMenuOpen = false)} onkeydown={() => (isMenuOpen = false)}>
-					<a
-						class:current={current === 1}
-						onclick={() => {
-							current = 1;
-							navigateTo('/');
-						}}
-						href="/">Home</a
-					>
-				</button>
-			</li>
-		</ul>
-	</nav>
-	<button onclick={toggleMenu} onkeydown={() => (isMenuOpen = false)}>
-		<div class="burger">X</div>
+<div class="radial-menu">
+	<button class="center-toggle" onclick={() => (isMenuOpen = !isMenuOpen)}>
+		{isMenuOpen ? '✕' : '☰'}
 	</button>
+	<div class="position-ring" style={`transform: rotate(${rotation}deg);`}>
+		{#each menuItems as item, i}
+			<div
+				class="menu-dot"
+				style={`transform: rotate(${(360 / menuItems.length) * i}deg) translate(8rem);`}
+			>
+				<a
+					href={item.href}
+					class:current={current === item.id}
+					onclick={() => {
+						current = item.id;
+						isMenuOpen = false;
+						navigateTo(item.href);
+					}}
+				>
+					<div class="dot-circle">
+						{#if current === item.id}
+							<span class="dot-label">{item.label}</span>
+						{/if}
+					</div>
+				</a>
+			</div>
+		{/each}
+	</div>
 </div>
 
 <!--svelte-ignore css_unused_selector -->
 <style>
-	.navbar {
-		background: radial-gradient(ellipse, var(--accent-2), var(--bg-2));
-		background-size: 200% 200%;
-		animation: gradientShift 50s ease-in-out infinite;
-		width: 100vw;
-		display: flex;
-		position: fixed;
-		top: 0;
-		justify-content: space-between;
-		height: var(--size-10);
-		transition: var(--transit);
-		border-bottom: 2px solid var(--bg-1);
-		box-shadow: var(--box-Shadow);
-		z-index: 950;
-	}
-
-	li[aria-current='page']::before,
-	li[aria-current='page']::after {
-		content: '';
-		padding: var(--size-1);
-		border: 3px solid var(--accent-1);
-		border-radius: 50px;
-	}
-
-	.navbar button {
-		all: unset;
-	}
-
-	.navbar a {
-		color: var(--txt-1);
-		transition: var(--transit);
-	}
-
-	.navbar a:hover,
-	.navbar a:focus {
-		color: var(--accent);
-		text-shadow: var(--text-Shadow);
-
-		transform: scale(1.05);
-	}
-
-	.navbar ul {
-		display: flex;
-		flex-direction: column-reverse;
-		justify-content: space-between;
-		align-items: center;
-		gap: var(--size-4);
-		margin: 0;
-		padding: 0;
-	}
-
-	.navbar ul li {
-		padding: 3% 0;
-	}
-
-	.navbar > li {
+	.radial-menu {
 		position: relative;
-	}
-
-	.navbar ul li button {
-		all: unset;
-		cursor: pointer;
-	}
-
-	.navbar .burger {
-		display: flex;
-		width: 100%;
-		margin: 0 2vw;
-
-		&:hover {
-			cursor: pointer;
-			transform: scale(0.9);
-			transition: transform 0.1s ease-in-out;
-		}
-
-		& svg {
-			width: var(--size-9);
-			height: var(--size-9);
-			background-color: var(--bg-1);
-			border-radius: 50%;
-		}
-	}
-
-	nav {
-		display: none;
-	}
-
-	nav.open {
-		display: block;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background: radial-gradient(ellipse, var(--bg-1), var(--accent-2));
-		background-size: 200% 200%;
-		animation: gradientShift 50s ease-in-out infinite;
 		width: 100vw;
-		/* border-top: 2px solid var(--accent-2); */
-		border-bottom: 2px solid var(--accent-2);
-		box-shadow: var(--box-Shadow);
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.center-toggle {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: var(--accent-1);
+		color: var(--txt-1);
+		font-size: 1.5rem;
+		border: none;
+		cursor: pointer;
+		box-shadow: var(--shdw-Box);
 	}
 
-	/* Dropdown Menu Styles */
-	.dropdown {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+	.position-ring {
 		position: absolute;
-		top: 100%;
-		background-color: var(--bg-1);
-		border: var(--bord);
-		box-shadow: var(--box-Shadow);
-		text-transform: capitalize;
+		top: 48%;
+		left: 45%;
+		width: 0;
+		height: 0;
+		transition: transform 0.4s ease;
 	}
-
-	.dropdown li {
-		padding: 0;
+	.menu-dot {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform-origin: center;
+		transition: transform 0.3s ease;
 	}
-
-	.dropdown a {
-		padding: var(--size-4);
+	.menu-dot a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+	}
+	.dot-circle {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: var(--txt-1);
+		border: 4px solid var(--accent-1);
+		box-shadow: var(--shdw-Box);
+		transition: background 0.2s ease;
+	}
+	.menu-dot a:hover .dot-circle {
+		background: var(--hover);
+		border: 2px solid var(--txt-1);
+	}
+	.dot-label {
+		margin-top: 0.4rem;
+		background: var(--txt-1);
+		padding: 0.2rem;
+		border-radius: 12px;
+		box-shadow: var(--shdw-Box);
 		white-space: nowrap;
+		opacity: 0;
+		animation: fadeIn 0.3s forwards;
 	}
-
-	/* Laptop styles */
-	@media only screen and (min-width: 1024px) {
-		nav {
-			display: flex;
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-5px);
 		}
-
-		.navbar {
-			height: 4rem;
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
-
-		.navbar .burger {
-			display: none;
-		}
-
-		.navbar ul {
-			flex-direction: row-reverse;
-			gap: var(--space-7);
-			margin: 0 15vw;
-
-			& li {
-				padding: var(--size-4);
-			}
-		}
-
-		.dropdown {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			background-color: var(--bg-1);
-			border: var(--bord);
-			box-shadow: var(--box-Shadow);
-			text-transform: capitalize;
-		}
+	}
+	a.current .dot-circle {
+		background: var(--accent-1);
+	}
+	a.current .dot-label {
+		color: var(--accent-1);
+		font-weight: bold;
 	}
 </style>

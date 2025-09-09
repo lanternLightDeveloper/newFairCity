@@ -1,21 +1,16 @@
 <script>
 	import { fade } from 'svelte/transition';
-
 	import img0 from '$lib/imgs/fairPlay.jpg';
-	import img1 from '$lib/imgs/1.jpg';
-	import img2 from '$lib/imgs/2.jpg';
-	import img3 from '$lib/imgs/3.jpg';
-	import img4 from '$lib/imgs/4.jpg';
-	import img5 from '$lib/imgs/5.jpg';
-
-	//  🦕  🦖🦖🦖 🦕 🦕 Image Slider 💀= 💣 🌠
+	import img1 from '$lib/imgs/1.JPG';
+	import img2 from '$lib/imgs/2.JPG';
+	import img3 from '$lib/imgs/3.JPG';
+	import img4 from '$lib/imgs/4.JPG';
+	import img5 from '$lib/imgs/5.JPG';
 
 	const images = [img1, img2, img3, img4, img5];
-
 	let index = $state(0);
 	let playing = $state(true);
 	const total = images.length;
-
 	const current = $derived(() => images[index]);
 
 	function next() {
@@ -36,42 +31,40 @@
 		if (e.key === 'ArrowRight') next();
 		if (e.key === 'ArrowLeft') prev();
 	}
-
-	//  🦕  🦖🦖🦖 🦕 🦕  Extras/ Debug 💀= 💣 🌠
 </script>
 
-<div class="entryBanner">
-	<img src={img0} alt="kitsap fair and rodeo logo" />
-
-	<div class="entry-poa-container">
-		<article class="entry-poa">
+<header class="header">
+	<img src={img0} alt="kitsap fair and rodeo logo" class="logo" />
+	<section class="header-info">
+		<article>
 			<p>
-				Hours:
-				<br />
-				Wednesday/Thursday 10am–9pm Friday/Saturday 10am–10pm Sunday 10am–6pm
+				<strong>Hours:</strong><br />
+				Wed/Thu: 10am–9pm<br />
+				Fri/Sat: 10am–10pm<br />
+				Sun: 10am–6pm
 			</p>
-
-			<button class="pulse-button">Full event Button</button>
+			<button class="btn-Shadow">Full Event</button>
 		</article>
-		<article class="entry-poa">
+		<article>
 			<p>
-				<strong>Admission</strong>
-				<br /> General Admission: $12 Senior/kids: $5 Under 5: Free Parking $10 per day per vehicle
+				<strong>Admission</strong><br />
+				General Admission: $12<br />
+				Seniors/Kids: $5<br />
+				Under 5: Free<br />
+				Parking: $10/day
 			</p>
+			<button class="btn-Shadow">Buy Tickets</button>
 		</article>
-	</div>
-</div>
+	</section>
+</header>
 
-<article class="warningBanner">
+<aside class="alert">
 	<p>
-		IMPORTANT MESSAGE: We are aware of fraudulent links to purchase tickets for the Kitsap Fair &
-		Stampede. ALL tickets to the fair and rodeo should only be purchased on this site or at the
-		venue during the fair.
+		⚠️ We are aware of fraudulent links. Tickets should only be purchased here or at the venue. ⚠️
 	</p>
-</article>
+</aside>
 
 <div
-	class="slider"
 	tabindex="0"
 	role="slider"
 	aria-valuemin="0"
@@ -81,66 +74,57 @@
 	onkeydown={onKeydown}
 	onmouseenter={() => (playing = false)}
 	onmouseleave={() => (playing = true)}
+	class="slider"
 >
-	<button class="nav left" onclick={prev} aria-label="Previous slide">‹</button>
-	<button class="nav right" onclick={next} aria-label="Next slide">›</button>
-
+	<button class="nav prev" onclick={prev} aria-label="Previous slide">‹</button>
+	<button class="nav next" onclick={next} aria-label="Next slide">›</button>
 	{#key current}
-		<img src={images[index]} alt="Slide" />
+		<img src={images[index]} alt="Slide" transition:fade class="slide" />
 	{/key}
-
-	<button class="btn-Wave"> Credit union discount button</button>
-
 	<div class="dots" role="tablist" aria-label="Slide selector">
 		{#each images as _, i}
 			<button
-				class="dot"
-				class:active={i === index}
 				role="tab"
+				aria-label="Slide {i + 1} of {total}"
 				aria-selected={i === index}
-				aria-label="image order"
+				class:selected={i === index}
 				onclick={() => (index = i)}
-			>
-			</button>
+			></button>
 		{/each}
 	</div>
 </div>
 
-<article class="warningBannerAlt">
+<section><p>Kitsap credit union members can recieve a discount on admission:</p></section>
+
+<div class="center-wrapper">
+	<button class="btn-Shadow">Click Me</button>
+</div>
+
+<aside class="notice">
 	<p>
-		NO PETS ALLOWED
-		<br />
-		No dogs or pets allowed
-		<br />
-		<br />
-		Service Animals Welcome
-		<br />
-		Service animals are trained to work or perform a task for persons with disabilities.
-		<br />
-		<br />
-		*Comfort and/or emotional support animals ARE NOT service animals.
+		🚫 No Pets Allowed<br />
+		Service animals are welcome.<br />
+		Comfort/emotional support animals are not service animals.
 	</p>
-</article>
+</aside>
 
-<div class="grid-5col">
-	<div></div>
-
-	<section class="grid-content-box">
-		Main Entertainment
-		<br />
-		​ ​Rodeo: <br />
-		Wed - Fri 6:30pm <br />
-		Sat 11:00am <br />
-		Xtreme Bulls: Sun 11:00am <br />
-		Kitsap Jr. Livestock Auction: <br />
-		Sat 2:00pm <br />
-		Thompson Square Concert: <br />
-		Sat 7:00pm <br />
-
-		<button>Full event Button</button>
+<main class="content">
+	<section>
+		<h2>Main Entertainment</h2>
+		<p>
+			Rodeo: Wed–Fri 6:30pm<br />
+			Sat 11:00am<br />
+			Xtreme Bulls: Sun 11:00am<br />
+			Jr. Livestock Auction: Sat 2:00pm<br />
+			Thompson Square Concert: Sat 7:00pm
+		</p>
+		<div class="center-wrapper">
+			<button class="btn-Shadow">Full Event</button>
+		</div>
 	</section>
 
-	<section class="things-content-box">
+	<h2>Points of interest</h2>
+	<section class="quick-links">
 		<ul>
 			<li><a href="/Rodeo">Rodeo & Bulls</a></li>
 			<li><a href="/Entertainment">Entertainment</a></li>
@@ -148,286 +132,191 @@
 			<li><a href="/JrLivestockAuction">Jr Livestock Auction</a></li>
 			<li><a href="/FairFood">Fair Food</a></li>
 			<li><a href="/CommercialVendors">Commercial Vendors</a></li>
-			<li>Submit to be a: Vendor Exhibitor Sponsor</li>
+			<li><a href="/Vendors">Submit: Vendor, Exhibitor, Sponsor</a></li>
 		</ul>
 	</section>
 
-	<section class="grid-content-box">Box C</section>
-
-	<div></div>
-	<div></div>
-	<section class="grid-content-box">
-		<h3>Fair Day Sponsors</h3>
-		<ul class="fair-day-sponsors">
+	<h2>Fair Day Sponsors</h2>
+	<section class="sponsors">
+		<ul>
+			<li><strong>Wed:</strong> Joyce Construction</li>
 			<li>
-				<strong>Wednesday:</strong> Opening at the Fair — proudly sponsored by Joyce Construction
+				<strong>Thu:</strong> Military Recognition — Geico Local
+				<em>(Discount all week long)</em>
 			</li>
-			<li>
-				<strong>Thursday:</strong> Military Recognition Day — proudly sponsored by Geico Local
-				<em
-					>(discount is given all week long on rodeo and Xtreme Bulls in appreciation of military
-					service)</em
-				>
-			</li>
-			<li><strong>Friday:</strong> Day at the Fair — proudly sponsored by Kitsap Credit Union</li>
-			<li>
-				<strong>Saturday:</strong> Kids Day at the Fair — Kids 12 and under come to the Fair free! Proudly
-				sponsored by Haselwood Auto Group
-			</li>
-			<li>
-				<strong>Sunday:</strong> Senior Day at the Fair — 62 and older come to the Fair free! Proudly
-				sponsored by Kitsap Credit Union
-			</li>
+			<li><strong>Fri:</strong> Kitsap Credit Union</li>
+			<li><strong>Sat:</strong> Haselwood Auto Group (Kids Free!)</li>
+			<li><strong>Sun:</strong> Kitsap Credit Union (Seniors Free!)</li>
 		</ul>
 	</section>
 
-	<section class="grid-content-box">
-		<h3>Kitsap Stampede Sponsors</h3>
-		<ul class="stampede-sponsors">
-			<li><strong>Wednesday:</strong> Opening Night — proudly sponsored by Agate Asphalt</li>
-			<li>
-				<strong>Thursday:</strong> Patriot Night — proudly sponsored by Virginia Mason Franciscan Health
-			</li>
-			<li>
-				<strong>Friday:</strong> Tough Enough to Wear Pink — proudly sponsored by Kitsap Credit Union
-			</li>
-			<li><strong>Saturday:</strong> Kids Day — proudly sponsored by Haselwood Auto Group</li>
-		</ul>
-	</section>
-	<section class="grid-content-box">
-		<h3>Xtreme Bulls Sponsor</h3>
-		<ul class="xtreme-bulls-sponsor">
-			<li><strong>Sunday:</strong> Xtreme Bulls — proudly sponsored by Hanley Construction</li>
-			<li>
-				<strong>Theme Contest:</strong> Have an idea for the 2026 fair? Submit your theme!
-				<br />
-				If your theme is chosen, you’ll win a family pass (two adults and two children) and a t-shirt
-				featuring the 2026 Kitsap Fair logo.
-			</li>
+	<h2>Kitsap Stampede Sponsors</h2>
+	<section class="sponsors">
+		<ul>
+			<li><strong>Wed:</strong> Agate Asphalt</li>
+			<li><strong>Thu:</strong> Virginia Mason Franciscan Health</li>
+			<li><strong>Fri:</strong> Kitsap Credit Union (Pink Day)</li>
+			<li><strong>Sat:</strong> Haselwood Auto Group</li>
 		</ul>
 	</section>
 
-	<div></div>
-</div>
+	<h2>Xtreme Bulls Sponsor</h2>
+	<section class="sponsors">
+		<ul>
+			<li><strong>Sun:</strong> Hanley Construction</li>
+		</ul>
+	</section>
+</main>
 
-<p>
-	Submit Ideas Button If your theme is chosen for the 2026 fair, you will win a family pass (two
-	adults and two children) and a t-shirt with the logo for the 2026 Kitsap Fair!
-</p>
+<footer class="footer">
+	<p><strong>Theme Contest:</strong> Submit your 2026 theme idea & win a family pass + T-shirt!</p>
+	<div class="center-wrapper">
+		<button class="btn-Shadow">Submit Ideas</button>
+	</div>
+	<p>
+		If your theme is chosen, you’ll win a family pass (2 adults + 2 kids) and a 2026 Kitsap Fair
+		T-shirt.
+	</p>
+</footer>
 
+<!--svelte-ignore css_unused_selector -->
 <style>
-	.entryBanner {
-		background-color: var(--accent-2);
-
+	header {
+		background-color: var(--bg-1);
 		position: relative;
-		width: 100vw;
-		height: 100vh;
-		object-fit: cover;
-		aspect-ratio: 16 / 9;
-		z-index: 950;
-	}
-
-	.entry-poa-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 1rem;
-		position: absolute;
-		bottom: var(--size-10);
-		left: 0;
-		right: 0;
-		margin: 2rem;
-
-		@media screen and (max-width: 768px) {
-			gap: 1rem;
-		}
-	}
-
-	.entry-poa {
-		flex: 1;
-		max-width: 400px;
-		max-height: fit-content;
-		background: var(--accent-1);
-		border-radius: 8px;
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+		padding: 1rem;
 		text-align: center;
+		border-bottom: 2px solid var(--bg-2);
+		z-index: 975;
+	}
 
-		& p {
-			margin: 0;
-			padding: var(--size-4);
-		}
+	.logo {
+		max-width: 220px;
+		margin: auto;
+	}
+	.header-info {
+		display: grid;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.center-wrapper {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center; /* horizontal center */
+		align-items: center; /* vertical center */
+	}
+
+	.alert {
+		background: var(--accent-2);
+
+		padding: 1rem;
+		font-weight: 600;
+		text-align: center;
 	}
 
 	.slider {
 		position: relative;
-		width: 100vw;
-		height: 60vh;
-		aspect-ratio: 16 / 9;
-		margin: 0 auto;
 		overflow: hidden;
-		outline: none;
-		z-index: 950;
-
-		& img {
-			position: absolute;
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			user-select: none;
-			pointer-events: none;
-		}
-
-		& button {
-			position: absolute;
-			bottom: var(--size-10);
-			left: 0;
-			right: 0;
-		}
-
-		@media (min-width: 768px) {
-			height: 100vh;
-		}
+		text-align: center;
 	}
-
+	.slide {
+		width: 100%;
+		height: auto;
+	}
 	.nav {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		z-index: 2;
-		font-size: 1.5rem;
-		line-height: 1;
-		width: 40px;
-		height: 40px;
-		border-radius: 999px;
+		background: var(--txt-1);
 		border: none;
-		color: white;
-		background: color-mix(in srgb, black 55%, transparent);
+		font-size: 2rem;
 		cursor: pointer;
-
-		&&:hover {
-			background: var(--hover);
-		}
+		padding: 0.1rem 0.75rem;
+		border-radius: 50%;
 	}
-	.nav.left {
-		left: 10px;
+	.nav.prev {
+		left: 0.5rem;
 	}
-	.nav.right {
-		right: 10px;
+	.nav.next {
+		right: 0.5rem;
 	}
 
 	.dots {
-		position: absolute;
-		left: 50%;
-		bottom: 10px;
-		transform: translateX(-50%);
 		display: flex;
-		gap: 8px;
-		z-index: 2;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.5rem;
 	}
-	.dot {
+	.dots button {
 		width: 10px;
 		height: 10px;
-		border-radius: 999px;
+		border-radius: 50%;
 		border: none;
+		background: var(--hover);
+	}
+	.dots button.selected {
+		background: var(--accent-2);
+	}
+
+	.notice {
+		margin-top: var(--size-3);
 		background: var(--accent-1);
-		cursor: pointer;
-	}
-	.dot.active {
-		background: var(--txt-1);
-	}
-
-	.warningBanner {
-		background-color: var(--accent-2);
-		width: 100vw;
-		color: var(--text-1);
-		padding: var(--size-1);
+		padding: 1rem;
 		text-align: center;
-		font-weight: bold;
-		box-shadow: var(--box-shadow);
-
-		& p {
-			margin: 0;
-			padding: var(--size-4);
-		}
+		font-size: 0.9rem;
+		border-top: var(--bord);
+		border-bottom: var(--bord);
 	}
 
-	.warningBannerAlt {
-		background-color: var(--accent-1);
-		width: 100vw;
-		color: var(--text-1);
-		padding: var(--size-1);
-		text-align: center;
-		font-weight: bold;
-		box-shadow: var(--box-shadow);
-
-		& p {
-			margin: 0;
-			padding: var(--size-4);
-
-			font-size: var(--size-3);
-		}
+	.content {
+		padding: 1rem;
 	}
 
-	.things-content-box {
-		position: relative;
-		display: inline-block;
-		font-family: sans-serif;
+	.quick-links ul {
+		margin-top: var(--size-3);
+		list-style: none;
+		padding: 0;
 	}
-
-	/* Dropdown trigger label */
-	.things-content-box::before {
-		content: 'Menu ▾';
-		display: block;
-		background: var(--accent, #4caf50);
-		color: white;
-		padding: 0.75rem 1rem;
-		border-radius: 6px;
-		cursor: pointer;
+	.quick-links li {
+		margin: 0.5rem 0;
+		padding-left: 1.25rem;
+	}
+	.quick-links a {
+		text-decoration: none;
+		color: #0077cc;
 		font-weight: 600;
 	}
-
-	/* Hide the list by default */
-	.things-content-box ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background: var(--bg-1, #fff);
-		border-radius: 6px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		min-width: 220px;
-		display: none;
-		z-index: 1000;
+	h2 {
+		border-top: var(--bord);
 	}
 
-	/* Show on hover */
-	.things-content-box:hover ul {
-		display: block;
+	.sponsors {
+		padding-left: 1.25rem;
+	}
+	.sponsors li {
+		margin: 0.5rem 0;
 	}
 
-	/* List items */
-	.things-content-box li {
-		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	footer {
+		text-align: center;
+		padding: 1rem;
+		background: #222;
+		color: #fff;
+		margin-top: 2rem;
 	}
 
-	.things-content-box li:last-child {
-		border-bottom: none;
-	}
-
-	.things-content-box li a,
-	.things-content-box li {
-		display: block;
-		padding: 0.75rem 1rem;
-		color: var(--txt-1, #333);
-		text-decoration: none;
-		transition: background 0.2s ease;
-	}
-
-	.things-content-box li a:hover,
-	.things-content-box li:hover {
-		background: color-mix(in srgb, var(--accent) 15%, white);
+	/* Responsive */
+	@media (min-width: 768px) {
+		.header-info {
+			grid-template-columns: 1fr 1fr;
+			max-width: 800px;
+			margin: 1rem auto 0;
+		}
+		.content {
+			max-width: 900px;
+			margin: auto;
+		}
 	}
 </style>

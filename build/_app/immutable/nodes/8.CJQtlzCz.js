@@ -1,1 +1,0 @@
-import"../chunks/DsnmJJEf.js";import"../chunks/h7WV65hZ.js";import{O as r,T as p}from"../chunks/C5loGXv_.js";var a=r("<h1>Livestock Auction</h1>");function e(o){var t=a();p(o,t)}export{e as component};

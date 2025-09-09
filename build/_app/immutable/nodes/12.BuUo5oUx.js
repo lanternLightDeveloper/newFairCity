@@ -1,1 +1,0 @@
-import"../chunks/DsnmJJEf.js";import"../chunks/h7WV65hZ.js";import{O as r,T as m}from"../chunks/C5loGXv_.js";var p=r("<h1>Submitted Pictures</h1>");function n(o){var t=p();m(o,t)}export{n as component};

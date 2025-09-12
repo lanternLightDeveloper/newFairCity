@@ -117,6 +117,90 @@
 	}
 
 
+	/* Wild west themed grid  */
+
+	.grid-Western {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		padding: 2rem;
+		border-radius: 12px;
+	}
+
+	/* Unified western block */
+	.blk-Western {
+		background:var(--gradient)	;
+		border: var(--bord);
+		border-radius: var(--rad-Sm);
+		padding: 1.5rem;
+		position: relative;
+
+		& h3 {
+			color: var(--txt-1);
+			background: var(--accent-2);
+			text-align: center;
+			margin: -2vh -3vw 1rem -4vw;
+			padding: 0.75rem 1rem;
+			width: 110%;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+
+		& article {
+			padding: 0.8rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.3rem;
+			border-bottom: 1px dashed var(--border-color);
+			
+			& :last-child {
+				border-bottom: none;
+			}
+		}
+
+		& p {
+			color: var(--txt-2);
+			margin: 0;
+			align-self: center;
+		}
+
+		& a { 	
+			color: var(--color-active);
+			text-shadow: var(--shdw-Txt);
+			font-weight: bold;
+		}
+
+		& .pointA {
+			font-weight: bold;
+			font-size: 1.2rem;
+
+			color: var(--hover);
+		}
+
+		& .pointB {
+			font-style: italic;
+			color: var(--txt-1);
+		}
+
+		& .pointD {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px dashed var(--border-color);
+
+			& strong {
+				padding-left: var(--size-8);
+			}
+
+			& :last-child {
+				border-bottom: none;
+			}
+		}
+
+		& :last-child {
+			border-bottom: none;
+		}
+	}
+
 
 	/* Glassmorphism flip cards grid */
 
@@ -131,6 +215,7 @@
 		transition: background-image 0.5s ease;
 		animation: fadeBg 0.5s ease;
 	}
+
 	@keyframes fadeBg {
 		from {
 			opacity: 0.8;
@@ -165,14 +250,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 1rem;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		padding: 1rem; 
 		backface-visibility: hidden;
 	}
 
 	/* Front: Glassmorphism flip */
 	.glass-front {
-		background: rgba(255, 255, 255, 0.2);
+		background: var(--hallow-2);
 		backdrop-filter: blur(12px);
 		color: white;
 		border: 1px solid rgba(255, 255, 255, 0.3);
@@ -180,10 +264,9 @@
 
 	/* Back: Less transparent, solid overlay */
 	.glass-back {
-		background: rgba(30, 30, 30, 0.85);
-		color: #fff;
+		background: var(--hallow); 
 		transform: rotateY(180deg);
-		border: 1px solid rgba(255, 255, 255, 0.1);
+		border: var(--bord);
 	}
 
 	.glass-back a {

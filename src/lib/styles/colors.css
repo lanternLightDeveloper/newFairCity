@@ -1,25 +1,28 @@
 
 :root{
     --bg-1: oklch(9.327% 0.01235 238.398);  /*Deep black */
-    --bg-2: oklch(25.488% 0.00481 248.158); /* Charcoal gray */
+    --bg-2:oklab(24.912% 0.01506 0.0251); 
     
     --txt-1: oklch(98.441% 0.00317 15.269);/* white */
-    --txt-2: oklch(98.296% 0.00407 285.921); /* white */
+    --txt-2: lch(95.95% 12.75 109.18);
 
-    --accent-1: oklch(31.69% 0.09526 256.234); /* Blue */
-    --accent-2:  lch(39.02% 62.51 16.81); /* Red*/
+    --accent-1: oklch(31.69% 0.09526 256.234);  
+    --accent-2:  oklch(39.984% 0.16408 29.223);  
+    --accent-3:  oklch(47.077% 0.11211 50.832); 
 
     --error:oklch(75.862% 0.17676 60.629); /* Orange bright  */
 
-    --gradient: linear-gradient(to bottom,var(--bg-1), var(--bg-1),  color-mix(in srgb, var(--bg-1) 90%, var(--accent-1) 10%),var(--accent-1));
+    --gradient: linear-gradient(to bottom right,var(--bg-1),   color-mix(in srgb, var(--bg-2) 90%, var(--bg-2) 10%),var(--bg-2));
     --gradientFlip:linear-gradient(0deg,var(--bg-1), var(--bg-1),  color-mix(in srgb, var(--bg-1) 90%, var(--accent-1) 10%),var(--accent-1));
+  
 
     /* Adjusted states for Dark Theme */
     --hover: color-mix(in oklch, var(--accent-1) 80%, white 20%);
-    --color-active: color-mix(in oklch, var(--bg-1) 80%, white 25%);
-    --border-color: color-mix(in oklch, var(--accent-2) 90%, var(--bg-1) 20%);
+    --color-active: color-mix(in oklch, var(--accent-1 ) 80%, white 25%);
+    --border-color: color-mix(in oklch, var(--accent-3) 100%, var(--txt-1) 10%);
     --shadow:color-mix(in oklch, var(--bg-1) 70%, var(--bg-1) 10%);
-    --hallow:color-mix(in oklch, var(--accent-2) 100%, transparent 100%);
+    --hallow:color-mix(in oklch, var(--accent-3) 100%, transparent 100%);
+    --hallow-2:color-mix(in oklch, var(--txt-2) 100%, transparent 100%);
 
     @media (prefers-color-scheme: light)   {
         --bg-1: oklch(98.441% 0.00317 15.269);/* white */
@@ -35,7 +38,7 @@
         --color-active: color-mix(in oklch, var(--accent-2) 80%, black 20%);
         --border-color: color-mix(in oklch, var(--bg-1) 50%, black 10%);
         --shadow:color-mix(in oklch, var(--txt-1) 70%, var(--bg-1) 10%);
-        --hallow:color-mix(in oklch, var(--accent-2) 100%, transparent 100%);
+        --hallow:color-mix(in oklch, var(--accent-2) 50%, transparent 100%, transparent 100%);
     }
 
     @media (prefers-color-scheme: headache)   {

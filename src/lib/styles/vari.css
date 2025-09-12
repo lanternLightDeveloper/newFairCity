@@ -30,11 +30,12 @@
 /* Border & Radius */
 --rad-Sm:           1rem;
 --rad-Lg:           2.25rem;
---bord:             1px solid var(--border-color);
---bord-2:           1px solid var(--accent-1);
+--bord:             2px solid var(--border-color);
+--bord-2:             2px dashed var(--border-color);
 
 /* Shadows & lights */
---glow-Box:       6px 4px 8px var(--shadow), 0 4px 6px var(--shadow);
+--glow-Box:       6px 4px 8px var(--hover), 0 4px 6px var(--hover);
+--glow-Txt:       0 0 2px var(--txt-1);
 --shdw-Box:       6px 4px 8px var(--shadow), 0 4px 6px var(--shadow);
 --shdw-Txt:      1px 2px 10px var(--shadow);
 

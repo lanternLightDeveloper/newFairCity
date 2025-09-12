@@ -1,32 +1,22 @@
-<h1>Rodeo & Bulls</h1>
+<section class="blk-Western">
+	<h3>Rodeo & Bull Schedule</h3>
 
-<p>
-	Rodeo: Eight (8) separate events are held each night of the rodeo: bareback riding, steer
-	wrestling, team roping, tie-down roping, saddle bronc riding, barrel racing, break-away roping,
-	and bull riding. Learn more about each event here. ​
-</p>
-
-<p>
-	Xtreme Bulls: The world’s top bull riders will converge at this event to attempt riding the
-	baddest, meanest, rankest one-ton athletes in the world. These bulls have thrown cowboys at the
-	largest rodeo venues in the world.
-</p>
-
-<p>
-	The rodeo will be held Wednesday through Saturday of the fair. The Rodeo Slack * will be Thursday
-	& Friday morning. Xtreme Bulls will start Sunday. Wednesday through Friday (Aug. 20-22), event
-	starts at 6:30 pm Saturday (Aug. 23), event starts at 11:00am Xtreme Bulls (Aug. 24), event starts
-	at 11:00am
-</p>
-
-<p>
-	* Rodeo Slack is for the overflow contestants that wouldn't quite fit in the highlighted nightly
-	rodeo. There looks to be over 200 competitors at this FREE event.
-</p>
-
-<p>Thursday - Barrel racing and break-away roping Friday - Timed events</p>
-
-<p>All rodeo events will be live/streamed on the Cowboy Channel!</p>
+	<article class="schedule">
+		<p class="pointA">Wed–Fri</p>
+		<p class="pointB">(Aug. 20–22)</p>
+		<p class="pointC"><strong>Event starts at 6:30 PM</strong></p>
+	</article>
+	<article class="schedule">
+		<p class="pointA">Saturday</p>
+		<p class="pointB">(Aug. 23)</p>
+		<p class="pointC"><strong>Event starts at 11:00 AM</strong></p>
+	</article>
+	<article class="schedule">
+		<p class="pointA">Sunday – XTREME BULLS</p>
+		<p class="pointB">(Aug. 24)</p>
+		<p class="pointC"><strong>Event starts at 11:00 AM</strong></p>
+	</article>
+</section>
 
 <p>
 	PRCA Photography Policy Fans may take photos from the stands, but only with cell phones or small
@@ -35,138 +25,135 @@
 	photographs or videos taken at a PRCA rodeo is prohibited.
 </p>
 
-<h3>Seating Pricing</h3>
-<table border="1" cellspacing="0" cellpadding="5">
+<p>Learn more about each event here. ​</p>
+<table class="rodeo-events">
 	<thead>
 		<tr>
-			<th>Seating Type</th>
-			<th>Category</th>
-			<th>Price</th>
+			<th>Events</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td rowspan="4">Uncovered Seating</td>
-			<td>General Admission</td>
-			<td>$35.00</td>
+			<td>Bareback Riding</td>
+			<td>Steer Wrestling</td>
 		</tr>
 		<tr>
-			<td>Military & Seniors</td>
-			<td>$30.00</td>
+			<td>Team Roping</td>
+			<td>Tie-Down Roping</td>
 		</tr>
 		<tr>
-			<td>Children 6–12 y.o.</td>
-			<td>$25.00</td>
+			<td>Saddle Bronc Riding</td>
+			<td>Barrel Racing</td>
 		</tr>
 		<tr>
-			<td>Children 5 & Under</td>
-			<td>Free</td>
-		</tr>
-		<tr>
-			<td rowspan="4">Covered Seating</td>
-			<td>General Admission</td>
-			<td>$40.00</td>
-		</tr>
-		<tr>
-			<td>Military & Seniors</td>
-			<td>$35.00</td>
-		</tr>
-		<tr>
-			<td>Children 6–12 y.o.</td>
-			<td>$30.00</td>
-		</tr>
-		<tr>
-			<td>Children 5 & Under</td>
-			<td>Free</td>
-		</tr>
-		<tr>
-			<td rowspan="5">Box Seats</td>
-			<td>Box 1</td>
-			<td>$50.00</td>
-		</tr>
-		<tr>
-			<td>Box 2</td>
-			<td>$55.00</td>
-		</tr>
-		<tr>
-			<td>Box 3</td>
-			<td>$60.00</td>
-		</tr>
-		<tr>
-			<td>Box 8</td>
-			<td>$65.00</td>
-		</tr>
-		<tr>
-			<td>Box 9</td>
-			<td>$65.00</td>
+			<td>Break-Away Roping</td>
+			<td>Bull Riding</td>
 		</tr>
 	</tbody>
 </table>
 
+<h3>Seating Pricing</h3>
+
+<section class="grid-Western">
+	<article class="blk-Western">
+		<h3>Uncovered Seating</h3>
+
+		<p class="pointD">General Admission<strong>$35.00</strong></p>
+		<p class="pointD">Military & Seniors<strong>$30.00</strong></p>
+		<p class="pointD">Children 6–12 y.o.<strong>$25.00</strong></p>
+		<p class="pointD">Children 5 & Under<strong>Free</strong></p>
+	</article>
+
+	<article class="blk-Western">
+		<h3>Covered Seating</h3>
+
+		<p class="pointD">General Admission<strong>$40.00</strong></p>
+		<p class="pointD">Military & Seniors<strong>$35.00</strong></p>
+		<p class="pointD">Children 6–12 y.o.<strong>$30.00</strong></p>
+		<p class="pointD">Children 5 & Under<strong>Free</strong></p>
+	</article>
+
+	<article class="blk-Western">
+		<h3>Box Seats</h3>
+
+		<p class="pointD">Box 1<strong>$50.00</strong></p>
+		<p class="pointD">Box 2<strong>$55.00</strong></p>
+		<p class="pointD">Box 3<strong>$60.00</strong></p>
+		<p class="pointD">Box 8<strong>$65.00</strong></p>
+		<p class="pointD">Box 9<strong>$65.00</strong></p>
+	</article>
+</section>
+
+<p>Thursday - Barrel racing and break-away roping Friday - Timed events</p>
+
+<p>All rodeo events will be live/streamed on the Cowboy Channel!</p>
+
+<p>
+	Xtreme Bulls: The world’s top bull riders will converge at this event to attempt riding the
+	baddest, meanest, rankest one-ton athletes in the world. These bulls have thrown cowboys at the
+	largest rodeo venues in the world.
+</p>
+
 <h3>🐂 XTREME BULLS PRICING</h3>
-<table border="1" cellspacing="0" cellpadding="5">
-	<thead>
-		<tr>
-			<th>Seating Type</th>
-			<th>Category</th>
-			<th>Price</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td rowspan="4">Uncovered Seating</td>
-			<td>General Admission</td>
-			<td>$45.00</td>
-		</tr>
-		<tr>
-			<td>Military & Seniors</td>
-			<td>$40.00</td>
-		</tr>
-		<tr>
-			<td>Children 6–12 y.o.</td>
-			<td>$35.00</td>
-		</tr>
-		<tr>
-			<td>Children 5 & Under</td>
-			<td>Free</td>
-		</tr>
-		<tr>
-			<td rowspan="4">Covered Seating</td>
-			<td>General Admission</td>
-			<td>$50.00</td>
-		</tr>
-		<tr>
-			<td>Military & Seniors</td>
-			<td>$45.00</td>
-		</tr>
-		<tr>
-			<td>Children 6–12 y.o.</td>
-			<td>$40.00</td>
-		</tr>
-		<tr>
-			<td>Children 5 & Under</td>
-			<td>Free</td>
-		</tr>
-		<tr>
-			<td rowspan="5">Box Seats</td>
-			<td>Box 1</td>
-			<td>$50.00</td>
-		</tr>
-		<tr>
-			<td>Box 2</td>
-			<td>$60.00</td>
-		</tr>
-		<tr>
-			<td>Box 3</td>
-			<td>$70.00</td>
-		</tr>
-		<tr>
-			<td>Box 8</td>
-			<td>$60.00</td>
-		</tr>
-		<tr>
-			<td>Box 9</td>
-			<td>$60.00</td>
-		</tr>
-	</tbody>
-</table>
+
+<section class="blk-Western-grid">
+	<article class="blk-Western">
+		<h3>Uncovered Seating</h3>
+
+		<p class="pointD">General Admission<strong>$45.00</strong></p>
+		<p class="pointD">Military & Seniors<strong>$40.00</strong></p>
+		<p class="pointD">Children 6–12 y.o.<strong>$35.00</strong></p>
+		<p class="pointD">Children 5 & Under<strong>Free</strong></p>
+	</article>
+
+	<article class="blk-Western">
+		<h3>Covered Seating</h3>
+
+		<p class="pointD">General Admission<strong>$50.00</strong></p>
+		<p class="pointD">Military & Seniors<strong>$45.00</strong></p>
+		<p class="pointD">Children 6–12 y.o.<strong>$40.00</strong></p>
+		<p class="pointD">Children 5 & Under<strong>Free</strong></p>
+	</article>
+
+	<article class="blk-Western">
+		<h3>Box Seats</h3>
+
+		<p class="pointD">Box 1<strong>$50.00</strong></p>
+		<p class="pointD">Box 2<strong>$60.00</strong></p>
+		<p class="pointD">Box 3<strong>$70.00</strong></p>
+		<p class="pointD">Box 8<strong>$60.00</strong></p>
+		<p class="pointD">Box 9<strong>$60.00</strong></p>
+	</article>
+</section>
+
+<p>
+	* Rodeo Slack is for the overflow contestants that wouldn't quite fit in the highlighted nightly
+	rodeo. There looks to be over 200 competitors at this FREE event.
+</p>
+
+<style>
+	.rodeo-events {
+		width: 80vw;
+		margin: 0 10vw;
+		background: linear-gradient(to bottom right, #2c1e13, #110c07);
+		border-radius: var(--rad-Sm);
+		border: 2px solid var(--border-color);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.rodeo-events th {
+		background-color: oklch(39.984% 0.16408 29.223);
+		border-radius: var(--rad-Sm) 0;
+		color: #fff;
+		padding: 0.75rem;
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
+
+	.rodeo-events td {
+		padding: 0.6rem;
+		border-top: 1px dashed #d2691e;
+		color: var(--txt-2);
+		text-align: center;
+	}
+</style>

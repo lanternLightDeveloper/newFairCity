@@ -1,49 +1,153 @@
-<h1>Auction</h1>
+<section class="  blk-Western">
+	<h3>Kitsap Junior Livestock Auction</h3>
+	<article>
+		<p class="pointB">
+			Advancing youth interest in agriculture and livestock management through ethics, education,
+			and community support.
+		</p>
 
-<p>
-	Goal: The Kitsap Junior Livestock Auction is dedicated to advancing youth interest and education
-	in agriculture and livestock management. We promote the principles of good citizenship, ethics,
-	sound business practices, fairness, and responsibility throughout the process of selecting and
-	caring for the animals that the youth bring to the market. ​
-</p>
+		<h4>Location & Time</h4>
+		<article>
+			<p class="pointD">
+				Where:<strong> Kitsap Fair & Stampede, 1300 NW Fairgrounds Rd, Bremerton, WA</strong>
+			</p>
+			<p class="pointD">When: <strong> Saturday, August 23, 2025 at 2:00pm </strong></p>
+			<p class="pointB">Register online or arrive early to bid in person.</p>
+		</article>
+	</article>
+</section>
 
-<a href="/"> Website: kitsapjuniorlivestockauction.org </a>
-<a href="/"> Bidding: bestbidonlineauctions.com</a>
+<div class="glass-flip-grid">
+	<h2>Auction Basics</h2>
+	<div class="glass-flip-card">
+		<div class="glass-flip-inner">
+			<div class="glass-front"><h3>Purchasing Outright</h3></div>
+			<div class="glass-back">
+				<p>
+					Buy an animal for processing. Additional costs apply for cut/wrap and smoking.
+					Poultry/rabbits sold in pens or singles.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="glass-flip-card">
+		<div class="glass-flip-inner">
+			<div class="glass-front"><h3>Splitting Purchases</h3></div>
+			<div class="glass-back">
+				<p>
+					Multiple buyers can split an animal. Must bid as one entry and coordinate arrangements
+					independently.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="glass-flip-card">
+		<div class="glass-flip-inner">
+			<div class="glass-front"><h3>Turning</h3></div>
+			<div class="glass-back">
+				<p>
+					Sell the animal back to the processor at the posted turn price. Tax-deductible donation.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<p>
-	Where: Kitsap Fair & Stampede, 1300 NW Fairgrounds Rd, Bremerton, WA 98311 <br /> ​ When:
-	Saturday, August 23, 2025 at 2:00pm (Register to bid online or arrive early to register for
-	bidding.) <br /> ​ How can I support the youth: Bid on an animal in-person or online to purchase. Or,
-	make a donation to support the program. ​
-</p>
+<section class=" grid-Western">
+	<div class="blk-Western">
+		<h3>Online Access</h3>
+		<article>
+			<p>
+				<a href="https://kitsapjuniorlivestockauction.org" target="_blank">Visit Auction Website</a>
+			</p>
+			<p><a href="https://bestbidonlineauctions.com" target="_blank">Bid Online</a></p>
+		</article>
+	</div>
 
-<p>What is available: Beef, lamb, goat, pork, rabbit, chicken, duck, and turkey. ​</p>
+	<div class="blk-Western">
+		<h3>Available Animals</h3>
+		<article>
+			<p>Beef, lamb, goat, pork, rabbit, chicken, duck, and turkey.</p>
+		</article>
+	</div>
 
-<p>
-	Who buys at the livestock auction: Anyone who is interested in supporting Kitsap area youth and
-	having an appreciation for top-quality livestock. Donations and "turns" are tax-deductible
-	donations. The Kitsap Junior Livestock Auction in an entity of the Kitsap Fair & Stampede
-	501(c)(3) non-profit organization (Tax ID 84-4802037).
-</p>
+	<div class="blk-Western">
+		<h3>How to Support</h3>
+		<article>
+			<p>Bid on an animal (in-person or online)</p>
+			<p>Make a donation</p>
+			<p>Submit an Add-On Form by August 23</p>
+		</article>
+	</div>
+</section>
 
-<p>
-	Details: Purchasing outright: Purchasing an animal for standard processing and obtaining meat for
-	the family freezer. This will involve additional costs for initial processing, cutting, and
-	wrapping. *Smoking/curing costs are in addition to the cut/wrap costs. *Poultry and rabbits are
-	sold in a pen of three (3) or sold as singles.
-</p>
+<style>
+	.auction-hero {
+		background: linear-gradient(to right, #fdf6e3, #fff8dc);
+		text-align: center;
+		padding: 2rem;
+		border-bottom: 2px solid #d2691e;
+	}
 
-<p>
-	Splitting purchases: One or more buyers/businesses may split the purchase of an animal. Buyers may
-	make their own arrangements to do this and must bid as one entry.
-</p>
+	.auction-hero h1 {
+		font-size: 2.5rem;
+		color: #8b0000;
+		font-family: 'Cinzel', serif;
+	}
 
-<p>
-	Turning: Selling the animal back to the processor and the pre-determined "turn" price. Price will
-	be posted at the sale.
-</p>
+	.auction-hero .mission {
+		font-size: 1.1rem;
+		color: #4b2e1e;
+		max-width: 600px;
+		margin: 0 auto;
+	}
 
-<p>
-	Add on donations: Donations for specific participants, or divided among all participants, at the
-	auction, or mail the Add-On Form by August 23, 2025.​
-</p>
+	.auction-details {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+		padding: 2rem;
+	}
+
+	.info-card {
+		background: linear-gradient(to right, #fdf6e3, #fff8dc);
+		border: 2px solid #d2691e;
+		border-radius: 12px;
+
+		color: var(--bg-1);
+		padding: 1rem;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.info-card h2 {
+		color: #8b0000;
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.info-card a {
+		color: #d2691e;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	.info-card p {
+		color: var(--bg-1);
+	}
+
+	.auction-explainer {
+		padding: 2rem;
+		background: linear-gradient(to right, #fdf6e3, #fff8dc);
+	}
+
+	.auction-explainer h2 {
+		text-align: center;
+		color: #8b0000;
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.glass-front {
+		color: var(--bg-1);
+	}
+</style>

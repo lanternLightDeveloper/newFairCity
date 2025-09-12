@@ -254,7 +254,6 @@
 
 	.alert {
 		background: var(--accent-2);
-
 		padding: 1rem;
 		font-weight: 600;
 		text-align: center;

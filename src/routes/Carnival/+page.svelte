@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Rodeo from '$lib/imgs/3.jpg';
+
+	import HorseRide from '$lib/imgs/caroselSilhouette2.png';
 </script>
 
 <header class="carnival-hero">
@@ -25,7 +27,9 @@
 	</p>
 </section>
 
-<main>
+<main
+	style={`background-image: url(${HorseRide}); background-size: cover; background-position: center;`}
+>
 	<p>
 		Returning to the 2025 Kitsap Fair and Rodeo, the best carnival in the Northwest! Funtastic Shows
 		will be providing the carnival and games. You are familiar with their safety and quality

@@ -7,6 +7,10 @@
 	import img4 from '$lib/imgs/4.jpg';
 	import img5 from '$lib/imgs/5.jpg';
 
+	import Sheeep from '$lib/imgs/sheepSilhouette.png';
+	import Horse from '$lib/imgs/horseSilhouette2.png';
+	import BullRider from '$lib/imgs/bullRiderSilhouette2.png';
+
 	import imgRodeo from '$lib/imgs/rodeo.jpg';
 	import imgEntertainment from '$lib/imgs/entertainment.jpg';
 	import imgCarnival from '$lib/imgs/carnival.jpg';
@@ -59,7 +63,10 @@
 	});
 </script>
 
-<header class="header">
+<header
+	class="header"
+	style={`background-image: url(${BullRider}); background-size: cover; background-position: center;`}
+>
 	<img src={img0} alt="kitsap fair and rodeo logo" class="logo" />
 	<section class="header-info">
 		<article>
@@ -85,9 +92,7 @@
 </header>
 
 <aside class="alert">
-	<p>
-		⚠️ We are aware of fraudulent links. Tickets should only be purchased here or at the venue. ⚠️
-	</p>
+	<p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p>
 </aside>
 
 <div
@@ -128,14 +133,17 @@
 
 <aside class="notice">
 	<p>
-		🚫 No Pets Allowed<br />
+		No Pets Allowed<br />
 		Service animals are welcome.<br />
 		Comfort/emotional support animals are not service animals.
 	</p>
 </aside>
 
 <main class="content">
-	<section>
+	<section
+		style={`background-image: url(${Sheeep}); background-size: cover; background-position: center;`}
+	>
+		<!-- <img src={Sheeep} alt="sheep silhouette" />  -->
 		<h2>Main Entertainment</h2>
 		<p>
 			Rodeo: Wed–Fri 6:30pm<br />
@@ -194,8 +202,11 @@
 		</ul>
 	</section>
 
-	<h2>Kitsap Stampede Sponsors</h2>
-	<section class="sponsors">
+	<section
+		class="sponsors"
+		style={`background-image: url(${Horse}); background-size: cover; background-position: center;`}
+	>
+		<h2>Kitsap Stampede Sponsors</h2>
 		<ul>
 			<li><strong>Wed:</strong> Agate Asphalt</li>
 			<li><strong>Thu:</strong> Virginia Mason Franciscan Health</li>

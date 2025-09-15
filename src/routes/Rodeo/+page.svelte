@@ -1,4 +1,11 @@
-<section class="blk-Western">
+<script>
+	import BullRider from '$lib/imgs/bullRiderSilhouette2.png';
+</script>
+
+<section
+	class="blk-Western"
+	style={`background-image: url(${BullRider}); background-size: cover; background-position: center;`}
+>
 	<h3>Rodeo & Bull Schedule</h3>
 
 	<article class="schedule">
@@ -94,7 +101,7 @@
 	largest rodeo venues in the world.
 </p>
 
-<h3>🐂 XTREME BULLS PRICING</h3>
+<h3>XTREME BULLS PRICING</h3>
 
 <section class="blk-Western-grid">
 	<article class="blk-Western">

@@ -1,4 +1,11 @@
-<section class="  blk-Western">
+<script>
+	import AuctionFace from '$lib/imgs/auctionSilhouette2.png';
+</script>
+
+<section
+	class="blk-Western"
+	style={`background-image: url(${AuctionFace}); background-size: cover; background-position: center;`}
+>
 	<h3>Kitsap Junior Livestock Auction</h3>
 	<article>
 		<p class="pointB">

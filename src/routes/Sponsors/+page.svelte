@@ -1,35 +1,7 @@
 <script lang="ts">
+	import { Sponsors } from '$lib/data/sponVendors';
 	let open = $state(null);
 	const testLink = 'https://newfaircity.netlify.app/';
-
-	let items = [
-		{ label: '19th Hole Bar and Grill' },
-		{ label: 'Admiral Theater Foundation' },
-		{ label: 'Agate Asphalt' },
-		{ label: 'Ahoy Kitsap Playland' },
-		{ label: 'All In Septic & Excavation' },
-		{ label: 'AllCounty Operations' },
-		{ label: 'Bagwell Law' },
-		{ label: 'Bankrock Corp' },
-		{ label: 'BJC Group Inc' },
-		{ label: 'Boot Barn' },
-		{ label: 'Brothers Powersports' },
-		{ label: 'Budget Blinds' },
-		{ label: 'C B Farrier Services' },
-		{ label: 'C & C Development & Trucking' },
-		{ label: 'Camp Union Properties' },
-		{ label: 'Cascade Diesel' },
-		{ label: 'Cornerstone Cleaning' },
-		{ label: "Dana's Heating & Cooling" },
-		{ label: 'Destination Harley Davidson' },
-		{ label: 'Diane K. Golbeck, PLLC' },
-		{ label: 'Fife RV' },
-		{ label: 'Geico, Silverdale Office (Kevin Krieger)' },
-		{ label: 'Gresham Pump & Drilling' },
-		{ label: 'Grey Miles Co' },
-		{ label: 'Hanley Constructions' },
-		{ label: 'Haselwood Auto Group' }
-	];
 </script>
 
 <h1>Sponsors</h1>
@@ -55,12 +27,12 @@
 </p>
 
 <section class="glass-flip-grid">
-	{#each items as item, i}
+	{#each Sponsors as sponsor, i}
 		<div
 			class="glass-flip-card"
 			tabindex="0"
 			role="button"
-			aria-label={`Details for ${item.label}`}
+			aria-label={`Details for ${sponsor.label}`}
 			onmouseenter={() => (open = i)}
 			onmouseleave={() => (open = null)}
 			onfocus={() => (open = i)}
@@ -74,7 +46,8 @@
 		>
 			<div class="glass-flip-inner" aria-hidden={open !== i}>
 				<div class="glass-front">
-					<h3>{item.label}</h3>
+					<h3>{sponsor.label}</h3>
+					<p>{sponsor.info}</p>
 				</div>
 				<div class="glass-back">
 					<a href={testLink} target="_blank" rel="noopener">Visit Online Space</a>

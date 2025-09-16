@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	let isMenuOpen = $state(false);
 	let current = $state(1);
 
@@ -22,6 +23,23 @@
 	let rotation = $derived.by(() => {
 		const selected = menuItems.find((item) => item.id === current);
 		return selected ? -selected.degree : 0;
+	});
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+	let showScrollButton = $state(false);
+
+	function handleScroll() {
+		const scrollY = window.scrollY;
+		const triggerHeight = window.innerHeight * 2; // 200vh
+		showScrollButton = scrollY > triggerHeight;
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
 	});
 </script>
 
@@ -54,6 +72,9 @@
 		{/each}
 	</div>
 </div>
+{#if showScrollButton}
+	<button class="scroll-top-button" onclick={scrollToTop}> up </button>
+{/if}
 
 <!--svelte-ignore css_unused_selector -->
 <style>
@@ -135,5 +156,32 @@
 	a.current .dot-label {
 		color: var(--accent-1);
 		font-weight: bold;
+	}
+	.scroll-top-button {
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		background-color: #333;
+		color: white;
+		border: none;
+		border-radius: 50%;
+		width: 3rem;
+		height: 3rem;
+		font-size: 1.2rem;
+		cursor: pointer;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+		z-index: 1000;
+		opacity: 0;
+		animation: fadeIn 0.5s forwards;
+	}
+
+	@keyframes fadeIn {
+		to {
+			opacity: 1;
+		}
+	}
+
+	.scroll-top-button:hover {
+		background-color: #555;
 	}
 </style>

@@ -6,20 +6,33 @@
 
 <h1>Sponsors</h1>
 
-<p>
-	FAIR DAY SPONSORS Wednesday: Opening at the Fair proudly sponsored by Joyce Construction Thursday:
-	Military Day proudly sponsored by Geico Local Friday: Day at the Fair proudly sponsored by Kitsap
-	Credit Union Saturday: Kids Day at the Fair – Kids 12 and under come to the Fair free! proudly
-	sponsored Haselwood Auto Group Sunday: Senior Day at the Fair – 62 and older come to the Fair
-	free! proudly sponsored Kitsap Credit Union
-</p>
+<section class="blk-Western">
+	<h3>FAIR DAY SPONSORS</h3>
+	<p class="pointD">Wednesday: Opening at the Fair proudly sponsored by Joyce Construction</p>
+	<p class="pointD">Thursday: Military Day proudly sponsored by Geico</p>
+	<p class="pointD">Friday: Day at the Fair proudly sponsored by Kitsap Credit Union</p>
+	<p class="pointD">
+		Saturday: Kids Day at the Fair – Kids 12 and under come to the Fair free! proudly sponsored by
+		Haselwood Auto Group
+	</p>
+	<p class="pointD">
+		Sunday: Senior Day at the Fair – 62 and older come to the Fair free! proudly sponsored by Kitsap
+		Credit Union
+	</p>
+</section>
+<br />
+<section class="blk-Western">
+	<h3>KITSAP STAMPEDE SPONSORS</h3>
+	<p class="pointD">Wednesday: Opening Night proudly sponsored by Agate Asphalt</p>
+	<p class="pointD">
+		Thursday: Patriot Night proudly sponsored by Virginia Mason Franciscan Health
+	</p>
+	<p class="pointD">Friday: Tough Enough to Wear Pink proudly sponsored Kitsap Credit Union</p>
+	<p class="pointD">Saturday: Kids Day proudly sponsored by Haselwood Auto Group</p>
 
-<p>
-	​KITSAP STAMPEDE SPONSORS Wednesday: Opening Night proudly sponsored by Agate Asphalt Thursday:
-	Patriot Night proudly sponsored by Virginia Mason Franciscan Health Friday: Tough Enough to Wear
-	Pink proudly sponsored Kitsap Credit Union Saturday: Kids Day proudly sponsored by Haselwood Auto
-	Group​ ​​​XTREME BULLS SPONSOR Sunday: proudly sponsored by Hanley Construction
-</p>
+	<h2 class="pointC">XTREME BULLS SPONSOR</h2>
+	<p class="pointD">Sunday: proudly sponsored by Hanley Construction</p>
+</section>
 
 <p>
 	Visit the websites of our generous sponsors. Learn more about these amazing companies that are

@@ -73,7 +73,7 @@
 	</div>
 </div>
 {#if showScrollButton}
-	<button class="scroll-top-button" onclick={scrollToTop}> up </button>
+	<button class="scroll-top-button" onclick={scrollToTop}> ↑ </button>
 {/if}
 
 <!--svelte-ignore css_unused_selector -->
@@ -161,8 +161,8 @@
 		position: fixed;
 		bottom: 1rem;
 		right: 1rem;
-		background-color: #333;
-		color: white;
+		background-color: var(--accent-2);
+		color: var(--txt-1);
 		border: none;
 		border-radius: 50%;
 		width: 3rem;
@@ -182,6 +182,6 @@
 	}
 
 	.scroll-top-button:hover {
-		background-color: #555;
+		background-color: var(--hover);
 	}
 </style>

@@ -47,6 +47,11 @@
 
 <h1 id="pictures-heading">Pictures</h1>
 
+<p>
+	These are pictures that all of you magnificent people took at the fair. Thank you all for every
+	minute you shared with us. Thank you all for everything.
+</p>
+
 <section class="image-gallery" aria-labelledby="pictures-heading">
 	{#each imageEntries as image}
 		<figure class="image-card">
@@ -65,18 +70,26 @@
 	<dialog class="modal-overlay" open role="dialog" aria-modal="true" aria-labelledby="modal-title">
 		<div class="modal-content" tabindex="-1">
 			<h2 id="modal-title" class="visually-hidden">Image preview</h2>
+			<img src={imageEntries[selectedIndex].src} alt={imageEntries[selectedIndex].label} />
+
+			<p>{imageEntries[selectedIndex].label}</p>
 
 			<div class="modal-nav">
 				<button
 					type="button"
+					class="btn-Pulse"
 					onclick={showPrevious}
 					aria-label="Previous image"
 					disabled={selectedIndex === 0}
 				>
 					←
 				</button>
-
-				<img src={imageEntries[selectedIndex].src} alt={imageEntries[selectedIndex].label} />
+				<button
+					type="button"
+					class="btn-Shadow"
+					onclick={closeModal}
+					aria-label="Close image preview">Close</button
+				>
 
 				<button
 					type="button"
@@ -88,11 +101,6 @@
 					→
 				</button>
 			</div>
-
-			<p>{imageEntries[selectedIndex].label}</p>
-			<button type="button" class="btn-Shadow" onclick={closeModal} aria-label="Close image preview"
-				>Close</button
-			>
 		</div>
 	</dialog>
 {/if}
@@ -106,7 +114,6 @@
 	.image-card {
 		break-inside: avoid;
 		margin-bottom: 1rem;
-		border-radius: 8px;
 		overflow: hidden;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	}
@@ -131,35 +138,41 @@
 	}
 
 	.modal-content {
-		background: white;
+		background: var(--txt-2);
 		padding: 1rem;
-		border-radius: 8px;
 		max-width: 90vw;
 		max-height: 90vh;
 		overflow: auto;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 		text-align: center;
+		overflow: hidden;
+
+		& p {
+			padding: 0;
+			margin: var(--size-5) 0 0 0;
+		}
+
+		.btn-Shadow {
+			padding: var(--size-3);
+		}
 	}
 
 	.modal-content img {
-		max-width: 90%;
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
 		height: auto;
-		border-radius: 4px;
 	}
 
 	.modal-nav {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 1rem;
 	}
 
 	.modal-nav button {
-		background: none;
 		border: none;
-		font-size: 2rem;
 		cursor: pointer;
-		color: #333;
 	}
 
 	.modal-nav button:disabled {

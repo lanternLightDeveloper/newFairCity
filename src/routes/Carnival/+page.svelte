@@ -7,8 +7,7 @@
 <header class="carnival-hero">
 	<div class="overlay">
 		<h1>Carnival at Kitsap Fair</h1>
-		<p>🎠 Funtastic Shows returns with the best rides, games, and thrills in the Northwest!</p>
-		<a href="#hours" class="cta-button">View Carnival Hours</a>
+		<p>Funtastic Shows returns with the best rides, games, and thrills in the Northwest!</p>
 	</div>
 	<img src={Rodeo} alt="Carnival rides and crowd in a fairground" />
 </header>
@@ -73,8 +72,7 @@
 		color: white;
 		text-align: center;
 		padding: 2rem;
-		background: rgba(0, 0, 0, 0.5); /* optional for readability */
-		border-radius: 12px;
+		background: rgba(0, 0, 0, 0.5);
 	}
 
 	.carnival-hero h1 {

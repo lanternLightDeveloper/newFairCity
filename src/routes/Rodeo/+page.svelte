@@ -25,13 +25,17 @@
 	</article>
 </section>
 
-<p>
-	PRCA Photography Policy Fans may take photos from the stands, but only with cell phones or small
-	cameras that have lenses smaller than 3". Those caught using cameras with a lens attachment,
-	without proper credentials, will be expelled from the rodeo grounds. The unauthorized sale of any
-	photographs or videos taken at a PRCA rodeo is prohibited.
-</p>
+<br />
+<section class="alert">
+	<p>
+		PRCA Photography Policy Fans may take photos from the stands, but only with cell phones or small
+		cameras that have lenses smaller than 3". Those caught using cameras with a lens attachment,
+		without proper credentials, will be expelled from the rodeo grounds. The unauthorized sale of
+		any photographs or videos taken at a PRCA rodeo is prohibited.
+	</p>
+</section>
 
+<p>All rodeo events will be live/streamed on the Cowboy Channel!</p>
 <p>Learn more about each event here. ​</p>
 <table class="rodeo-events">
 	<thead>
@@ -90,10 +94,6 @@
 		<p class="pointD">Box 9<strong>$65.00</strong></p>
 	</article>
 </section>
-
-<p>Thursday - Barrel racing and break-away roping Friday - Timed events</p>
-
-<p>All rodeo events will be live/streamed on the Cowboy Channel!</p>
 
 <p>
 	Xtreme Bulls: The world’s top bull riders will converge at this event to attempt riding the
@@ -162,6 +162,13 @@
 		padding: 0.6rem;
 		border-top: 1px dashed #d2691e;
 		color: var(--txt-2);
+		text-align: center;
+	}
+
+	.alert {
+		background: var(--accent-2);
+		padding: 1rem;
+		font-weight: 600;
 		text-align: center;
 	}
 </style>

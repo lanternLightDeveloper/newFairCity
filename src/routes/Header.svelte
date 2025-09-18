@@ -7,7 +7,7 @@
 		{ label: 'Home', href: '/', id: 1, degree: 0 },
 		{ label: 'Sponsors', href: '/Sponsors', id: 2, degree: 36 },
 		{ label: 'Rodeo', href: '/Rodeo', id: 3, degree: 72 },
-		{ label: 'Entertainment', href: '/Entertainment', id: 4, degree: 108 },
+		{ label: 'Entertainment', href: '/Entertainment/FairSchedule', id: 4, degree: 108 },
 		{ label: 'Carnival', href: '/Carnival', id: 5, degree: 144 },
 		{ label: 'Auction', href: '/Auction', id: 6, degree: 180 },
 		{ label: 'Food', href: '/Food', id: 7, degree: 216 },
@@ -33,7 +33,7 @@
 
 	function handleScroll() {
 		const scrollY = window.scrollY;
-		const triggerHeight = window.innerHeight * 2; // 200vh
+		const triggerHeight = window.innerHeight * 1.5;
 		showScrollButton = scrollY > triggerHeight;
 	}
 

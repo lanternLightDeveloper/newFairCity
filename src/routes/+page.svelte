@@ -7,6 +7,8 @@
 	import img4 from '$lib/imgs/4.jpg';
 	import img5 from '$lib/imgs/5.jpg';
 
+	import Multipass from '$lib/imgs/multipass.png';
+
 	import Sheeep from '$lib/imgs/sheepSilhouette.png';
 	import Horse from '$lib/imgs/horseSilhouette2.png';
 	import BullRider from '$lib/imgs/bullRiderSilhouette2.png';
@@ -63,10 +65,7 @@
 	});
 </script>
 
-<header
-	class="header"
-	style={`background-image: url(${BullRider}); background-size: cover; background-position: center;`}
->
+<header class="header">
 	<img src={img0} alt="kitsap fair and rodeo logo" class="logo" />
 	<section class="header-info">
 		<article>
@@ -86,13 +85,14 @@
 				Under 5: Free<br />
 				Parking: $10/day
 			</p>
-			<button class="btn-Shadow">Buy Tickets</button>
+			<button> <img src={Multipass} alt="kitsap fair entry ticket" /></button>
 		</article>
 	</section>
 </header>
 
 <aside class="alert">
-	<p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p>
+	<p>THIS IS NOT A REAL WEBSITE AND YOU SHOULD ONLY PURCHASE FROM THE ACTUAL PAGE</p>
+	<!-- <p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p> -->
 </aside>
 
 <div
@@ -243,6 +243,14 @@
 		text-align: center;
 		border-bottom: 2px solid var(--bg-2);
 		z-index: 975;
+
+		& button {
+			all: unset;
+
+			& img {
+				width: 45vw;
+			}
+		}
 	}
 
 	.logo {

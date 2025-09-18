@@ -69,9 +69,9 @@
 	.carnival-hero .overlay {
 		position: relative;
 		z-index: 2;
-		color: white;
 		text-align: center;
 		padding: 2rem;
+		height: 100%;
 		background: rgba(0, 0, 0, 0.5);
 	}
 

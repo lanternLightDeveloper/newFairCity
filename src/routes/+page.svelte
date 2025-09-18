@@ -131,14 +131,6 @@
 	<button class="btn-Shadow">Click Me</button>
 </div>
 
-<aside class="notice">
-	<p>
-		No Pets Allowed<br />
-		Service animals are welcome.<br />
-		Comfort/emotional support animals are not service animals.
-	</p>
-</aside>
-
 <main class="content">
 	<section
 		style={`background-image: url(${Sheeep}); background-size: cover; background-position: center;`}
@@ -222,6 +214,14 @@
 		</ul>
 	</section>
 </main>
+
+<aside class="notice">
+	<p>
+		No Pets Allowed<br />
+		Service animals are welcome.<br />
+		Comfort/emotional support animals are not service animals.
+	</p>
+</aside>
 
 <footer class="footer">
 	<p><strong>Theme Contest:</strong> Submit your 2026 theme idea & win a family pass + T-shirt!</p>

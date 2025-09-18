@@ -65,10 +65,28 @@
 	});
 </script>
 
-<header class="header">
-	<img src={img0} alt="kitsap fair and rodeo logo" class="logo" />
+<header>
+	<!-- Background slider -->
+	<div class="slider">
+		{#key current}
+			<div class="slide" style={`background-image: url(${images[index]});`} transition:fade></div>
+		{/key}
+	</div>
+
+	<!-- Foreground content -->
 	<section class="header-info">
-		<article>
+		<article class="glass-Box">
+			<p>
+				<strong>Admission</strong><br />
+				General Admission: $12<br />
+				Seniors/Kids: $5<br />
+				Under 5: Free<br />
+				Parking: $10/day
+			</p>
+			<button><img src={Multipass} alt="kitsap fair entry ticket" /></button>
+		</article>
+
+		<article class="glass-Box">
 			<p>
 				<strong>Hours:</strong><br />
 				Wed/Thu: 10am–9pm<br />
@@ -77,16 +95,6 @@
 			</p>
 			<button class="btn-Shadow">Full Event</button>
 		</article>
-		<article>
-			<p>
-				<strong>Admission</strong><br />
-				General Admission: $12<br />
-				Seniors/Kids: $5<br />
-				Under 5: Free<br />
-				Parking: $10/day
-			</p>
-			<button> <img src={Multipass} alt="kitsap fair entry ticket" /></button>
-		</article>
 	</section>
 </header>
 
@@ -94,36 +102,6 @@
 	<p>THIS IS NOT A REAL WEBSITE AND YOU SHOULD ONLY PURCHASE FROM THE ACTUAL PAGE</p>
 	<!-- <p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p> -->
 </aside>
-
-<div
-	tabindex="0"
-	role="slider"
-	aria-valuemin="0"
-	aria-valuemax={total - 1}
-	aria-valuenow={index}
-	aria-label="Image slider"
-	onkeydown={onKeydown}
-	onmouseenter={() => (playing = false)}
-	onmouseleave={() => (playing = true)}
-	class="slider"
->
-	<button class="nav prev" onclick={prev} aria-label="Previous slide">‹</button>
-	<button class="nav next" onclick={next} aria-label="Next slide">›</button>
-	{#key current}
-		<img src={images[index]} alt="Slide" transition:fade class="slide" />
-	{/key}
-	<div class="dots" role="tablist" aria-label="Slide selector">
-		{#each images as _, i}
-			<button
-				role="tab"
-				aria-label="Slide {i + 1} of {total}"
-				aria-selected={i === index}
-				class:selected={i === index}
-				onclick={() => (index = i)}
-			></button>
-		{/each}
-	</div>
-</div>
 
 <section><p>Kitsap credit union members can recieve a discount on admission:</p></section>
 
@@ -241,6 +219,9 @@
 		position: relative;
 		padding: 1rem;
 		text-align: center;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
 		border-bottom: 2px solid var(--bg-2);
 		z-index: 975;
 
@@ -253,14 +234,49 @@
 		}
 	}
 
-	.logo {
-		max-width: 220px;
-		margin: auto;
-	}
 	.header-info {
 		display: grid;
+		position: absolute;
+		left: 10%;
+		bottom: 4rem;
 		gap: 1rem;
-		margin-top: 1rem;
+		height: 45vh;
+		width: 80vw;
+		margin: 1rem auto;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+		& img {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.slider {
+		position: relative;
+		overflow: hidden;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		height: 100vh; /* full viewport height */
+		inset: 0; /* top:0; right:0; bottom:0; left:0 */
+	}
+
+	.slide {
+		width: 100%;
+		height: 100%;
+		background-size: cover; /* fill space */
+		background-repeat: no-repeat;
+		background-position: left center; /* start from left */
+		animation: pan 25s linear forwards infinite; /* pan effect */
+	}
+
+	@keyframes pan {
+		from {
+			background-position: left center;
+		}
+		to {
+			background-position: right center;
+		}
 	}
 
 	.center-wrapper {
@@ -278,15 +294,6 @@
 		text-align: center;
 	}
 
-	.slider {
-		position: relative;
-		overflow: hidden;
-		text-align: center;
-	}
-	.slide {
-		width: 100%;
-		height: auto;
-	}
 	.nav {
 		position: absolute;
 		top: 50%;

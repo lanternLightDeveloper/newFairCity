@@ -13,7 +13,7 @@
 		{ label: 'Food', href: '/Food', id: 7, degree: 216 },
 		{ label: 'Vendors', href: '/Vendors', id: 8, degree: 252 },
 		{ label: 'Pictures', href: '/Pictures', id: 9, degree: 288 },
-		{ label: 'Submissions', href: '/Submissions', id: 10, degree: 324 }
+		{ label: 'Extra', href: '/Extra', id: 10, degree: 324 }
 	];
 
 	function navigateTo(href) {

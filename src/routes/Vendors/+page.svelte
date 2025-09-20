@@ -8,7 +8,7 @@
 <p>THE LISTING BELOW IS IN ALPHABETICAL ORDER, AND DOES NOT INDICATE BOOTH PLACEMENT.</p>
 
 <section class="glass-flip-grid">
-	<h2>Outdoor</h2>
+	<h2>Outside</h2>
 	{#each OutdoorCommercial as item, i}
 		<div
 			class="glass-flip-card"

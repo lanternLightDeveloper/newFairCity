@@ -158,8 +158,8 @@
 		{/each}
 	</section>
 
-	<h2>Fair Day Sponsors</h2>
 	<section class="sponsors">
+		<h2>Fair Day Sponsors</h2>
 		<ul>
 			<li><strong>Wed:</strong> Joyce Construction</li>
 			<li>
@@ -185,8 +185,8 @@
 		</ul>
 	</section>
 
-	<h2>Xtreme Bulls Sponsor</h2>
 	<section class="sponsors">
+		<h2>Xtreme Bulls Sponsor</h2>
 		<ul>
 			<li><strong>Sun:</strong> Hanley Construction</li>
 		</ul>

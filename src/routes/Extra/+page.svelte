@@ -1,35 +1,47 @@
-<h1>KFSA Contacts & Association Staff</h1>
+<h1>About</h1>
 
-<h2>Event Management</h2>
-<ul>
-	<li>
-		Event Manager: Gregg Smith, <a href="mailto:GSmith.KFSA@gmail.com">GSmith.KFSA@gmail.com</a>
-	</li>
-	<li>
-		Co-Fair Coordinators:
-		<ul>
-			<li>
-				Adam Braun, <a href="mailto:faircoordinator.kfsa@gmail.com"
-					>faircoordinator.kfsa@gmail.com</a
-				>
-			</li>
-			<li>Cindy McKay, <a href="mailto:McKay.KFSA@gmail.com">McKay.KFSA@gmail.com</a></li>
-		</ul>
-	</li>
-	<li>
-		Bookkeeper: Jenn Eikelman, <a href="mailto:Eikelman.KFSA@gmail.com">Eikelman.KFSA@gmail.com</a>
-	</li>
-	<li>
-		Maintenance Supervisor: Dori Leckner, <a href="mailto:Leckner.KFSA@gmail.com"
-			>Leckner.KFSA@gmail.com</a
-		>
-	</li>
-	<li>
-		Web Designer / Office Assistant: Dorrie Berning, <a href="mailto:Berning.KFSA@gmail.com"
-			>Berning.KFSA@gmail.com</a
-		>
-	</li>
-</ul>
+<p>
+	The first recorded Kitsap County Fair was held in 1923 in Port Orchard. It moved to Bremerton, in
+	1958. In 1929, exhibitors at the Fair totaled 1,000; today there are more than 6,000, with an
+	annual attendance of over 80,000.
+	<br />
+	<br />
+	In 1960, the Chief Kitsap Stampede sold stock certificates for $1 and constructed the Thunderbird Arena.
+	When completed, it held 12,000 spectators. In the late ‘70’s, portions of the Arena were condemned.
+	The covered grandstands were later added. Today the Arena holds 5,000 spectators and is used year-round
+	for various events such as the Demolition Derby, Draft Horse Show, monster trucks, and more. The complex
+	has an annual overall attendance at its various events of more than 211,000.
+	<br />
+	<br />
+	​ In January 2020, the The Kitsap Fair and Stampede Association was formed to take over the responsibility
+	of producing the annual Kitsap Fair and Rodeo. The non-profit organization is governed by 11 appointed
+	board members. They come with a variety of experience in business, public service and public involvement.
+
+	<br />
+	<br />
+
+	Unfortunately, the 2020 fair was cancelled due to the COVID-19 virus. In 2023, the Fair and Rodeo
+	celebrated the 100th Kitsap Fair. ​In 2024, the Kitsap Stampede celebrated 75 years of rodeo in
+	the county.
+</p>
+
+<h2>MISSION STATEMENT:</h2>
+
+<p>
+	The mission of the Kitsap Fair & Stampede is to provide entertainment and educational events that
+	are fun, safe, innovative; yet preserves tradition for the benefit of the greater west sound area.
+</p>
+
+<h2>VISION:</h2>
+
+<p>A thriving, premier organization that is successful, self-sufficient, and respected by all.</p>
+
+<h2>VALUES:</h2>
+
+<p>
+	KFSA foundation values are honesty, professionalism, respect, effectiveness and efficiency
+	delivered through exceptional customer service, teamwork and common goals.
+</p>
 
 <h2>Board of Directors</h2>
 <ul>
@@ -49,7 +61,7 @@
 	<li>Daniel Wakefield</li>
 </ul>
 
-<h3>Board Director in Memoriam</h3>
+<h2>Board Director in Memoriam</h2>
 <ul>
 	<li>Craig Webster</li>
 </ul>
@@ -68,45 +80,12 @@
 	<li>Eva Gagnon, Starlets Drill Team Captain</li>
 </ul>
 
-<p>About</p>
+<style>
+	ul {
+		list-style: disc;
+		width: 90vw;
 
-<p>
-	The first recorded Kitsap County Fair was held in 1923 in Port Orchard. It moved to Bremerton, in
-	1958. In 1929, exhibitors at the Fair totaled 1,000; today there are more than 6,000, with an
-	annual attendance of over 80,000.
-	<br />
-	In 1960, the Chief Kitsap Stampede sold stock certificates for $1 and constructed the Thunderbird Arena.
-	When completed, it held 12,000 spectators. In the late ‘70’s, portions of the Arena were condemned.
-	The covered grandstands were later added. Today the Arena holds 5,000 spectators and is used year-round
-	for various events such as the Demolition Derby, Draft Horse Show, monster trucks, and more. The complex
-	has an annual overall attendance at its various events of more than 211,000.
-	<br />
-	​ In January 2020, the The Kitsap Fair and Stampede Association was formed to take over the responsibility
-	of producing the annual Kitsap Fair and Rodeo. The non-profit organization is governed by 11 appointed
-	board members. They come with a variety of experience in business, public service and public involvement.
-
-	<br />
-
-	Unfortunately, the 2020 fair was cancelled due to the COVID-19 virus. In 2023, the Fair and Rodeo
-	celebrated the 100th Kitsap Fair. ​In 2024, the Kitsap Stampede celebrated 75 years of rodeo in
-	the county.
-</p>
-
-<h3>MISSION STATEMENT:</h3>
-
-<p>
-	The mission of the Kitsap Fair & Stampede is to provide entertainment and educational events that
-	are fun, safe, innovative; yet preserves tradition for the benefit of the greater west sound area.
-	​
-</p>
-
-<h3>VISION:</h3>
-
-<p>A thriving, premier organization that is successful, self-sufficient, and respected by all.</p>
-
-<h3>VALUES:</h3>
-
-<p>
-	KFSA foundation values are honesty, professionalism, respect, effectiveness and efficiency
-	delivered through exceptional customer service, teamwork and common goals.
-</p>
+		padding-left: 1.5rem;
+		margin: 1.5rem 5vw;
+	}
+</style>

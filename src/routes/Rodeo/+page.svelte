@@ -63,7 +63,7 @@
 	</tbody>
 </table>
 
-<h3>Seating Pricing</h3>
+<h2>Seating Pricing</h2>
 
 <section class="grid-Western">
 	<article class="blk-Western">
@@ -101,7 +101,7 @@
 	largest rodeo venues in the world.
 </p>
 
-<h3>XTREME BULLS PRICING</h3>
+<h2>XTREME BULLS PRICING</h2>
 
 <section class="blk-Western-grid">
 	<article class="blk-Western">

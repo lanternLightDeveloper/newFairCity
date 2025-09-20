@@ -25,11 +25,10 @@
 
 
 	/* 🦕  🦖🦖🦖 🦕 🦕 Boxes 💀= 💣 🌠 */
-.glass-Box {
-	background: var(--hallow);
-	backdrop-filter: blur(4px);
+.glass-Box { 
+	backdrop-filter: blur(8px);
 	--webkit-backdrop-filter: blur(1.5px);
-	
+	border: var(--bord);
 		border-radius: var(--rad-Sm);
 }
 

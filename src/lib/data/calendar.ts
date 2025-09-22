@@ -9,6 +9,8 @@ export type Event = {
 	link: string;
 };
 
+import imgRodeo from '$lib/imgs/rodeo.jpg';
+
 export const Events = [
 	{
 		date: '2025-09-26',
@@ -17,7 +19,7 @@ export const Events = [
 		location: 'Conference Room A',
 		time: '10:00 AM',
 		explanaition: 'A detailed meeting to discuss the upcoming project milestones and deliverables.',
-		img: 'words',
+		img: imgRodeo,
 		link: 'https://example.com/meeting'
 	},
 	{
@@ -27,7 +29,7 @@ export const Events = [
 		location: 'Online',
 		time: '5:00 PM',
 		explanation: 'All project submissions must be in by this date.',
-		img: 'words',
+		img: imgRodeo,
 		link: 'https://example.com/deadline'
 	},
 	{
@@ -37,7 +39,7 @@ export const Events = [
 		location: 'City Hall',
 		time: '12:00 PM',
 		explanation: 'A public holiday to celebrate independence.',
-		img: 'words',
+		img: imgRodeo,
 		link: 'https://example.com/independence'
 	}
 ];

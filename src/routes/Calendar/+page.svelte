@@ -146,8 +146,8 @@
 				<p><strong>Location:</strong> {event.location}</p>
 				<p>{event.description}</p>
 				<p>{event.explanation}</p>
+				<img src={` ${event.img}`} alt={event.title} />
 				<a href={event.link} target="_blank">More Info</a>
-				<img src={`/assets/${event.img}`} alt={event.title} />
 			</div>
 		{/each}
 	</div>

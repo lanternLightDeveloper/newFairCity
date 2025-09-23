@@ -1,5 +1,68 @@
 <script>
 	import BullRider from '$lib/imgs/bullRiderSilhouette2.png';
+
+	import Multipass from '$lib/imgs/multipass.png';
+
+	let rodeoEvents = [
+		{
+			name: 'Bareback Riding',
+			part1: 'The rider grips a rigging (like a suitcase handle) strapped to the horse.',
+			part2: 'Must “mark out” by keeping spurs above the horse’s shoulders on the first jump.',
+			part3: 'Judged on spurring technique and control during the 8-second ride.',
+			part4: 'Known for being the most physically punishing event.'
+		},
+		{
+			name: 'Saddle Bronc Riding',
+			part1: 'Rodeo’s classic event—riders use a specialized saddle and rein.',
+			part2: 'Must maintain rhythm and control while spurring in sync with the horse’s bucking.',
+			part3: 'Style and finesse matter as much as grit.'
+		},
+		{
+			name: 'Bull Riding',
+			part1: 'The rider holds onto a rope tied around a 2,000-pound bull.',
+			part2: 'Must stay on for 8 seconds using only one hand.',
+			part3: 'Scored on rider’s control and the bull’s intensity.',
+			part4: 'One of the most dangerous and crowd-thrilling events.'
+		},
+		{
+			name: 'Steer Wrestling',
+			part1: 'Also called “bulldogging.”',
+			part2: 'Rider jumps off a horse, grabs a steer by the horns, and wrestles it to the ground.',
+			part3:
+				'Requires strength, timing, and help from a “hazer” who keeps the steer running straight.'
+		},
+		{
+			name: 'Team Roping',
+			part1: 'Two riders: the “header” ropes the steer’s horns, the “heeler” ropes the hind legs.',
+			part2: 'Must work in perfect sync to stop the clock.',
+			part3: 'Combines speed, accuracy, and partnership.'
+		},
+		{
+			name: 'Tie-Down Roping',
+			part1: 'Rider ropes a calf, dismounts, and ties three of its legs.',
+			part2: 'Speed and precision are key.',
+			part3: 'The horse must stop and back up smoothly to keep tension on the rope.'
+		},
+		{
+			name: 'Breakaway Roping',
+			part1: 'A variation of tie-down roping, typically for women.',
+			part2: 'The rope is tied to the saddle horn with a string.',
+			part3: 'When the calf is roped, the string breaks—stopping the clock.',
+			part4: 'Fastest time wins.'
+		},
+		{
+			name: 'Barrel Racing',
+			part1: 'Rider races in a cloverleaf pattern around three barrels.',
+			part2: 'Fastest time wins, but knocking over a barrel adds a 5-second penalty.',
+			part3: 'Requires tight turns, explosive speed, and horse-rider harmony.'
+		}
+	];
+
+	let selectedEvent = $state(null);
+
+	function selectEvent(name) {
+		selectedEvent = rodeoEvents.find((e) => e.name === name);
+	}
 </script>
 
 <section
@@ -24,6 +87,9 @@
 		<p class="pointC"><strong>Event starts at 11:00 AM</strong></p>
 	</article>
 </section>
+<a href="/Extra/Tickets">
+	<button class="ticket-button"><img src={Multipass} alt="kitsap fair entry ticket" /></button>
+</a>
 
 <br />
 <section class="alert">
@@ -36,7 +102,7 @@
 </section>
 
 <p>All rodeo events will be live/streamed on the Cowboy Channel!</p>
-<p>Learn more about each event here. ​</p>
+<p>Clickan item to learn more about each event. ​</p>
 <table class="rodeo-events">
 	<thead>
 		<tr>
@@ -45,23 +111,34 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>Bareback Riding</td>
-			<td>Steer Wrestling</td>
+			<td onclick={() => selectEvent('Bareback Riding')}>Bareback Riding</td>
+			<td onclick={() => selectEvent('Steer Wrestling')}>Steer Wrestling</td>
 		</tr>
 		<tr>
-			<td>Team Roping</td>
-			<td>Tie-Down Roping</td>
+			<td onclick={() => selectEvent('Team Roping')}>Team Roping</td>
+			<td onclick={() => selectEvent('Tie-Down Roping')}>Tie-Down Roping</td>
 		</tr>
 		<tr>
-			<td>Saddle Bronc Riding</td>
-			<td>Barrel Racing</td>
+			<td onclick={() => selectEvent('Saddle Bronc Riding')}>Saddle Bronc Riding</td>
+			<td onclick={() => selectEvent('Barrel Racing')}>Barrel Racing</td>
 		</tr>
 		<tr>
-			<td>Break-Away Roping</td>
-			<td>Bull Riding</td>
+			<td onclick={() => selectEvent('Breakaway Roping')}>Breakaway Roping</td>
+			<td onclick={() => selectEvent('Bull Riding')}>Bull Riding</td>
 		</tr>
 	</tbody>
 </table>
+{#if selectedEvent}
+	<div class="event-details">
+		<h3>{selectedEvent.name}</h3>
+		<ul>
+			{#if selectedEvent.part1}<li>{selectedEvent.part1}</li>{/if}
+			{#if selectedEvent.part2}<li>{selectedEvent.part2}</li>{/if}
+			{#if selectedEvent.part3}<li>{selectedEvent.part3}</li>{/if}
+			{#if selectedEvent.part4}<li>{selectedEvent.part4}</li>{/if}
+		</ul>
+	</div>
+{/if}
 
 <h2>Seating Pricing</h2>
 
@@ -163,6 +240,35 @@
 		border-top: 1px dashed #d2691e;
 		color: var(--txt-2);
 		text-align: center;
+		cursor: pointer;
+		transition: background 0.2s ease;
+	}
+
+	.rodeo-events td:hover {
+		background-color: var(--hover);
+	}
+
+	.event-details {
+		margin-top: 20px;
+		padding: 12px;
+		background: var(--bg-2);
+		border: var(--bord);
+		border-radius: 6px;
+
+		& ul {
+			& li {
+				list-style: disc;
+				margin: 0.75rem;
+			}
+		}
+	}
+
+	.ticket-button {
+		all: unset;
+		cursor: pointer;
+		display: block;
+		margin: 1rem auto;
+		transition: transform 0.2s ease;
 	}
 
 	.alert {

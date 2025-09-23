@@ -5,6 +5,9 @@
 </script>
 
 <h1>Sponsors</h1>
+<a href="/Extra/SponsorGuide">
+	<button class="btn-Shadow"> Submit to sponsor </button>
+</a>
 
 <section class="blk-Western">
 	<h3>FAIR DAY SPONSORS</h3>
@@ -39,10 +42,9 @@
 	supporting our Fair and your community.​​
 </p>
 
-<section class="glass-flip-grid">
+<section class="sponsorSection">
 	{#each Sponsors as sponsor, i}
 		<div
-			class="glass-flip-card"
 			tabindex="0"
 			role="button"
 			aria-label={`Details for ${sponsor.label}`}
@@ -57,15 +59,54 @@
 				}
 			}}
 		>
-			<div class="glass-flip-inner" aria-hidden={open !== i}>
-				<div class="glass-front">
-					<h3>{sponsor.label}</h3>
+			<div aria-hidden={open !== i}>
+				<div>
+					<h2>{sponsor.label}</h2>
 					<p>{sponsor.info}</p>
-				</div>
-				<div class="glass-back">
 					<a href={testLink} target="_blank" rel="noopener">Visit Online Space</a>
 				</div>
 			</div>
 		</div>
 	{/each}
 </section>
+
+<style>
+	button {
+		& a {
+			all: unset;
+		}
+	}
+
+	.sponsorSection {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		gap: 16px;
+		margin-top: 20px;
+	}
+
+	.sponsorSection > div {
+		border-top: var(--bord-2);
+		padding: 12px;
+		transition: background 0.3s ease;
+	}
+
+	.sponsorSection > div:hover,
+	.sponsorSection > div:focus {
+		background-color: #f9f9f9;
+		outline: none;
+	}
+
+	.sponsorSection h2 {
+		margin: 0 0 8px;
+		font-size: 1.2rem;
+	}
+
+	.sponsorSection p {
+		margin: 0 0 8px;
+	}
+
+	.sponsorSection a {
+		color: #0077cc;
+		text-decoration: underline;
+	}
+</style>

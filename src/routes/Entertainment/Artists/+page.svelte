@@ -9,6 +9,8 @@
 
 <h2>Artists</h2>
 
+<p>Apply to perform at the Fair??</p>
+
 <div class="grid-5col">
 	{#each Artists as artist, i}
 		<article class="grid-content-box">

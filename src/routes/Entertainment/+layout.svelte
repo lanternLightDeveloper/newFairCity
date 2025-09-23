@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Schedule } from '$lib/data/entertainment';
 	import Plan from '$lib/imgs/planSilhouette2.png';
+	import Day from '$lib/imgs/daySilhouette.png';
 	import Barn from '$lib/imgs/barnSilhouette2.png';
 	import Stage from '$lib/imgs/stageSilhouette2.png';
 	let { children } = $props();
@@ -8,7 +9,8 @@
 
 <h1>Event schedules</h1>
 <nav class="entertainment-nav">
-	<a href="/Entertainment/FairSchedule"><img src={Plan} alt="schedule icon" /></a>
+	<a href="/Entertainment/Calendar"><img src={Plan} alt="schedule icon" /></a>
+	<a href="/Entertainment/FairSchedule"><img src={Day} alt="day icon" /></a>
 	<a href="/Entertainment/BarnSchedule"><img src={Barn} alt="barn icon" /></a>
 	<a href="/Entertainment/Artists"><img src={Stage} alt="stage icon" /></a>
 </nav>

@@ -20,8 +20,6 @@
 	// Optional: sort by index
 	imageEntries.sort((a, b) => a.index - b.index);
 
-	let selectedImage = $state(null);
-
 	let selectedIndex = $state(null);
 
 	function openImage(image) {

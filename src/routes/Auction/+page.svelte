@@ -24,6 +24,10 @@
 	</article>
 </section>
 
+<a href="/Extra/InfoSheets">
+	<button class="btn-Shadow"> Download Info Sheet </button>
+</a>
+
 <div class="glass-flip-grid">
 	<h2>Auction Basics</h2>
 	<div class="glass-flip-card">
@@ -82,8 +86,8 @@
 		<h3>How to Support</h3>
 		<article>
 			<p>Bid on an animal (in-person or online)</p>
-			<p>Make a donation</p>
-			<p>Submit an Add-On Form by August 23</p>
+			<a href="/Extra/infoSheets">Make a donation</a>
+			<a href="/Extra/infoSheets">Submit an Add-On Form by August 23</a>
 		</article>
 	</div>
 </section>

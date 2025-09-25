@@ -9,10 +9,8 @@
 	<a href="/Extra/SponsorGuide">Sponsor Guides</a>
 	<a href="/Extra/VendorGuide">Vendor Guides</a>
 </nav>
-
-<main>
-	{@render children()}
-</main>
+ 
+	{@render children()} 
 
 <!--svelte-ignore css_unused_selector -->
 <style>

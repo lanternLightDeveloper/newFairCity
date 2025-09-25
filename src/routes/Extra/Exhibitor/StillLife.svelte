@@ -77,7 +77,7 @@ Crafts & Hobbies, Home Arts, Art & Photography: <br> Sat & Sun, Aug. 9th-10th, 1
 
 
 
-<h2>Points of interest</h2>
+<h2>Entry Guides & Rules</h2>
 <section class="glass-flip-grid" style={`background-image: url('${backgroundImage}');`}>
 	{#each ExhibitorForms as formItems, i}
 		<div

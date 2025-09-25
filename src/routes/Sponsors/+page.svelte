@@ -100,7 +100,7 @@
 
 	.sponsorSection > div:hover,
 	.sponsorSection > div:focus {
-		background-color: #f9f9f9;
+		background-color: var(--txt-2);
 		color: var(--bg-1);
 		outline: none;
 	}

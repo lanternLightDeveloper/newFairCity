@@ -77,7 +77,8 @@
 
 	section > div:hover,
 	section > div:focus {
-		background-color: #f9f9f9;
+		background-color: var(--txt-2);
+		color: var(--bg-1);
 		outline: none;
 	}
 
@@ -89,9 +90,5 @@
 	section p {
 		margin: 0 0 8px;
 	}
-
-	section a {
-		color: #0077cc;
-		text-decoration: underline;
-	}
+ 
 </style>

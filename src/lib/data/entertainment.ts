@@ -1,3 +1,6 @@
+
+import imgRodeo from '$lib/imgs/entertainment.jpg';
+
 export type BarnDay = {
 	day: string;
 	events: string[];
@@ -241,6 +244,7 @@ export const Artists = [
 		teaser: 'Award-winning songwriter blending Miranda Lambert and Taylor Swift energy.',
 		website: 'https://aftonprater.com',
 		video: 'https://youtube.com/aftonprater',
+		img: imgRodeo,
 		description:
 			'Afton’s music is a mix of light-hearted fun, emotional depth, and “kick-ass” country. She’s won several awards and is quickly rising in the scene.'
 	},
@@ -250,6 +254,7 @@ export const Artists = [
 		teaser: 'Nu jazz & neo-soul meets fashion and wellness in immersive performances.',
 		website: 'https://avaxjade.com',
 		video: 'https://youtube.com/avaxjade',
+		img: imgRodeo,
 		description:
 			'Led by Angela Moorer, AVA X is a music, media, fashion, and wellness brand. Their projects INDIGO, BLUE, and JADE blend sound and experience.'
 	},
@@ -259,6 +264,7 @@ export const Artists = [
 		teaser: 'A tribute to underground bootleg tapes—raw, nostalgic, and unapologetically live.',
 		website: '',
 		video: '',
+		img: imgRodeo,
 		description:
 			'The Bootlegs channel the spirit of live recordings from the 70s and 80s, delivering gritty, authentic performances that feel like a time capsule.'
 	},
@@ -268,6 +274,7 @@ export const Artists = [
 		teaser: '“Red, White and Blue Collar” country—raw rock infused with fiddle and banjo.',
 		website: 'https://dakotapoorman.com',
 		video: 'https://youtube.com/dakotapoorman',
+		img: imgRodeo,
 		description:
 			'Dakota brings a fresh edge to the country scene with fiery fiddle, badass banjo, and rock ’n’ roll grit.'
 	},
@@ -277,6 +284,7 @@ export const Artists = [
 		teaser: 'Multi-instrumental trio with acoustic guitars, saxophone, and rich harmonies.',
 		website: 'https://fireandwater.ie',
 		video: 'https://youtube.com/fireandwater',
+		img: imgRodeo,
 		description:
 			'Chart-toppers in Ireland, Fire & Water blend genres with 3 unique voices and a signature sound. Their 2019 release “On Pana” hit #1.'
 	},
@@ -286,6 +294,7 @@ export const Artists = [
 		teaser: 'House band for Scottsdale’s Handlebar J—swing, line dance, and toe-tapping tunes.',
 		website: '',
 		video: 'https://youtube.com/herndonbrothers',
+		img: imgRodeo,
 		description:
 			'Whether you want to swing, line dance, or just tap your toes, this is the act not to miss.'
 	},
@@ -295,6 +304,7 @@ export const Artists = [
 		teaser: 'Genre-hopping quartet led by trumpeter Tracey D. Hooker—since 2005.',
 		website: 'https://hookmeupband.com',
 		video: 'https://youtube.com/hookmeupband',
+		img: imgRodeo,
 		description:
 			'Western Washington staple for pop, rock, jazz, Latin, and blues. Expect good tunes and good times.'
 	}

@@ -340,6 +340,42 @@
 }
 
 
+/* iTEM LIST STYLE */
+
+	.grid-List {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		gap: var(--size-4);
+		margin-top: var(--size-4);
+
+	& h2 {
+		margin: 0 0 8px 0;
+		font-size: var(--size-6);
+	}
+
+	& p {
+		margin: 0 0 8px 0;
+	}
+
+	& a {
+		color: #0077cc;
+		text-decoration: underline;
+	}
+	}
+
+	.grid-List > div {
+		border-top: var(--bord-2);
+		padding: 12px;
+		transition: background 0.3s ease;
+	}
+
+	.grid-List > div:hover,
+	.grid-List > div:focus {
+		background-color: var(--txt-2);
+		color: var(--bg-1); 
+	} 
+
+
 	/* 🦕  🦖🦖🦖 🦕 🦕 Extras  💀= 💣 🌠 */
 
 /* Opacity for depth */

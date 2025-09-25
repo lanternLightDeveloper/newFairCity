@@ -6,6 +6,7 @@
 	import img3 from '$lib/imgs/3.jpg';
 	import img4 from '$lib/imgs/4.jpg';
 	import img5 from '$lib/imgs/5.jpg';
+	import KCU from '$lib/imgs/kcuCard.png';
 
 	import Multipass from '$lib/imgs/multipass.png';
 
@@ -93,7 +94,9 @@
 				Fri/Sat: 10am–10pm<br />
 				Sun: 10am–6pm
 			</p>
-			<button class="btn-Shadow">Full Event</button>
+			<a href="/Entertainment/FairSchedule">
+				<button class="btn-Shadow">Full Event</button>
+			</a>
 		</article>
 	</section>
 </header>
@@ -103,11 +106,18 @@
 	<!-- <p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p> -->
 </aside>
 
-<section><p>Kitsap credit union members can recieve a discount on admission:</p></section>
+ <section
+		style={`background-image: url(${KCU});`}
+		class ="kcu-banner"
+	><p>Kitsap credit union members can recieve a discount on admission:</p>
 
-<div class="center-wrapper">
-	<button class="btn-Shadow">Click Me</button>
+	<div class="center-wrapper">
+		<a href="/Extra/Tickets">
+			<button class="btn-Ghost">Click Me</button>
+		</a>
 </div>
+</section>
+ 
 
 <main class="content">
 	<section
@@ -123,7 +133,9 @@
 			Thompson Square Concert: Sat 7:00pm
 		</p>
 		<div class="center-wrapper">
-			<button class="btn-Shadow">Full Event</button>
+						<a href="/Entertainment/FairSchedule">
+							<button class="btn-Ghost">Full Event</button>
+						</a> 
 		</div>
 	</section>
 
@@ -157,41 +169,38 @@
 			</div>
 		{/each}
 	</section>
+ 
 
-	<section class="sponsors">
-		<h2>Fair Day Sponsors</h2>
-		<ul>
-			<li><strong>Wed:</strong> Joyce Construction</li>
-			<li>
-				<strong>Thu:</strong> Military Recognition — Geico Local
-				<em>(Discount all week long)</em>
-			</li>
-			<li><strong>Fri:</strong> Kitsap Credit Union</li>
-			<li><strong>Sat:</strong> Haselwood Auto Group (Kids Free!)</li>
-			<li><strong>Sun:</strong> Kitsap Credit Union (Seniors Free!)</li>
-		</ul>
-	</section>
+	
+<section class="blk-Western">
+	<h3>FAIR DAY SPONSORS</h3>
+	<p class="pointD">Wednesday: Opening at the Fair proudly sponsored by Joyce Construction</p>
+	<p class="pointD">Thursday: Military Day proudly sponsored by Geico</p>
+	<p class="pointD">Friday: Day at the Fair proudly sponsored by Kitsap Credit Union</p>
+	<p class="pointD">
+		Saturday: Kids Day at the Fair – Kids 12 and under come to the Fair free! proudly sponsored by
+		Haselwood Auto Group
+	</p>
+	<p class="pointD">
+		Sunday: Senior Day at the Fair – 62 and older come to the Fair free! proudly sponsored by Kitsap
+		Credit Union
+	</p>
+</section>
+<br />
+<section class="blk-Western" 
+		style={`background-image: url(${Horse}); background-size: cover; background-position: center;`}>
+	<h3>KITSAP STAMPEDE SPONSORS</h3>
+	<p class="pointD">Wednesday: Opening Night proudly sponsored by Agate Asphalt</p>
+	<p class="pointD">
+		Thursday: Patriot Night proudly sponsored by Virginia Mason Franciscan Health
+	</p>
+	<p class="pointD">Friday: Tough Enough to Wear Pink proudly sponsored Kitsap Credit Union</p>
+	<p class="pointD">Saturday: Kids Day proudly sponsored by Haselwood Auto Group</p>
 
-	<section
-		class="sponsors"
-		style={`background-image: url(${Horse}); background-size: cover; background-position: center;`}
-	>
-		<h2>Kitsap Stampede Sponsors</h2>
-		<ul>
-			<li><strong>Wed:</strong> Agate Asphalt</li>
-			<li><strong>Thu:</strong> Virginia Mason Franciscan Health</li>
-			<li><strong>Fri:</strong> Kitsap Credit Union (Pink Day)</li>
-			<li><strong>Sat:</strong> Haselwood Auto Group</li>
-		</ul>
-	</section>
+	<h2 class="pointC">XTREME BULLS SPONSOR</h2>
+	<p class="pointD">Sunday: proudly sponsored by Hanley Construction</p>
+</section>
 
-	<section class="sponsors">
-		<h2>Xtreme Bulls Sponsor</h2>
-		<ul>
-			<li><strong>Sun:</strong> Hanley Construction</li>
-		</ul>
-	</section>
-</main>
 
 <aside class="notice">
 	<p>
@@ -200,6 +209,9 @@
 		Comfort/emotional support animals are not service animals.
 	</p>
 </aside>
+</main>
+
+
 
 <footer class="footer">
 	<p><strong>Theme Contest:</strong> Submit your 2026 theme idea & win a family pass + T-shirt!</p>
@@ -283,8 +295,8 @@
 		padding: 0;
 		margin: 0;
 		display: flex;
-		justify-content: center; /* horizontal center */
-		align-items: center; /* vertical center */
+		justify-content: center; 
+		align-items: center; 
 	}
 
 	.alert {
@@ -292,6 +304,25 @@
 		padding: 1rem;
 		font-weight: 600;
 		text-align: center;
+	}
+
+	.kcu-banner { 
+		background-size: cover;
+		background-position: center;
+		background-size: 90%;
+		background-repeat: no-repeat;
+		height: 300px;
+		padding: 1rem;
+		text-align: center;
+		font-weight: 600;
+		color: var(--txt-2);
+		background-blend-mode: multiply;
+		background-color: rgba(0, 0, 0, 0.5);
+
+		& p {
+			margin-top: 100px;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+		}
 	}
 
 	.nav {
@@ -340,11 +371,8 @@
 	}
 
 	.content {
-		padding: 1rem;
-	}
-
-	h2 {
-		border-top: var(--bord);
+		padding: 0;
+		margin: 0;
 	}
 
 	.sponsors {

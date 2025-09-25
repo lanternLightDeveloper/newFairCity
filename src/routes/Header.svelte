@@ -7,7 +7,7 @@
 		{ label: 'Home', href: '/', id: 1, degree: 0 },
 		{ label: 'Sponsors', href: '/Sponsors', id: 2, degree: 36 },
 		{ label: 'Rodeo', href: '/Rodeo', id: 3, degree: 72 },
-		{ label: 'Entertainment', href: '/Entertainment/FairSchedule', id: 4, degree: 108 },
+		{ label: 'Entertainment', href: '/Entertainment/Calendar', id: 4, degree: 108 },
 		{ label: 'Carnival', href: '/Carnival', id: 5, degree: 144 },
 		{ label: 'Auction', href: '/Auction', id: 6, degree: 180 },
 		{ label: 'Food', href: '/Food', id: 7, degree: 216 },
@@ -16,20 +16,16 @@
 		{ label: 'Extra', href: '/Extra', id: 10, degree: 324 }
 	];
 
-	function navigateTo(href) {
-		console.log('navigate', href);
-	}
-
 	let rotation = $derived.by(() => {
 		const selected = menuItems.find((item) => item.id === current);
 		return selected ? -selected.degree : 0;
 	});
 
+	let showScrollButton = $state(false);
+
 	function scrollToTop() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
-
-	let showScrollButton = $state(false);
 
 	function handleScroll() {
 		const scrollY = window.scrollY;
@@ -47,11 +43,11 @@
 	<button class="center-toggle" onclick={() => (isMenuOpen = !isMenuOpen)}>
 		{isMenuOpen ? '✕' : '☰'}
 	</button>
-	<div class="position-ring" style={`transform: rotate(${rotation}deg);`}>
+	<div class="position-ring" style={`transform: rotate(${rotation}deg) ;`}>
 		{#each menuItems as item, i}
 			<div
 				class="menu-dot"
-				style={`transform: rotate(${(360 / menuItems.length) * i}deg) translate(7rem);`}
+				style={`transform: rotate(${(360 / menuItems.length) * i}deg) translate(6rem) ;`}
 			>
 				<a
 					href={item.href}
@@ -59,7 +55,6 @@
 					onclick={() => {
 						current = item.id;
 						isMenuOpen = false;
-						navigateTo(item.href);
 					}}
 				>
 					<div class="dot-circle">
@@ -72,6 +67,7 @@
 		{/each}
 	</div>
 </div>
+
 {#if showScrollButton}
 	<button class="scroll-top-button" onclick={scrollToTop}> ↑ </button>
 {/if}
@@ -100,9 +96,9 @@
 
 	.position-ring {
 		position: absolute;
-		top: 51%;
-		left: 43%;
-		/* transform: translate(-50%, -50%); */
+		top: 48%;
+		left: 45%;
+		transform: translate(-50%, -50%);
 		transition: transform 0.4s ease;
 	}
 
@@ -157,6 +153,7 @@
 		color: var(--accent-1);
 		font-weight: bold;
 	}
+
 	.scroll-top-button {
 		position: fixed;
 		bottom: 1rem;

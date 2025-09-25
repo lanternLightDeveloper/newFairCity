@@ -5,9 +5,13 @@
 </script>
 
 <h1>Sponsors</h1>
-<a href="/Extra/SponsorGuide">
-	<button class="btn-Shadow"> Submit to sponsor </button>
-</a>
+ 
+
+	<div class="center-wrapper">
+		<a href="/Extra/SponsorGuide">
+<button class="btn-Ghost"> Submit to sponsor </button>
+		</a>
+</div>
 
 <section class="blk-Western">
 	<h3>FAIR DAY SPONSORS</h3>
@@ -75,6 +79,14 @@
 		& a {
 			all: unset;
 		}
+	}
+
+		.center-wrapper {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center; 
+		align-items: center; 
 	}
 
 	.sponsorSection {

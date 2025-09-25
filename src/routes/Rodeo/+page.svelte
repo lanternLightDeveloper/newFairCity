@@ -102,7 +102,7 @@
 </section>
 
 <p>All rodeo events will be live/streamed on the Cowboy Channel!</p>
-<p>Clickan item to learn more about each event. ​</p>
+<p>Click an item to learn more about each event. ​</p>
 <table class="rodeo-events">
 	<thead>
 		<tr>
@@ -180,7 +180,7 @@
 
 <h2>XTREME BULLS PRICING</h2>
 
-<section class="blk-Western-grid">
+<section class="grid-Western">
 	<article class="blk-Western">
 		<h3>Uncovered Seating</h3>
 
@@ -249,7 +249,8 @@
 	}
 
 	.event-details {
-		margin-top: 20px;
+		margin: 20px 5vw;
+		width: 90vw;
 		padding: 12px;
 		background: var(--bg-2);
 		border: var(--bord);
@@ -258,7 +259,7 @@
 		& ul {
 			& li {
 				list-style: disc;
-				margin: 0.75rem;
+				margin: 0.5rem;
 			}
 		}
 	}

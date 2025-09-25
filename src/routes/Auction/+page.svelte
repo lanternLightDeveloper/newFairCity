@@ -24,8 +24,8 @@
 	</article>
 </section>
 
-<a href="/Extra/InfoSheets">
-	<button class="btn-Shadow"> Download Info Sheet </button>
+<a href="/Extra/InfoSheets"  class="center-wrapper">
+	<button class="btn-Ghost"> Download Info Sheet </button>
 </a>
 
 <div class="glass-flip-grid">
@@ -97,4 +97,14 @@
 	.glass-front {
 		color: var(--bg-1);
 	}
+
+	
+	.center-wrapper {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center; 
+		align-items: center; 
+	}
+
 </style>

@@ -1,5 +1,4 @@
-<script lang="ts">
-	import { Schedule } from '$lib/data/entertainment';
+<script lang="ts"> 
 	import Plan from '$lib/imgs/planSilhouette2.png';
 	import Day from '$lib/imgs/daySilhouette.png';
 	import Barn from '$lib/imgs/barnSilhouette2.png';
@@ -31,19 +30,16 @@
 		color: var(--accent-1);
 		border-bottom: var(--bord);
 		font-weight: 500;
+		margin-bottom: 2vh;
 
 		& img {
-			width: var(--size-10);
+			width: var(--size-9);
 			background-color: var(--hallow-2);
 		}
 
-		&:hover {
+		&:hover, &:active {
 			background-color: var(--hover);
 			border-bottom: var(--bord-2);
-
-			& img {
-				background-color: var(--hallow-1);
-			}
 		}
 	}
 </style>

@@ -44,9 +44,9 @@
 	}
 
 	.card-header {
-		width: 100%;
+		width: 80vw;
 		background: var(--bg-2);
-		margin-top: 1vh;
+		margin: 1vh;
 		padding: 0.75rem 1rem;
 		text-align: left;
 		border-radius: var(--rad-Sm);
@@ -56,17 +56,17 @@
 	}
 
 	.card-content {
-		width: 100%;
+		width: 80vw;
 		background: var(--bg-2);
 		margin-top: 1vh;
 		text-align: left;
 		border-radius: var(--rad-Sm);
-		padding: 0.25rem 0.25rem;
+		border: var(--bord);
+		padding: 0.25rem ;
 
 		& p {
 			padding: 0.5rem 0;
 			margin: 0.5rem 0;
-
 			border-bottom: 1px dashed var(--border-color);
 		}
 

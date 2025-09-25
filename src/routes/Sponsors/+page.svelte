@@ -67,7 +67,7 @@
 				<div>
 					<h2>{sponsor.label}</h2>
 					<p>{sponsor.info}</p>
-					<a href={testLink} target="_blank" rel="noopener">Visit Online Space</a>
+					<a href={testLink} target="_blank" rel="noopener"> Visit site</a>
 				</div>
 			</div>
 		</div>
@@ -75,11 +75,7 @@
 </section>
 
 <style>
-	button {
-		& a {
-			all: unset;
-		}
-	}
+ 
 
 		.center-wrapper {
 		padding: 0;
@@ -105,6 +101,7 @@
 	.sponsorSection > div:hover,
 	.sponsorSection > div:focus {
 		background-color: #f9f9f9;
+		color: var(--bg-1);
 		outline: none;
 	}
 

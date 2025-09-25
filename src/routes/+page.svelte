@@ -200,15 +200,7 @@
 	<h2 class="pointC">XTREME BULLS SPONSOR</h2>
 	<p class="pointD">Sunday: proudly sponsored by Hanley Construction</p>
 </section>
-
-
-<aside class="notice">
-	<p>
-		No Pets Allowed<br />
-		Service animals are welcome.<br />
-		Comfort/emotional support animals are not service animals.
-	</p>
-</aside>
+ 
 </main>
 
 

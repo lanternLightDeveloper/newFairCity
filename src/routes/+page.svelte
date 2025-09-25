@@ -30,10 +30,7 @@
 
 	function next() {
 		index = (index + 1) % total;
-	}
-	function prev() {
-		index = (index - 1 + total) % total;
-	}
+	} 
 
 	const intervalMs = 5000;
 
@@ -42,11 +39,7 @@
 		const id = setInterval(next, intervalMs);
 		return () => clearInterval(id);
 	});
-
-	function onKeydown(e) {
-		if (e.key === 'ArrowRight') next();
-		if (e.key === 'ArrowLeft') prev();
-	}
+	
 
 	let items = [
 		{ label: 'Rodeo & Bulls', href: '/Rodeo', img: imgRodeo },
@@ -169,38 +162,35 @@
 			</div>
 		{/each}
 	</section>
- 
-
 	
-<section class="blk-Western">
-	<h3>FAIR DAY SPONSORS</h3>
-	<p class="pointD">Wednesday: Opening at the Fair proudly sponsored by Joyce Construction</p>
-	<p class="pointD">Thursday: Military Day proudly sponsored by Geico</p>
-	<p class="pointD">Friday: Day at the Fair proudly sponsored by Kitsap Credit Union</p>
-	<p class="pointD">
-		Saturday: Kids Day at the Fair – Kids 12 and under come to the Fair free! proudly sponsored by
-		Haselwood Auto Group
-	</p>
-	<p class="pointD">
-		Sunday: Senior Day at the Fair – 62 and older come to the Fair free! proudly sponsored by Kitsap
-		Credit Union
-	</p>
-</section>
-<br />
-<section class="blk-Western" 
-		style={`background-image: url(${Horse}); background-size: cover; background-position: center;`}>
-	<h3>KITSAP STAMPEDE SPONSORS</h3>
-	<p class="pointD">Wednesday: Opening Night proudly sponsored by Agate Asphalt</p>
-	<p class="pointD">
-		Thursday: Patriot Night proudly sponsored by Virginia Mason Franciscan Health
-	</p>
-	<p class="pointD">Friday: Tough Enough to Wear Pink proudly sponsored Kitsap Credit Union</p>
-	<p class="pointD">Saturday: Kids Day proudly sponsored by Haselwood Auto Group</p>
+	<section class="blk-Western">
+		<h3>FAIR DAY SPONSORS</h3>
+		<p class="pointD">Wednesday: Opening at the Fair proudly sponsored by Joyce Construction</p>
+		<p class="pointD">Thursday: Military Day proudly sponsored by Geico</p>
+		<p class="pointD">Friday: Day at the Fair proudly sponsored by Kitsap Credit Union</p>
+		<p class="pointD">
+			Saturday: Kids Day at the Fair – Kids 12 and under come to the Fair free! proudly sponsored by
+			Haselwood Auto Group
+		</p>
+		<p class="pointD">
+			Sunday: Senior Day at the Fair – 62 and older come to the Fair free! proudly sponsored by Kitsap
+			Credit Union
+		</p>
+	</section>
+	<br />
+	<section class="blk-Western" 
+			style={`background-image: url(${Horse}); background-size: cover; background-position: center;`}>
+		<h3>KITSAP STAMPEDE SPONSORS</h3>
+		<p class="pointD">Wednesday: Opening Night proudly sponsored by Agate Asphalt</p>
+		<p class="pointD">
+			Thursday: Patriot Night proudly sponsored by Virginia Mason Franciscan Health
+		</p>
+		<p class="pointD">Friday: Tough Enough to Wear Pink proudly sponsored Kitsap Credit Union</p>
+		<p class="pointD">Saturday: Kids Day proudly sponsored by Haselwood Auto Group</p>
 
-	<h2 class="pointC">XTREME BULLS SPONSOR</h2>
-	<p class="pointD">Sunday: proudly sponsored by Hanley Construction</p>
-</section>
- 
+		<h2 class="pointC">XTREME BULLS SPONSOR</h2>
+		<p class="pointD">Sunday: proudly sponsored by Hanley Construction</p>
+	</section>
 </main>
 
 
@@ -216,7 +206,6 @@
 	</p>
 </footer>
 
-<!--svelte-ignore css_unused_selector -->
 <style>
 	header {
 		background-color: var(--bg-1);
@@ -261,17 +250,17 @@
 		position: absolute;
 		text-align: center;
 		width: 100%;
-		height: 100vh; /* full viewport height */
-		inset: 0; /* top:0; right:0; bottom:0; left:0 */
+		height: 100vh;  
+		inset: 0;  
 	}
 
 	.slide {
 		width: 100%;
 		height: 100%;
-		background-size: cover; /* fill space */
+		background-size: cover;  
 		background-repeat: no-repeat;
-		background-position: left center; /* start from left */
-		animation: pan 25s linear forwards infinite; /* pan effect */
+		background-position: left center;  
+		animation: pan 25s linear forwards infinite; 
 	}
 
 	@keyframes pan {
@@ -289,13 +278,6 @@
 		display: flex;
 		justify-content: center; 
 		align-items: center; 
-	}
-
-	.alert {
-		background: var(--accent-2);
-		padding: 1rem;
-		font-weight: 600;
-		text-align: center;
 	}
 
 	.kcu-banner { 
@@ -317,68 +299,15 @@
 		}
 	}
 
-	.nav {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background: var(--txt-1);
-		border: none;
-		font-size: 2rem;
-		cursor: pointer;
-		padding: 0.1rem 0.75rem;
-		border-radius: 50%;
-	}
-	.nav.prev {
-		left: 0.5rem;
-	}
-	.nav.next {
-		right: 0.5rem;
-	}
-
-	.dots {
-		display: flex;
-		justify-content: center;
-		gap: 0.5rem;
-		padding: 0.5rem;
-	}
-	.dots button {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		border: none;
-		background: var(--hover);
-	}
-	.dots button.selected {
-		background: var(--accent-2);
-	}
-
-	.notice {
-		margin-top: var(--size-3);
-		background: var(--accent-1);
-		padding: 1rem;
-		text-align: center;
-		font-size: 0.9rem;
-		border-top: var(--bord);
-		border-bottom: var(--bord);
-	}
-
 	.content {
 		padding: 0;
 		margin: 0;
 	}
 
-	.sponsors {
-		padding-left: 1.25rem;
-	}
-	.sponsors li {
-		margin: 0.5rem 0;
-	}
-
 	footer {
 		text-align: center;
 		padding: 1rem;
-		background: #222;
-		color: #fff;
+		background: var(--bg-2); 
 		margin-top: 2rem;
 	}
 

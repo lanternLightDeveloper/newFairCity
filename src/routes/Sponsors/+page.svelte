@@ -5,11 +5,9 @@
 </script>
 
 <h1>Sponsors</h1>
- 
-
 	<div class="center-wrapper">
 		<a href="/Extra/SponsorGuide">
-<button class="btn-Ghost"> Submit to sponsor </button>
+			<button class="btn-Ghost"> Submit to be a sponsor today!</button>
 		</a>
 </div>
 
@@ -46,7 +44,7 @@
 	supporting our Fair and your community.​​
 </p>
 
-<section class="sponsorSection">
+<section class="grid-List">
 	{#each Sponsors as sponsor, i}
 		<div
 			tabindex="0"
@@ -73,49 +71,3 @@
 		</div>
 	{/each}
 </section>
-
-<style>
- 
-
-		.center-wrapper {
-		padding: 0;
-		margin: 0;
-		display: flex;
-		justify-content: center; 
-		align-items: center; 
-	}
-
-	.sponsorSection {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-		gap: 16px;
-		margin-top: 20px;
-	}
-
-	.sponsorSection > div {
-		border-top: var(--bord-2);
-		padding: 12px;
-		transition: background 0.3s ease;
-	}
-
-	.sponsorSection > div:hover,
-	.sponsorSection > div:focus {
-		background-color: var(--txt-2);
-		color: var(--bg-1);
-		outline: none;
-	}
-
-	.sponsorSection h2 {
-		margin: 0 0 8px;
-		font-size: 1.2rem;
-	}
-
-	.sponsorSection p {
-		margin: 0 0 8px;
-	}
-
-	.sponsorSection a {
-		color: #0077cc;
-		text-decoration: underline;
-	}
-</style>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Rodeo from '$lib/imgs/3.jpg';
-
 	import HorseRide from '$lib/imgs/caroselSilhouette2.png';
 </script>
 
@@ -85,21 +84,5 @@
 	.carnival-hero p {
 		font-size: 1.2rem;
 		margin-bottom: 1rem;
-	}
-
-	.cta-button {
-		display: inline-block;
-		background: #8b0000;
-		color: #fff;
-		padding: 0.6rem 1.2rem;
-		border-radius: 8px;
-		text-decoration: none;
-		font-weight: bold;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-		transition: background 0.3s ease;
-	}
-
-	.cta-button:hover {
-		background: #a52a2a;
 	}
 </style>

@@ -52,13 +52,23 @@
 
 <footer>
 	<section>
-			<button class="btn-Ghost" type="button" onclick={() => (photoDisclaimer = true)} aria-label="View photo disclaimer">
-				Photo Disclaimer
-			</button>
+		<button
+			class="btn-Ghost"
+			type="button"
+			onclick={() => (photoDisclaimer = true)}
+			aria-label="View photo disclaimer"
+		>
+			Photo Disclaimer
+		</button>
 
-			<button class="btn-Ghost" type="button" onclick={() => (petDisclaimer = true)} aria-label="View pet disclaimer">
-				Pet Disclaimer
-			</button>
+		<button
+			class="btn-Ghost"
+			type="button"
+			onclick={() => (petDisclaimer = true)}
+			aria-label="View pet disclaimer"
+		>
+			Pet Disclaimer
+		</button>
 	</section>
 
 	<p>
@@ -69,56 +79,55 @@
 <!-- svelte-ignore css_unused_selector -->
 <style>
 	footer {
-    background-color: var(--bg-2);
-    color: var(--txt-1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    padding: 1rem;
-    gap: 0.5rem;
-}
+		background-color: var(--bg-2);
+		color: var(--txt-1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		padding: 1rem;
+		gap: 0.5rem;
+	}
 
-footer section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
+	footer section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+		margin-bottom: 0.5rem;
+	}
 
-footer section button {
-    padding: 0.5rem 1rem;
-    font-size: var(--size-4);
-    border: 1px solid var(--txt-1);
-    background-color: transparent;
-    color: var(--txt-1);
-    border-radius: var(--rad-Sm);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
+	footer section button {
+		padding: 0.5rem 1rem;
+		font-size: var(--size-4);
+		border: 1px solid var(--txt-1);
+		background-color: transparent;
+		color: var(--txt-1);
+		border-radius: var(--rad-Sm);
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+	}
 
-footer section button:hover {
-    background-color: var(--hover);
-    color: #fff;
-}
+	footer section button:hover {
+		background-color: var(--hover);
+		color: #fff;
+	}
 
-footer p {
-    text-align: center;
-    font-size: var(--size-4);
-    margin: 0.5rem 0;
-}
+	footer p {
+		text-align: center;
+		font-size: var(--size-4);
+		margin: 0.5rem 0;
+	}
 
-footer a {
-    color: var(--hover);
-    text-decoration: none;
-}
+	footer a {
+		color: var(--hover);
+		text-decoration: none;
+	}
 
-footer a:hover {
-    text-decoration: underline;
-}
-
+	footer a:hover {
+		text-decoration: underline;
+	}
 
 	@media only screen and (min-width: 980px) {
 		p {
@@ -141,14 +150,15 @@ footer a:hover {
 
 	.modal-content {
 		background: var(--txt-2);
+		border: var(--bord);
 		padding: 1rem;
 		max-width: 90vw;
-		max-height: 80vh;
+		max-height: 90vh;
 		overflow-y: auto;
 		text-align: center;
 
 		& .btn-Ghost {
-	color: var(--bg-1);
-}
+			color: var(--bg-1);
+		}
 	}
 </style>

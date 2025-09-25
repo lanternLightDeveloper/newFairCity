@@ -1,6 +1,5 @@
 <script>
 	import BullRider from '$lib/imgs/bullRiderSilhouette2.png';
-
 	import Multipass from '$lib/imgs/multipass.png';
 
 	let rodeoEvents = [
@@ -227,17 +226,16 @@
 	}
 
 	.rodeo-events th {
-		background-color: oklch(39.984% 0.16408 29.223);
-		border-radius: var(--rad-Sm) 0;
-		color: #fff;
-		padding: 0.75rem;
-		font-size: 1rem;
+		background-color: var(--accent-2);
+		border-radius: var(--rad-Sm) 0; 
+		padding: var(--size-4);
+		font-size:var(--size-6);
 		text-transform: uppercase;
 	}
 
 	.rodeo-events td {
-		padding: 0.6rem;
-		border-top: 1px dashed #d2691e;
+		padding: var(--size-3);
+		border-top: var(--bord-2);
 		color: var(--txt-2);
 		text-align: center;
 		cursor: pointer;
@@ -254,7 +252,7 @@
 		padding: 12px;
 		background: var(--bg-2);
 		border: var(--bord);
-		border-radius: 6px;
+		border-radius: var(--rad-Sm);
 
 		& ul {
 			& li {
@@ -272,10 +270,4 @@
 		transition: transform 0.2s ease;
 	}
 
-	.alert {
-		background: var(--accent-2);
-		padding: 1rem;
-		font-weight: 600;
-		text-align: center;
-	}
 </style>

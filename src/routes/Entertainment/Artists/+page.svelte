@@ -15,41 +15,39 @@
 	{#each Artists as artist, i}
 		<article class="grid-content-box" style={`background-image: url(${artist.img});  `}>
 			<div class="filter">
-
 				<header>
 					<h3 id={`artist-title-${i}`}>
 						{artist.name}
-					<span class="genre-tag">{artist.genre}</span>
-				</h3>
-				<p class="teaser">{artist.teaser}</p>
-				{#if artist.website}
-					<p><a href={artist.website} target="_blank" rel="noopener">Visit Website</a></p>
+						<span class="genre-tag">{artist.genre}</span>
+					</h3>
+					<p class="teaser">{artist.teaser}</p>
+					{#if artist.website}
+						<p><a href={artist.website} target="_blank" rel="noopener">Visit Website</a></p>
 					{/if}
 					<button
-					class="toggle-details"
-					onclick={() => toggleArtistCard(i)}
-					aria-expanded={openArtistCard === i}
-					aria-controls={`artist-details-${i}`}
-					aria-labelledby={`artist-title-${i}`}
-				>
-					{openArtistCard === i ? 'Hide Details' : 'Show Details'}
-				</button>
-			</header>
-
-			{#if openArtistCard === i}
-				<div
-					class="card-details"
-					id={`artist-details-${i}`}
-
-					role="region"
-					aria-labelledby={`artist-title-${i}`}
+						class="toggle-details"
+						onclick={() => toggleArtistCard(i)}
+						aria-expanded={openArtistCard === i}
+						aria-controls={`artist-details-${i}`}
+						aria-labelledby={`artist-title-${i}`}
 					>
-					<p>{artist.description}</p>
-					<!-- <img src="{artist.img}" alt=" {artist.name} image" loading="lazy" /> -->
-					{#if artist.video}
-					<p><a href={artist.video} target="_blank" rel="noopener">Watch Video</a></p>
-					{/if}
-				</div>
+						{openArtistCard === i ? 'Hide Details' : 'Show Details'}
+					</button>
+				</header>
+
+				{#if openArtistCard === i}
+					<div
+						class="card-details"
+						id={`artist-details-${i}`}
+						role="region"
+						aria-labelledby={`artist-title-${i}`}
+					>
+						<p>{artist.description}</p>
+						<!-- <img src="{artist.img}" alt=" {artist.name} image" loading="lazy" /> -->
+						{#if artist.video}
+							<p><a href={artist.video} target="_blank" rel="noopener">Watch Video</a></p>
+						{/if}
+					</div>
 				{/if}
 			</div>
 		</article>
@@ -67,10 +65,10 @@
 		margin: 0;
 		padding: 0;
 	}
- 
+
 	.grid-content-box {
-			padding: 0;
-			margin: 0;
+		padding: 0;
+		margin: 0 5vw;
 		border-radius: var(--rad-Sm);
 		text-align: left;
 		border: var(--bord);
@@ -78,7 +76,7 @@
 			box-shadow 0.3s ease,
 			transform 0.2s ease;
 		cursor: pointer;
-		background-size: cover; 
+		background-size: cover;
 		background-position: center;
 
 		.filter {
@@ -98,7 +96,7 @@
 	}
 
 	.grid-content-box h3 {
-		padding: 0.5rem 1rem ;
+		padding: 0.5rem 1rem;
 		margin: 0 0 0.5rem;
 		font-size: 1.25rem;
 		display: flex;
@@ -108,7 +106,7 @@
 
 	.genre-tag {
 		background: var(--accent-1, #4caf50);
-		padding:0.5rem 1rem;
+		padding: 0.5rem 1rem;
 		color: white;
 		padding: 0.25rem 0.5rem;
 		border-radius: 6px;
@@ -132,7 +130,8 @@
 		color: var(--txt-2, #444);
 	}
 
-	a, button {
+	a,
+	button {
 		padding: 0.5rem 1rem;
 		color: var(--accent-1);
 		text-decoration: underline;

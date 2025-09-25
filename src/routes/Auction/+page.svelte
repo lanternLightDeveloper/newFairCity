@@ -24,8 +24,8 @@
 	</article>
 </section>
 
-<a href="/Extra/InfoSheets"  class="center-wrapper">
-	<button class="btn-Ghost"> Download Info Sheet </button>
+<a href="/Extra/InfoSheets" class="center-wrapper">
+	<button class="btn-Ghost"> Download The Information Sheet </button>
 </a>
 
 <div class="glass-flip-grid">
@@ -94,17 +94,11 @@
 
 <!--svelte-ignore css_unused_selector -->
 <style>
+	.btn-Ghost {
+		margin-top: var(--size-8);
+	}
+
 	.glass-front {
 		color: var(--bg-1);
 	}
-
-	
-	.center-wrapper {
-		padding: 0;
-		margin: 0;
-		display: flex;
-		justify-content: center; 
-		align-items: center; 
-	}
-
 </style>

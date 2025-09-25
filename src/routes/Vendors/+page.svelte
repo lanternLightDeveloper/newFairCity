@@ -7,7 +7,7 @@
 
 <p>THE LISTING BELOW IS IN ALPHABETICAL ORDER, AND DOES NOT INDICATE BOOTH PLACEMENT.</p>
 
-<section>
+<section class="grid-List">
 	<h3>Outside</h3>
 	{#each OutdoorCommercial as item, i}
 		<div
@@ -60,35 +60,3 @@
 		</div>
 	{/each}
 </section>
-
-<style>
-	section {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-		gap: 16px;
-		margin-top: 20px;
-	}
-
-	section > div {
-		border-top: var(--bord-2);
-		padding: 12px;
-		transition: background 0.3s ease;
-	}
-
-	section > div:hover,
-	section > div:focus {
-		background-color: var(--txt-2);
-		color: var(--bg-1);
-		outline: none;
-	}
-
-	section h2 {
-		margin: 0 0 8px;
-		font-size: 1.2rem;
-	}
-
-	section p {
-		margin: 0 0 8px;
-	}
- 
-</style>

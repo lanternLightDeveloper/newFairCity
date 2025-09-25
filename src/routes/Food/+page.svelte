@@ -6,7 +6,7 @@
 
 <h1>Food</h1>
 
-<p>
+<p class="notice">
 	​​*Indicates this concessionaire is only located on the arena side but no event ticket is required
 	unless an event is occurring in the arena. ​**Indicates this concessionaire is only located on the
 	arena side and an event ticket is required. ​
@@ -51,7 +51,7 @@
 	.glass-front {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start; /* optional: aligns text to the left */
+		align-items: flex-start;
 		justify-content: flex-start;
 
 		& p,

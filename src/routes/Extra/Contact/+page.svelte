@@ -33,8 +33,6 @@
 <style>
 	ul {
 		list-style: disc;
-		width: 90vw;
-
 		padding-left: 1.5rem;
 		margin: 1.5rem 5vw;
 	}

@@ -99,13 +99,8 @@
 	transition: all 0.3s ease;
 }
 
-.btn-Animated:hover {
+.btn-Animated:hover, .btn-Animated:active {
 	background-color: var(--hover);
-	color: var(--txt-1);
-}
-
-.btn-Animated:active {
-	background-color: var(--color-active);
 	color: var(--txt-1);
 }
 
@@ -113,12 +108,19 @@
 .btn-Ghost {
 	background-color: transparent;
 	border: 2px solid var(--accent-1);
-	color: var(--accent-1);
+	color: var(--txt-2	);
 	padding: var(--size-4);
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	cursor: pointer;
+
+	&:hover, & :active {
+		background-color: var(--hover);
+		animation: pulse 1.2s infinite ease-in-out;
+		color: var(--txt-1);
+		box-shadow: var(--shdw-Box);
+	}
 }
 
 /* Slant */
@@ -158,12 +160,15 @@
 @keyframes pulse {
 	0% {
 		transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.6);
 	}
-	50% {
+	70% {
 		transform: scale(1.1);
+			box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
 	}
 	100% {
 		transform: scale(1);
+			box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
 	}
 }
 
@@ -226,6 +231,6 @@
   box-shadow: 0 0 0 transparent;
   transition: box-shadow 0.3s ease;
 }
-.btn-Glow:hover {
-  box-shadow: 0 0 12px var(--accent-1);
+.btn-Glow:hover, .btn-Glow:focus, .btn-Glow:active {
+  box-shadow: 0 0 16px var(--accent-2);
 }

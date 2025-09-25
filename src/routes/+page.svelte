@@ -113,7 +113,7 @@
 
 	<div class="center-wrapper">
 		<a href="/Extra/Tickets">
-			<button class="btn-Ghost">Click Me</button>
+			<button class="btn-Ghost">Save Money!</button>
 		</a>
 </div>
 </section>
@@ -216,7 +216,7 @@
 <footer class="footer">
 	<p><strong>Theme Contest:</strong> Submit your 2026 theme idea & win a family pass + T-shirt!</p>
 	<div class="center-wrapper">
-		<button class="btn-Shadow">Submit Ideas</button>
+		<button class="btn-Ghost">Submit Ideas</button>
 	</div>
 	<p>
 		If your theme is chosen, you’ll win a family pass (2 adults + 2 kids) and a 2026 Kitsap Fair

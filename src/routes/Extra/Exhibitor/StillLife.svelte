@@ -11,33 +11,71 @@
 
 <h1>Still Life</h1>
 
-<p>
+<section>
+	<h2>
 	Still Life (Presidents Hall) <br />
-	ENTRY FEE: <br />
+	</h2>
 
-	FREE <br />
+	<ul>
+		<li>
+			Entry Fee: FREE
+			
+		</li>
 
-	Register on intake days; DO NOT use FairEntry (used for livestock only) <br />
+		<li>
+			Register on intake days; DO NOT use FairEntry (used for livestock only) <br />
+		</li>
 
-	FFA & 4-H entries need to visit the livestock page and register using Fair Entry! <br />
+		<li>
+			FFA & 4-H entries need to visit the livestock page and register using Fair Entry! <br />
+		</li>
+	</ul> 
 
-	​ EXHIBITOR INTAKE DAYS: <br />
+	<h2>
 
-	Crafts & Hobbies, Home Arts, Art & Photography: Sat & Sun, Aug. 9th-10th, 10am to 6pm in the
-	Presidents Hall <br />
+		​ EXHIBITOR INTAKE DAYS:  
+	</h2>
 
-	Food, Canning & Honey: Sun, Aug. 17, 10am to 6pm in the Presidents Hall <br />
+	<ul>
+		<li>
+Crafts & Hobbies, Home Arts, Art & Photography: <br> Sat & Sun, Aug. 9th-10th, 10am to 6pm in the
+	Presidents Hall
+		</li>
+		
+		<li>
+			Food, Canning & Honey: <br> Sun, Aug. 17, 10am to 6pm in the Presidents Hall  
+		</li>
 
-	Horticulture: Mon, Aug. 18, 12pm - 8pm in the Presidents Hall <br />
+		<li>
 
-	Floral: Mon, Aug. 18, 12pm - 8pm in the Pavilion <br />
+			Horticulture: Mon, Aug. 18, 12pm - 8pm in the Presidents Hall <br />
+		</li>
 
-	​ ​ALL OPEN CLASS ENTRIES RECEIVE: <br />
+		<li>
+			Floral: <br> Mon, Aug. 18, 12pm - 8pm in the Pavilion <br />
 
-	One 5-day fair admission pass (one per exhibitor)​ <br />
+		</li>
+	</ul>
 
-	The option to purchase a $10 parking pass for the duration of this year's fair <br />
-</p>
+	<h2>
+		​ ​ALL OPEN CLASS ENTRIES RECEIVE:  
+	</h2>
+
+	<ul>
+		<li>
+			One 5-day fair admission pass (one per exhibitor)​ <br />
+		</li>
+		<li>
+			The option to purchase a $10 parking pass for the duration of this year's fair <br />
+		</li>
+	</ul> 
+</section>
+
+
+<p>​ Any questions about the exhibitor guides, email phall.stilllife@gmail.com</p>
+
+
+
 
 <h2>Points of interest</h2>
 <section class="glass-flip-grid" style={`background-image: url('${backgroundImage}');`}>
@@ -70,4 +108,29 @@
 	{/each}
 </section>
 
-<p>​ Any questions about the exhibitor guides, email phall.stilllife@gmail.com</p>
+
+<style>
+	/* Lists */
+	ul {
+		width: 90vw;
+		list-style: disc;
+		padding-left: 1.5rem;
+		margin: 1.5rem 5vw;
+	}
+
+	dl {
+		margin: 2rem 5vw;
+		width: 90vw;
+	}
+
+	dt {
+		font-weight: bold;
+		color: var(--hover);
+		margin-top: 1rem;
+	}
+
+	dd {
+		margin-left: 1rem;
+	}
+ 
+</style>

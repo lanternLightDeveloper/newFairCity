@@ -5,15 +5,27 @@
 	available for you to share your services or sell your products at this annual five (5) day event.
 </p>
 
-<p>​Indoor (Pavilion) Commercial: <br /> 10' x 10' space, $495 / 10' x 10' corner space, $595</p>
+<h2>
+	Indoor (Pavilion) Commercial
+</h2>
+<p>  10' x 10' space, $495 <br> 10' x 10' corner space, $595</p>
 
-<p>Outside Commercial: <br /> (10' minimum), $35 per foot</p>
+<h2>Outdoor Commercial</h2>
+<p>  (10' minimum), $35 per foot</p>
 
-<p>​ Outside Concession: <br /> $35 per front foot or 20%, whichever is greater ​</p>
+<h2>Outside Concessions</h2>
+<p>  $35 per front foot or 20%, whichever is greater ​</p>
 
 <p>
 	All vendors and concessionaires must have insurance; KFSA can refer you to a provider if needed.
-	​​ Return completed vendor applications to Cindy at the contact information provided. If you were
+</p>
+
+<p>
+	​​ Return completed vendor applications to Cindy at the contact information provided. 
+</p>
+
+<p>
+	If you were
 	a vendor at the prior year's Fair, no application is required.
 </p>
 

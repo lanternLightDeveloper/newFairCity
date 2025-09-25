@@ -2,7 +2,7 @@
 	let { children } = $props();
 </script>
 
-<h1>Extra items</h1>
+<h1>Contacts & Guides</h1>
 <nav class="entertainment-nav">
 	<a href="/Extra/Contact">Contact</a>
 	<a href="/Extra/Exhibitor">Exhibitor Guides</a>

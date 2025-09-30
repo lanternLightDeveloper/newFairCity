@@ -71,17 +71,19 @@
 	>
 		<h4>Rodeo & Bull Schedule</h4>
 
-		<article class="schedule">
-			<p>Wed–Fri (Aug. 20–22) <strong>Event starts at 6:30 PM</strong></p>
+		<p>Wed–Fri (Aug. 20–22) <strong>Event starts at 6:30 PM</strong></p>
 
-			<p>Saturday (Aug. 23) <strong>Event starts at 11:00 AM</strong></p>
+		<p>Saturday (Aug. 23) <strong>Event starts at 11:00 AM</strong></p>
 
-			<p>Sunday – XTREME BULLS (Aug. 24) <strong>Event starts at 11:00 AM</strong></p>
-		</article>
+		<p>Sunday – XTREME BULLS (Aug. 24) <strong>Event starts at 11:00 AM</strong></p>
 	</section>
-	<a href="/Extra/Tickets">
-		<button class="ticket-button"><img src={Multipass} alt="kitsap fair entry ticket" /></button>
-	</a>
+	<section>
+		<a href="/Extra/Tickets">
+			<button class="ticket-button"><img src={Multipass} alt="kitsap fair entry ticket" /></button>
+		</a>
+	</section>
+
+	<section>maybe this can be an image of the rodeo</section>
 
 	<br />
 	<section class="alert right-Block">
@@ -132,7 +134,7 @@
 		</div>
 	{/if}
 
-	<h2 class="right-Block">Seating Pricing</h2>
+	<h2 class="double-Block">Seating Pricing</h2>
 
 	<article class="block-List">
 		<h4>Uncovered Seating</h4>
@@ -161,13 +163,13 @@
 		<p>Box 9<strong>$65.00</strong></p>
 	</article>
 
-	<p class="right-Block">
+	<p class="double-Block">
 		Xtreme Bulls: The world’s top bull riders will converge at this event to attempt riding the
 		baddest, meanest, rankest one-ton athletes in the world. These bulls have thrown cowboys at the
 		largest rodeo venues in the world.
 	</p>
 
-	<h2 class="right-Block">XTREME BULLS PRICING</h2>
+	<h2 class="double-Block">XTREME BULLS PRICING</h2>
 
 	<article class="block-List">
 		<h4>Uncovered Seating</h4>

@@ -41,12 +41,12 @@
 		<p>Sunday: proudly sponsored by Hanley Construction</p>
 	</section>
 
-	<p class="right-Block">
+	<p class="double-Block">
 		Visit the websites of our generous sponsors. Learn more about these amazing companies that are
 		supporting our Fair and your community.​​
 	</p>
 
-	<section class="grid-List right-Block">
+	<section class="grid-List double-Block">
 		{#each Sponsors as sponsor, i}
 			<div
 				tabindex="0"

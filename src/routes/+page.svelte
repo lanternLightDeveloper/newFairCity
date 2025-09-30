@@ -96,17 +96,16 @@
 	<!-- <p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p> -->
 </aside>
 
-<section class="kcu-banner">
-	<p>Kitsap credit union members can recieve a discount on admission:</p>
-
-	<div class="center-wrapper">
-		<a href="/Extra/Tickets">
-			<button class="btn-Ghost">Save Money!</button>
-		</a>
-	</div>
-</section>
-
 <main class="grid-Main">
+	<section class="kcu-banner">
+		<p>Kitsap credit union members can recieve a discount on admission:</p>
+
+		<div class="center-wrapper">
+			<a href="/Extra/Tickets">
+				<button class="btn-Ghost">Save Money!</button>
+			</a>
+		</div>
+	</section>
 	<section
 		class="right-Block"
 		style={`background-image: url(${Sheeep}); background-size: cover; background-position: center;`}
@@ -311,7 +310,7 @@
 		}
 
 		@media only screen and (min-width: 1440px) {
-			height: 600px;
+			height: 400px;
 			background-size: 60%;
 			font-size: var();
 		}

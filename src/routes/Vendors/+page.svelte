@@ -7,9 +7,8 @@
 
 <p>THE LISTING BELOW IS IN ALPHABETICAL ORDER, AND DOES NOT INDICATE BOOTH PLACEMENT.</p>
 
+<h3>Outside</h3>
 <section class="grid-List">
-	<h3>Outside</h3>
-	<br />
 	{#each OutdoorCommercial as item, i}
 		<div
 			tabindex="0"
@@ -34,10 +33,11 @@
 			</div>
 		</div>
 	{/each}
+</section>
 
-	<br />
-	<h3>Inside</h3>
-	<br />
+<h3>Inside</h3>
+
+<section class="grid-List">
 	{#each IndoorCommercial as item, i}
 		<div
 			tabindex="0"

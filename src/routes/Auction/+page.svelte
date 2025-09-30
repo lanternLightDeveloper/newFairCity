@@ -4,7 +4,7 @@
 
 <main class="grid-Main">
 	<section
-		class="right-Block"
+		class="double-Block"
 		style={`background-image: url(${AuctionFace}); background-size: cover; background-position: center;`}
 	>
 		<h1>Kitsap Junior Livestock Auction</h1>
@@ -13,18 +13,16 @@
 			and community support.
 		</p>
 
-		<article>
-			<h2>Location & Time</h2>
+		<h2>Location & Time</h2>
 
-			<p><strong> Where: </strong></p>
-			<p>Kitsap Fair & Stampede, 1300 NW Fairgrounds Rd, Bremerton, WA</p>
-			<p><strong> When: </strong></p>
-			<p>Saturday, August 23, 2025 at 2:00pm</p>
-			<p>Register online or arrive early to bid in person.</p>
-		</article>
+		<p><strong> Where: </strong></p>
+		<p>Kitsap Fair & Stampede, 1300 NW Fairgrounds Rd, Bremerton, WA</p>
+		<p><strong> When: </strong></p>
+		<p>Saturday, August 23, 2025 at 2:00pm</p>
+		<p>Register online or arrive early to bid in person.</p>
 	</section>
 
-	<a href="/Extra/InfoSheets" class="center-wrapper right-Block">
+	<a href="/Extra/InfoSheets" class="center-wrapper double-Block">
 		<button class="btn-Ghost"> Download The Information Sheet </button>
 	</a>
 

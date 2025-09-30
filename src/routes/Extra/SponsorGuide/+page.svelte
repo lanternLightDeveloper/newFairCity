@@ -1,14 +1,14 @@
-<main>
+<h1>2025 Sponsorship Opportunities</h1>
+<main class="grid-Main">
 	<header>
-		<h1>2025 Sponsorship Opportunities</h1>
 		<p>
 			Be a sponsor of the Kitsap Fair & Stampede and get your name in front of the community you
 			serve!
 		</p>
 	</header>
 
-	<section aria-labelledby="why-sponsor">
-		<h2 id="why-sponsor">Why Sponsor?</h2>
+	<section class="double-Block">
+		<h2>Why Sponsor?</h2>
 		<ul>
 			<li>Showcase your business to over 80,000 attendees</li>
 			<li>Support Kitsap County youth and traditions</li>
@@ -16,8 +16,8 @@
 		</ul>
 	</section>
 
-	<section aria-labelledby="benefits">
-		<h2 id="benefits">Sponsor Benefits</h2>
+	<section class="double-Block">
+		<h2>Sponsor Benefits</h2>
 		<ul>
 			<li>Program advertising and recognition</li>
 			<li>Listing on <a href="https://www.kitsapfair.org">kitsapfair.org</a></li>
@@ -28,8 +28,8 @@
 		</ul>
 	</section>
 
-	<section aria-labelledby="featured-packages">
-		<h2 id="featured-packages">Featured Sponsorship Packages</h2>
+	<section class="double-Block">
+		<h2>Featured Sponsorship Packages</h2>
 
 		<article>
 			<h3>President’s Hall Naming Rights – $3,000</h3>
@@ -60,7 +60,7 @@
 		</article>
 	</section>
 
-	<section aria-labelledby="signage">
+	<section>
 		<h2 id="signage">Arena & Fairgrounds Signage</h2>
 		<table>
 			<thead>
@@ -77,8 +77,8 @@
 		</table>
 	</section>
 
-	<section aria-labelledby="rodeo">
-		<h2 id="rodeo">Rodeo Sponsorships</h2>
+	<section>
+		<h2>Rodeo Sponsorships</h2>
 
 		<article>
 			<h3>Rodeo Event Sponsor – $4,000</h3>
@@ -102,8 +102,8 @@
 		</article>
 	</section>
 
-	<section aria-labelledby="starlets">
-		<h2 id="starlets">Starlets Sponsorships</h2>
+	<section>
+		<h2>Starlets Sponsorships</h2>
 		<dl>
 			<dt>Gold Buckle – $2,500</dt>
 			<dd>4 Club Memberships, 2 Box Seats (W–F), Flag display</dd>
@@ -119,8 +119,8 @@
 		</dl>
 	</section>
 
-	<section aria-labelledby="elite">
-		<h2 id="elite">Elite Sponsor Packages</h2>
+	<section>
+		<h2>Elite Sponsor Packages</h2>
 		<dl>
 			<dt>Blue Ribbon – $2,100</dt>
 			<dd>4 VIP Club Memberships, 4x8 banner</dd>
@@ -133,7 +133,7 @@
 		</dl>
 	</section>
 
-	<footer>
+	<section class="double-Block">
 		<h2>Contact</h2>
 		<p>Keith Armstrong – Sponsorship Director</p>
 		<ul>
@@ -141,21 +141,15 @@
 			<li>Phone: <a href="tel:3602862319">(360) 286-2319</a></li>
 			<li>Address: 1300 NW Fairgrounds Rd., Bremerton, WA 98311</li>
 		</ul>
-	</footer>
+	</section>
 </main>
 
 <style>
 	/* Lists */
-	ul {
-		width: 90vw;
-		list-style: disc;
-		padding-left: 1.5rem;
-		margin: 1.5rem 5vw;
-	}
 
 	dl {
 		margin: 2rem 5vw;
-		width: 90vw;
+		width: 90%;
 	}
 
 	dt {
@@ -170,7 +164,7 @@
 
 	/* Tables */
 	table {
-		width: 90vw;
+		width: 90;
 		border-collapse: collapse;
 		margin: 1.5rem 5vw;
 	}

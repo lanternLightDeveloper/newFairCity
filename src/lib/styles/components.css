@@ -87,7 +87,7 @@
 	/* 5 block grid */
 	.grid-5col {
 		display: grid;
-		grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		gap: 1rem;
 		padding-block: 2rem;
 
@@ -122,20 +122,24 @@
 
 	.grid-Western {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem; 
 		border-radius: 12px;
 	}
 
 	/* Unified western block */
 	.blk-Western {
-		background:var(--gradient)	;
+		background:var(--gradient);
 		border: var(--bord);
 		border-radius: var(--rad-Sm);
 		padding: 1.5rem;
 		position: relative;
-		margin: 0 5vw;;
-		width: 90vw;
+		margin: 0 5vw;
+		width: 90%;
+
+		& h2 {
+			margin: 4vh 4vw;
+		}
 
 		& h3 {
 			color: var(--txt-1);
@@ -146,6 +150,12 @@
 			width: 110%;
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
+
+				@media (min-width: 768px) { 
+					margin:0 10%;  
+					width: 80%;
+					font-size: var(--size-5);
+				}
 		}
 
 		& article {
@@ -188,6 +198,7 @@
 			display: flex;
 			justify-content: space-between;
 			border-bottom: 1px dashed var(--border-color);
+ 
 
 			& strong {
 				padding-left: var(--size-8);
@@ -255,9 +266,17 @@
 		justify-content: center;
 		padding: 1rem; 
 		backface-visibility: hidden;
+
+		
+	@media only screen and (min-width: 768px) { 
+		padding: 0;
+		& p{
+			font-size: var(--size-3);
+		}
+		
+	}
 	}
 
-	/* Front: Glassmorphism flip */
 	.glass-front {
 		background: var(--hallow-2);
 		backdrop-filter: blur(12px);
@@ -265,11 +284,10 @@
 		border: 1px solid rgba(255, 255, 255, 0.3);
 	}
 
-	/* Back: Less transparent, solid overlay */
 	.glass-back {
 		background: var(--hallow); 
 		transform: rotateY(180deg);
-		border: var(--bord);
+		border: var(--bord);		
 	}
 
 	.glass-back a {
@@ -280,16 +298,13 @@
 
 	
 
-/* Display shelf */
-.LR_block,
-.LR_block_l {
+/* MAIN GRID */
+.grid-Main {
 	width: 90vw;
 	display: grid;
-	margin: var(--space-Qtr);
-	border-radius: var(--rad-Sm);
-	border: var(--bord);
-	background-color: var(--bg-2);
-	box-shadow: var(--box-Shadow);
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	margin: var(--space-Qtr); 
+	gap: var(--size-4);
 
 	& img {
 		width: 100%;
@@ -303,39 +318,78 @@
 		}
 	}
 
-	& h3,
-	p,
-	a {
+	& h2 {
+		height: fit-content;
+	}
+
+	& h3, p, a {
 		margin: var(--space-Sm);
 	}
 
-	@media only screen and (min-width: 780px) {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+
+	@media only screen and (min-width: 768px) { 
 		gap: var(--size-4);
 	}
 
-	@media only screen and (min-width: 1024px) {
-		width: 90vw;
+	@media only screen and (min-width: 1024px) { 
 		margin: var(--space-Qtr);
+
+		.block-List{
+			height: fit-content;
+	}
+	}
+
+	@media only screen and (min-width: 1440px) { 
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 	}
 }
 
-.LR_block {
-	@media only screen and (min-width: 780px) {
-		& img {
-			grid-column: 1 / span 2;
-			grid-row: 1 / span 2;
+.block-List{
+		border: var(--bord);
+		border-radius: var(--rad-Sm);
+		background:var(--gradient);
+		justify-content: space-between;
+		
+		& strong { 
+			
+			float: right;
 		}
+
+	& p {
+		border-bottom: 1px dashed var(--border-color); 
+	}	
+			
+	& :last-child {
+		border-bottom: none;
+	}
+
+	h4 { 
+		text-align: center;
+		margin: 0;
+		padding: var(--size-4);
+		background-color: var(--accent-2);
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+	}
+
+	
+	@media only screen and (min-width: 768px) { 
+			height: fit-content;
+		& p {
+			font-size: var(--size-4);
+		}
+	} 
+}
+
+.right-Block {
+	@media only screen and (min-width: 768px) {
+		grid-column: 1 / span 2;  
 	}
 }
 
-.LR_block_l {
-	@media only screen and (min-width: 780px) {
-		& img {
-			grid-column: 2 / span 3;
-			grid-row: 1 / span 2;
-		}
+.left-Block {
+	@media only screen and (min-width: 768px) {
+		grid-column: 2 / span 3;  
 	}
 }
 
@@ -403,13 +457,4 @@
 	to {
 		--rotation: 360deg;
 	}
-}
-
-/* Add easing */
-.testBox {
-	animation: rotate var(--ani-Speed-Long) linear infinite;
-	transform: rotate(var(--rotation));
-	background-color: var(--accent-1);
-	width: 200px;
-	height: 200px;
 }

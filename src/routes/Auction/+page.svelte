@@ -2,95 +2,88 @@
 	import AuctionFace from '$lib/imgs/auctionSilhouette2.png';
 </script>
 
-<section
-	class="blk-Western"
-	style={`background-image: url(${AuctionFace}); background-size: cover; background-position: center;`}
->
-	<h3>Kitsap Junior Livestock Auction</h3>
-	<article>
-		<p class="pointB">
+<main class="grid-Main">
+	<section
+		class="right-Block"
+		style={`background-image: url(${AuctionFace}); background-size: cover; background-position: center;`}
+	>
+		<h1>Kitsap Junior Livestock Auction</h1>
+		<p>
 			Advancing youth interest in agriculture and livestock management through ethics, education,
 			and community support.
 		</p>
 
-		<h4>Location & Time</h4>
 		<article>
-			<p class="pointD">
-				Where:<strong> Kitsap Fair & Stampede, 1300 NW Fairgrounds Rd, Bremerton, WA</strong>
-			</p>
-			<p class="pointD">When: <strong> Saturday, August 23, 2025 at 2:00pm </strong></p>
-			<p class="pointB">Register online or arrive early to bid in person.</p>
+			<h2>Location & Time</h2>
+
+			<p><strong> Where: </strong></p>
+			<p>Kitsap Fair & Stampede, 1300 NW Fairgrounds Rd, Bremerton, WA</p>
+			<p><strong> When: </strong></p>
+			<p>Saturday, August 23, 2025 at 2:00pm</p>
+			<p>Register online or arrive early to bid in person.</p>
 		</article>
-	</article>
-</section>
+	</section>
 
-<a href="/Extra/InfoSheets" class="center-wrapper">
-	<button class="btn-Ghost"> Download The Information Sheet </button>
-</a>
+	<a href="/Extra/InfoSheets" class="center-wrapper right-Block">
+		<button class="btn-Ghost"> Download The Information Sheet </button>
+	</a>
 
-<div class="glass-flip-grid">
 	<h2>Auction Basics</h2>
-	<div class="glass-flip-card">
-		<div class="glass-flip-inner">
-			<div class="glass-front"><h3>Purchasing Outright</h3></div>
-			<div class="glass-back">
-				<p>
-					Buy an animal for processing. Additional costs apply for cut/wrap and smoking.
-					Poultry/rabbits sold in pens or singles.
-				</p>
+	<div class="glass-flip-grid">
+		<div class="glass-flip-card">
+			<div class="glass-flip-inner">
+				<div class="glass-front"><h3>Purchasing Outright</h3></div>
+				<div class="glass-back">
+					<p>
+						Buy an animal for processing. Additional costs apply for cut/wrap and smoking.
+						Poultry/rabbits sold in pens or singles.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="glass-flip-card">
+			<div class="glass-flip-inner">
+				<div class="glass-front"><h3>Splitting Purchases</h3></div>
+				<div class="glass-back">
+					<p>
+						Multiple buyers can split an animal. Must bid as one entry and coordinate arrangements
+						independently.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="glass-flip-card">
+			<div class="glass-flip-inner">
+				<div class="glass-front"><h3>Turning</h3></div>
+				<div class="glass-back">
+					<p>
+						Sell the animal back to the processor at the posted turn price. Tax-deductible donation.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="glass-flip-card">
-		<div class="glass-flip-inner">
-			<div class="glass-front"><h3>Splitting Purchases</h3></div>
-			<div class="glass-back">
-				<p>
-					Multiple buyers can split an animal. Must bid as one entry and coordinate arrangements
-					independently.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="glass-flip-card">
-		<div class="glass-flip-inner">
-			<div class="glass-front"><h3>Turning</h3></div>
-			<div class="glass-back">
-				<p>
-					Sell the animal back to the processor at the posted turn price. Tax-deductible donation.
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
 
-<section class=" grid-Western">
-	<div class="blk-Western">
-		<h3>Online Access</h3>
-		<article>
-			<p>
-				<a href="https://kitsapjuniorlivestockauction.org" target="_blank">Visit Auction Website</a>
-			</p>
-			<p><a href="https://bestbidonlineauctions.com" target="_blank">Bid Online</a></p>
-		</article>
-	</div>
+	<article class="block-List">
+		<h4>Online Access</h4>
+		<p>
+			<a href="https://kitsapjuniorlivestockauction.org" target="_blank">Visit Auction Website</a>
+		</p>
+		<p><a href="https://bestbidonlineauctions.com" target="_blank">Bid Online</a></p>
+	</article>
 
-	<div class="blk-Western">
-		<h3>Available Animals</h3>
-		<article>
-			<p>Beef, lamb, goat, pork, rabbit, chicken, duck, and turkey.</p>
-		</article>
-	</div>
+	<article class="block-List">
+		<h4>Available Animals</h4>
+		<p>Beef, lamb, goat, pork, rabbit, chicken, duck, and turkey.</p>
+	</article>
 
-	<div class="blk-Western">
-		<h3>How to Support</h3>
-		<article>
-			<p>Bid on an animal (in-person or online)</p>
-			<a href="/Extra/infoSheets">Make a donation</a>
-			<a href="/Extra/infoSheets">Submit an Add-On Form by August 23</a>
-		</article>
-	</div>
-</section>
+	<article class="block-List">
+		<h4>How to Support</h4>
+		<p>Bid on an animal (in-person or online)</p>
+		<p><a href="/Extra/infoSheets">Make a donation</a></p>
+		<p><a href="/Extra/infoSheets">Submit an Add-On Form by August 23</a></p>
+	</article>
+</main>
 
 <!--svelte-ignore css_unused_selector -->
 <style>

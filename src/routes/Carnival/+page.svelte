@@ -11,35 +11,34 @@
 	<img src={Rodeo} alt="Carnival rides and crowd in a fairground" />
 </header>
 
-<section id="hours" class="blk-Western">
-	<h3>Carnival Hours</h3>
-
-	<p>
-		<strong>Wednesday - Saturday:</strong>
-		<br /> 11:00am – 11:00pm
-	</p>
-	<br />
-	<p>
-		<strong>Sunday:</strong> 11:00am – 7:00pm
-		<br /><em>🎟 Wristband Day until 6:00pm – unlimited rides + 3 games for $50!</em>
-	</p>
-</section>
-
 <main
 	style={`background-image: url(${HorseRide}); background-size: cover; background-position: center;`}
+	class="grid-Main"
 >
-	<p>
+	<section class="block-List right-Block">
+		<h4>Carnival Hours</h4>
+
+		<p>
+			Wednesday - Saturday:<strong>1:00am – 11:00pm</strong>
+		</p>
+		<p>
+			Sunday:<strong>11:00am – 7:00pm</strong>
+			<br /><em>Sun = Wristband Day until 6:00pm – unlimited rides + 3 games for $50!</em>
+		</p>
+	</section>
+
+	<p class="right-Block">
 		Returning to the 2025 Kitsap Fair and Rodeo, the best carnival in the Northwest! Funtastic Shows
 		will be providing the carnival and games. You are familiar with their safety and quality
 		standards if you have adventured to the Washington State Fair.
 	</p>
 
-	<p>
+	<p class="right-Block">
 		All rides and games will be in one designated area so your family of all ages can enjoy the fun
 		together.
 	</p>
 
-	<p>
+	<p class="right-Block">
 		GOOD NEWS! Carnival wristbands will be back for this year's fair. Wristband day will be Sunday,
 		Aug. 24. Wristbands will be $50 per individual and non-transferable. Ride as many rides as you'd
 		like and play three (games) between 11:00am and 6:00pm with your wristband. These can be

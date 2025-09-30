@@ -22,10 +22,14 @@
 					</h3>
 					<p class="teaser">{artist.teaser}</p>
 					{#if artist.website}
-						<p><a href={artist.website} target="_blank" rel="noopener">Visit Website</a></p>
+						<p>
+							<a href={artist.website} class="btn-Ghost" target="_blank" rel="noopener"
+								>Visit Website</a
+							>
+						</p>
 					{/if}
 					<button
-						class="toggle-details"
+						class="toggle-details btn-Ghost"
 						onclick={() => toggleArtistCard(i)}
 						aria-expanded={openArtistCard === i}
 						aria-controls={`artist-details-${i}`}
@@ -45,7 +49,11 @@
 						<p>{artist.description}</p>
 						<!-- <img src="{artist.img}" alt=" {artist.name} image" loading="lazy" /> -->
 						{#if artist.video}
-							<p><a href={artist.video} target="_blank" rel="noopener">Watch Video</a></p>
+							<p>
+								<a href={artist.video} class="btn-Ghost" target="_blank" rel="noopener"
+									>Watch Video</a
+								>
+							</p>
 						{/if}
 					</div>
 				{/if}
@@ -88,6 +96,30 @@
 			border-radius: var(--rad-Sm);
 			background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
 		}
+
+		& p {
+			backdrop-filter: blur(8px);
+			--webkit-backdrop-filter: blur(1.5px);
+			width: fit-content;
+			margin: 5%;
+			padding: 5%;
+		}
+
+		@media (min-width: 768px) {
+			width: 80%;
+			margin-left: 10%;
+			height: fit-content;
+
+			.teaser,
+			p {
+				margin: 10%;
+				padding: 0;
+			}
+
+			& button {
+				margin: 0 10%;
+			}
+		}
 	}
 
 	.grid-content-box:hover {
@@ -102,6 +134,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		backdrop-filter: blur(8px);
+		--webkit-backdrop-filter: blur(1.5px);
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
 	}
 
 	.genre-tag {
@@ -132,8 +168,10 @@
 
 	a,
 	button {
+		backdrop-filter: blur(8px);
+		--webkit-backdrop-filter: blur(1.5px);
+		border: var(--bord);
 		padding: 0.5rem 1rem;
-		color: var(--accent-1);
 		text-decoration: underline;
 		font-weight: 500;
 	}

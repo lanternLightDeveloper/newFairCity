@@ -9,6 +9,7 @@
 
 <section class="grid-List">
 	<h3>Outside</h3>
+	<br />
 	{#each OutdoorCommercial as item, i}
 		<div
 			tabindex="0"
@@ -34,7 +35,9 @@
 		</div>
 	{/each}
 
+	<br />
 	<h3>Inside</h3>
+	<br />
 	{#each IndoorCommercial as item, i}
 		<div
 			tabindex="0"

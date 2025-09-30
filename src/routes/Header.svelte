@@ -130,6 +130,7 @@
 	}
 	.dot-label {
 		position: relative;
+		right: 9vw;
 		background: var(--txt-1);
 		padding: 0.2rem;
 		border-radius: 12px;

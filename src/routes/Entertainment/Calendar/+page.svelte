@@ -93,87 +93,95 @@
 	});
 </script>
 
-<div class="calendar">
-	<div class="header">
-		<button onclick={prevMonth}>◀</button>
-		<strong>{monthNames[currentMonth]} {currentYear}</strong>
-		<button onclick={nextMonth}>▶</button>
-	</div>
+<main>
+	<div class="calendar">
+		<div class="header">
+			<button onclick={prevMonth}>◀</button>
+			<strong>{monthNames[currentMonth]} {currentYear}</strong>
+			<button onclick={nextMonth}>▶</button>
+		</div>
 
-	<div class="grid">
-		<div class="day">Sun</div>
-		<div class="day">Mon</div>
-		<div class="day">Tue</div>
-		<div class="day">Wed</div>
-		<div class="day">Thu</div>
-		<div class="day">Fri</div>
-		<div class="day">Sat</div>
+		<div class="grid">
+			<div class="day">Sun</div>
+			<div class="day">Mon</div>
+			<div class="day">Tue</div>
+			<div class="day">Wed</div>
+			<div class="day">Thu</div>
+			<div class="day">Fri</div>
+			<div class="day">Sat</div>
 
-		{#each days as day}
-			<button
-				class="day
+			{#each days as day}
+				<button
+					class="day
       {day === null ? 'blank' : ''} 
       {day === currentDay &&
-				currentMonth === today.getMonth() &&
-				currentYear === today.getFullYear()
-					? 'today'
-					: ''} 
+					currentMonth === today.getMonth() &&
+					currentYear === today.getFullYear()
+						? 'today'
+						: ''} 
       {day !== null &&
-				eventDates.has(
-					`${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
-				)
-					? 'has-event'
-					: ''} 
+					eventDates.has(
+						`${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+					)
+						? 'has-event'
+						: ''} 
       {selectedDate ===
-				`${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
-					? 'selected'
-					: ''}"
-				onclick={() => day && selectDay(day)}
-			>
-				{day}
-			</button>
-		{/each}
+					`${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+						? 'selected'
+						: ''}"
+					onclick={() => day && selectDay(day)}
+				>
+					{day}
+				</button>
+			{/each}
+		</div>
 	</div>
-</div>
 
-{#if selectedDate && filteredEvents.length > 0}
-	<div class="events">
-		<h3>Events on {selectedDate}</h3>
-		{#each filteredEvents as event}
-			<div class="event-card">
-				<h4>{event.title}</h4>
-				<p><strong>Time:</strong> {event.time}</p>
-				<p><strong>Location:</strong> {event.location}</p>
+	{#if selectedDate && filteredEvents.length > 0}
+		<div class="events">
+			<h3>Events on {selectedDate}</h3>
+			{#each filteredEvents as event}
+				<div class="event-card">
+					<h2>{event.title}</h2>
+					<p><strong>Time:</strong> {event.time}</p>
+					<p><strong>Location:</strong> {event.location}</p>
+					<p>{event.description}</p>
+					<p>{event.explanation}</p>
+					<img src={` ${event.img}`} alt={event.title} />
+					<a href={event.link} target="_blank">More Info</a>
+				</div>
+			{/each}
+		</div>
+	{:else if selectedDate}
+		<p>No events on {selectedDate}</p>
+	{:else if monthlyEvents.length > 0}
+		<div class="events">
+			<h1>Events in {monthNames[currentMonth]} {currentYear}</h1>
+			{#each monthlyEvents as event}
+				<h2>{event.title}</h2>
+				<p>{event.date}</p>
 				<p>{event.description}</p>
-				<p>{event.explanation}</p>
-				<img src={` ${event.img}`} alt={event.title} />
-				<a href={event.link} target="_blank">More Info</a>
-			</div>
-		{/each}
-	</div>
-{:else if selectedDate}
-	<p>No events on {selectedDate}</p>
-{:else if monthlyEvents.length > 0}
-	<div class="events">
-		<h1>Events in {monthNames[currentMonth]} {currentYear}</h1>
-		{#each monthlyEvents as event}
-			<h2>{event.title}</h2>
-			<p>{event.date}</p>
-			<p>{event.description}</p>
-		{/each}
-	</div>
-{:else}
-	<p>No events scheduled for {monthNames[currentMonth]} {currentYear}</p>
-{/if}
+			{/each}
+		</div>
+	{:else}
+		<p>No events scheduled for {monthNames[currentMonth]} {currentYear}</p>
+	{/if}
+</main>
 
 <style>
 	button {
 		all: unset;
 	}
+
 	.calendar {
 		max-width: 300px;
 		margin: auto;
 		font-family: sans-serif;
+
+		@media (min-width: 768px) {
+			max-width: 600px;
+			width: 100%;
+		}
 	}
 	.header {
 		display: flex;
@@ -191,6 +199,10 @@
 		padding: 6px;
 		background: var(--accent-1);
 		border-radius: 4px;
+
+		@media (min-width: 768px) {
+			height: 50px;
+		}
 	}
 	.blank {
 		visibility: hidden;
@@ -229,17 +241,40 @@
 
 	.events {
 		margin-top: 20px;
+
+		@media (min-width: 768px) {
+			& p,
+			h2 {
+				margin: 5% 10%;
+				width: 80%;
+			}
+		}
 	}
+
 	.event-card {
 		background: var(--bg-2);
 		border: var(--bord);
 		padding: 12px;
 		margin-bottom: 10px;
 		border-radius: 6px;
-	}
-	.event-card img {
-		max-width: 100%;
-		height: auto;
-		margin-top: 8px;
+
+		& img {
+			max-width: 100%;
+			height: auto;
+			margin-top: 8px;
+		}
+
+		@media (min-width: 768px) {
+			& p {
+				margin: 5% 10%;
+				width: 80%;
+			}
+
+			& img {
+				max-width: 80%;
+				height: auto;
+				margin: 0 10%;
+			}
+		}
 	}
 </style>

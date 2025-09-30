@@ -16,11 +16,6 @@
 		{ label: 'Extra', href: '/Extra', id: 10, degree: 324 }
 	];
 
-	let rotation = $derived.by(() => {
-		const selected = menuItems.find((item) => item.id === current);
-		return selected ? -selected.degree : 0;
-	});
-
 	let showScrollButton = $state(false);
 
 	function scrollToTop() {
@@ -39,33 +34,33 @@
 	});
 </script>
 
-<div class="radial-menu">
-	<button class="center-toggle" onclick={() => (isMenuOpen = !isMenuOpen)}>
-		{isMenuOpen ? '✕' : '☰'}
+<div>
+	<!-- Toggle -->
+	<button class="center-toggle" onclick={() => (isMenuOpen = !isMenuOpen)} aria-label="Toggle menu">
+		<span class:open={isMenuOpen}>{isMenuOpen ? '✕' : '☰'}</span>
 	</button>
-	<div class="position-ring" style={`transform: rotate(${rotation}deg) ;`}>
-		{#each menuItems as item, i}
-			<div
-				class="menu-dot"
-				style={`transform: rotate(${(360 / menuItems.length) * i}deg) translate(6rem) ;`}
-			>
-				<a
-					href={item.href}
-					class:current={current === item.id}
-					onclick={() => {
-						current = item.id;
-						isMenuOpen = false;
-					}}
-				>
-					<div class="dot-circle">
-						{#if current === item.id}
-							<span class="dot-label">{item.label}</span>
-						{/if}
-					</div>
-				</a>
+
+	<!-- Overlay -->
+	{#if isMenuOpen}
+		<div class="menu-overlay">
+			<div class="menu-content">
+				{#each menuItems as item, i}
+					<a
+						href={item.href}
+						class="menu-link"
+						class:current={current === item.id}
+						onclick={() => {
+							current = item.id;
+							isMenuOpen = false;
+						}}
+						style={`animation-delay: ${i * 0.1}s`}
+					>
+						{item.label}
+					</a>
+				{/each}
 			</div>
-		{/each}
-	</div>
+		</div>
+	{/if}
 </div>
 
 {#if showScrollButton}
@@ -74,70 +69,76 @@
 
 <!--svelte-ignore css_unused_selector -->
 <style>
-	.radial-menu {
-		position: relative;
-		width: 100vw;
-		height: 100vh;
+	.center-toggle {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		z-index: 960;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(6px);
+		color: var(--txt-1);
+		font-size: 1.5rem;
+		border: 2px solid var(--accent-1);
+		box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+		cursor: pointer;
+		transition:
+			transform 0.3s ease,
+			background 0.3s ease;
+	}
+	.center-toggle:hover {
+		transform: scale(1.1);
+		background: rgba(255, 255, 255, 0.25);
+	}
+	.center-toggle span.open {
+		transform: rotate(90deg);
+		transition: transform 0.3s ease;
+	}
+
+	.menu-overlay {
+		position: fixed;
+		inset: 0;
+		background: radial-gradient(circle at center, var(--bg-1), var(--bg-2));
+		backdrop-filter: blur(12px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		z-index: 950;
+		overflow: hidden;
+		animation: fadeIn 0.4s ease forwards;
 	}
-	.center-toggle {
-		width: 60px;
-		height: 60px;
-		border-radius: 50%;
-		background: var(--accent-1);
-		color: var(--txt-1);
-		font-size: 1.5rem;
-		border: none;
-		cursor: pointer;
-		box-shadow: var(--shdw-Box);
-	}
-
-	.position-ring {
-		position: absolute;
-		top: 48%;
-		left: 45%;
-		transform: translate(-50%, -50%);
-		transition: transform 0.4s ease;
-	}
-
-	.menu-dot {
-		position: absolute;
-		top: 0;
-		left: 0;
-		transform-origin: center;
-		transition: transform 0.3s ease;
-	}
-	.menu-dot a {
+	.menu-content {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		gap: 1.5rem;
+		text-align: center;
+	}
+	.menu-link {
+		font-size: 2rem;
+		color: var(--txt-1);
 		text-decoration: none;
-	}
-	.dot-circle {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		background: var(--txt-1);
-		border: 4px solid var(--accent-1);
-		box-shadow: var(--shdw-Box);
-		transition: background 0.2s ease;
-	}
-	.menu-dot a:hover .dot-circle {
-		background: var(--hover);
-		border: 2px solid var(--txt-1);
-	}
-	.dot-label {
-		position: relative;
-		right: 9vw;
-		background: var(--txt-1);
-		padding: 0.2rem;
-		border-radius: 12px;
-		box-shadow: var(--shdw-Box);
-		white-space: nowrap;
 		opacity: 0;
-		animation: fadeIn 0.3s forwards;
+		transform: translateY(20px);
+		animation: slideUp 0.4s ease forwards;
+	}
+	.menu-link:hover {
+		color: var(--accent-2);
+		text-shadow: 0 0 8px var(--accent-2);
+		transform: scale(1.05);
+	}
+	.menu-link.current {
+		color: var(--accent-1);
+		font-weight: bold;
+		text-shadow: 0 0 12px var(--accent-1);
+	}
+
+	@keyframes slideUp {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 	@keyframes fadeIn {
 		from {
@@ -147,19 +148,12 @@
 			opacity: 1;
 		}
 	}
-	a.current .dot-circle {
-		background: var(--accent-1);
-	}
-	a.current .dot-label {
-		color: var(--accent-1);
-		font-weight: bold;
-	}
 
 	.scroll-top-button {
 		position: fixed;
-		bottom: 1rem;
-		right: 1rem;
-		background-color: var(--accent-2);
+		bottom: 1.5rem;
+		right: 1.5rem;
+		background: var(--accent-2);
 		color: var(--txt-1);
 		border: none;
 		border-radius: 50%;
@@ -167,19 +161,24 @@
 		height: 3rem;
 		font-size: 1.2rem;
 		cursor: pointer;
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-		z-index: 1000;
-		opacity: 0;
-		animation: fadeIn 0.5s forwards;
+		z-index: 1002;
+		animation: bounceIn 0.6s ease forwards;
 	}
-
-	@keyframes fadeIn {
-		to {
-			opacity: 1;
-		}
-	}
-
 	.scroll-top-button:hover {
 		background-color: var(--hover);
+		box-shadow: 0 0 12px var(--accent-2);
+	}
+	@keyframes bounceIn {
+		0% {
+			transform: scale(0.5);
+			opacity: 0;
+		}
+		60% {
+			transform: scale(1.2);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1);
+		}
 	}
 </style>

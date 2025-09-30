@@ -228,6 +228,12 @@
 		gap: 1.5rem;
 		transition: background-image 0.5s ease;
 		animation: fadeBg 0.5s ease;
+
+		
+		@media only screen and (min-width: 1440px) { 
+		 
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
 	}
 
 	@keyframes fadeBg {
@@ -272,6 +278,29 @@
 		padding: 0;
 		& p{
 			font-size: var(--size-3);
+		}
+		
+	}
+
+		@media only screen and (min-width: 1024px) { 
+		
+		& h3{
+				font-size: var(--size-5);
+		}
+		& p{
+			font-size: var(--size-4);
+		}
+		
+		li {
+			font-size: var(--size-3);
+		}
+	}
+
+	
+	@media only screen and (min-width: 768px) { 
+ 
+		li{
+			font-size: var(--size-4);
 		}
 		
 	}
@@ -325,7 +354,20 @@
 	& h3, p, a {
 		margin: var(--space-Sm);
 	}
+	
+	section {
+		& a {
+			padding: 0;
+			margin: 0;
+		}
 
+		ul {
+			width: 90%;
+			list-style: disc;
+			margin: 1.5rem 5vw;
+		}
+	}
+		
 
 	@media only screen and (min-width: 768px) { 
 		gap: var(--size-4);
@@ -357,6 +399,7 @@
 
 	& p {
 		border-bottom: 1px dashed var(--border-color); 
+		font-size: var(--size-4);
 	}	
 			
 	& :last-child {
@@ -374,16 +417,32 @@
 
 	
 	@media only screen and (min-width: 768px) { 
-			height: fit-content;
-		& p {
-			font-size: var(--size-4);
+			height: fit-content; 
+		& h2 {
+			margin: var(--size-4);
+			font-size: var(--size-5);
 		}
 	} 
+}
+
+.double-Block {
+	@media only screen and (min-width: 768px) {  
+		grid-column: 1 / span 2;  
+		& h2 {
+			margin: var(--size-4);
+			padding: 0 var(--size-8);
+			font-size: var(--size-7);
+		}
+	}  
 }
 
 .right-Block {
 	@media only screen and (min-width: 768px) {
 		grid-column: 1 / span 2;  
+	}
+
+	@media only screen and (min-width: 1440px) {
+		grid-column:  span 1;  
 	}
 }
 

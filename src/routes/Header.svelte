@@ -100,14 +100,20 @@
 	.menu-overlay {
 		position: fixed;
 		inset: 0;
-		background: radial-gradient(circle at center, var(--bg-1), var(--bg-2));
+		background: radial-gradient(
+			circle at center,
+			var(--bg-1),
+			var(--bg-1),
+			var(--bg-1),
+			var(--accent-2)
+		);
 		backdrop-filter: blur(12px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		z-index: 950;
 		overflow: hidden;
-		animation: fadeIn 0.4s ease forwards;
+		animation: fadeIn 0.4s ease-in-out forwards;
 	}
 	.menu-content {
 		display: flex;

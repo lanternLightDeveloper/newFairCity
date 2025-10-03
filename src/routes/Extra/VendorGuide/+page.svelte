@@ -39,3 +39,9 @@
 		</p>
 	</section>
 </main>
+
+<style>
+	p {
+		background: none;
+	}
+</style>

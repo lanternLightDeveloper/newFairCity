@@ -133,6 +133,7 @@
 		text-shadow: 0 0 8px var(--accent-2);
 		transform: scale(1.05);
 	}
+
 	.menu-link.current {
 		color: var(--accent-1);
 		font-weight: bold;

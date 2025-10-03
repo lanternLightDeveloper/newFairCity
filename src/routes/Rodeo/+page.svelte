@@ -240,7 +240,7 @@
 	}
 
 	.event-details {
-		margin: 20px 5vw;
+		margin: 20px 0;
 		width: 90vw;
 		padding: 12px;
 		background: var(--bg-2);

@@ -6,7 +6,9 @@
 <header class="carnival-hero">
 	<div class="overlay">
 		<h1>Carnival at Kitsap Fair</h1>
-		<p>Funtastic Shows returns with the best rides, games, and thrills in the Northwest!</p>
+		<p class="light-White">
+			Funtastic Shows returns with the best rides, games, and thrills in the Northwest!
+		</p>
 	</div>
 	<img src={Rodeo} alt="Carnival rides and crowd in a fairground" />
 </header>
@@ -27,18 +29,18 @@
 		</p>
 	</section>
 
-	<p class="double-Block">
+	<p class="double-Block light-Back">
 		Returning to the 2025 Kitsap Fair and Rodeo, the best carnival in the Northwest! Funtastic Shows
 		will be providing the carnival and games. You are familiar with their safety and quality
 		standards if you have adventured to the Washington State Fair.
 	</p>
 
-	<p class="double-Block">
+	<p class="double-Block light-Back">
 		All rides and games will be in one designated area so your family of all ages can enjoy the fun
 		together.
 	</p>
 
-	<p class="double-Block">
+	<p class="double-Block light-Back">
 		GOOD NEWS! Carnival wristbands will be back for this year's fair. Wristband day will be Sunday,
 		Aug. 24. Wristbands will be $50 per individual and non-transferable. Ride as many rides as you'd
 		like and play three (games) between 11:00am and 6:00pm with your wristband. These can be
@@ -83,5 +85,14 @@
 	.carnival-hero p {
 		font-size: 1.2rem;
 		margin-bottom: 1rem;
+	}
+
+	.grid-Main {
+		.light-Back {
+			@media (prefers-color-scheme: light) {
+				background-color: color-mix(in oklch, var(--bg-1) 80%, transparent 25%);
+				border-radius: 3px;
+			}
+		}
 	}
 </style>

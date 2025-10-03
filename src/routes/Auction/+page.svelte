@@ -8,7 +8,7 @@
 		style={`background-image: url(${AuctionFace}); background-size: cover; background-position: center;`}
 	>
 		<h1>Kitsap Junior Livestock Auction</h1>
-		<p>
+		<p class="light-Back">
 			Advancing youth interest in agriculture and livestock management through ethics, education,
 			and community support.
 		</p>

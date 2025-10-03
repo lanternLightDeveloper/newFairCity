@@ -66,7 +66,7 @@
 
 <main class="grid-Main">
 	<section
-		class="block-List right-Block"
+		class="block-List right-Block light-Back"
 		style={`background-image: url(${BullRider}); background-size: cover; background-position: center;`}
 	>
 		<h4>Rodeo & Bull Schedule</h4>
@@ -75,7 +75,7 @@
 
 		<p>Saturday (Aug. 23) <strong>Event starts at 11:00 AM</strong></p>
 
-		<p>Sunday – XTREME BULLS (Aug. 24) <strong>Event starts at 11:00 AM</strong></p>
+		<p>Sunday: XTREME BULLS (Aug. 24) <strong>Event starts at 11:00 AM</strong></p>
 	</section>
 	<section>
 		<a href="/Extra/Tickets">
@@ -86,7 +86,7 @@
 	<section>maybe this can be an image of the rodeo</section>
 
 	<br />
-	<section class="alert right-Block">
+	<section class="alert right-Block light-White">
 		<p>
 			PRCA Photography Policy Fans may take photos from the stands, but only with cell phones or
 			small cameras that have lenses smaller than 3". Those caught using cameras with a lens
@@ -100,7 +100,7 @@
 	<table class="rodeo-events right-Block">
 		<thead>
 			<tr>
-				<th>Events</th>
+				<th class="light-White">Events</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -208,7 +208,7 @@
 <style>
 	.rodeo-events {
 		width: 100%;
-		background: linear-gradient(to bottom right, #2c1e13, #110c07);
+		background: var(--gradient);
 		border-radius: var(--rad-Sm);
 		border: 2px solid var(--border-color);
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -233,6 +233,10 @@
 
 	.rodeo-events td:hover {
 		background-color: var(--hover);
+
+		@media (prefers-color-scheme: light) {
+			color: var(--bg-1);
+		}
 	}
 
 	.event-details {

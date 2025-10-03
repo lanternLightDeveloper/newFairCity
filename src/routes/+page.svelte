@@ -67,7 +67,7 @@
 	</div>
 
 	<!-- Foreground content -->
-	<section class="header-info">
+	<section class="header-info light-White">
 		<article class="glass-Box">
 			<p>
 				<strong>Admission</strong><br />
@@ -91,23 +91,23 @@
 	</section>
 </header>
 
-<aside class="alert">
+<aside class="alert light-White">
 	<p>THIS IS NOT A REAL WEBSITE AND YOU SHOULD ONLY PURCHASE FROM THE ACTUAL PAGE</p>
 	<!-- <p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p> -->
 </aside>
 
 <main class="grid-Main">
 	<section class="kcu-banner">
-		<p>Kitsap credit union members can recieve a discount on admission:</p>
+		<p class=" light-White">Kitsap credit union members can recieve a discount on admission:</p>
 
 		<div class="center-wrapper">
 			<a href="/Extra/Tickets">
-				<button class="btn-Ghost">Save Money!</button>
+				<button class="btn-Ghost light-White">Save Money!</button>
 			</a>
 		</div>
 	</section>
 	<section
-		class="right-Block"
+		class="right-Block light-Back"
 		style={`background-image: url(${Sheeep}); background-size: cover; background-position: center;`}
 	>
 		<h2>Main Entertainment</h2>
@@ -170,7 +170,7 @@
 	</section>
 
 	<section
-		class="block-List"
+		class="block-List light-Back"
 		style={`background-image: url(${Horse}); background-size: cover; background-position: center;`}
 	>
 		<h4>KITSAP STAMPEDE SPONSORS</h4>
@@ -282,7 +282,6 @@
 		font-weight: 600;
 		color: var(--txt-2);
 		background-blend-mode: multiply;
-		background-color: rgba(0, 0, 0, 0.5);
 
 		& p {
 			margin-top: 100px;

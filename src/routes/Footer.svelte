@@ -150,6 +150,7 @@
 
 	.modal-content {
 		background: var(--txt-2);
+		color: var(--bg-1);
 		border: var(--bord);
 		padding: 1rem;
 		max-width: 90vw;

@@ -22,11 +22,9 @@
 					</h3>
 					<p class="teaser">{artist.teaser}</p>
 					{#if artist.website}
-						<p>
-							<a href={artist.website} class="btn-Ghost" target="_blank" rel="noopener"
-								>Visit Website</a
-							>
-						</p>
+						<a href={artist.website} class="btn-Ghost" target="_blank" rel="noopener"
+							>Visit Website</a
+						>
 					{/if}
 					<button
 						class="toggle-details btn-Ghost"
@@ -49,11 +47,8 @@
 						<p>{artist.description}</p>
 						<!-- <img src="{artist.img}" alt=" {artist.name} image" loading="lazy" /> -->
 						{#if artist.video}
-							<p>
-								<a href={artist.video} class="btn-Ghost" target="_blank" rel="noopener"
-									>Watch Video</a
-								>
-							</p>
+							<a href={artist.video} class="btn-Ghost" target="_blank" rel="noopener">Watch Video</a
+							>
 						{/if}
 					</div>
 				{/if}
@@ -134,6 +129,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		background-color: color-mix(in oklch, var(--bg-1) 42%, transparent 45%);
 		backdrop-filter: blur(8px);
 		--webkit-backdrop-filter: blur(1.5px);
 		border-top-left-radius: 1rem;
@@ -156,6 +152,10 @@
 		margin-bottom: 0.5rem;
 		color: var(--txt-1, #333);
 		padding: 0.5rem 1rem;
+		background-color: color-mix(in oklch, var(--bg-1) 42%, transparent 45%);
+		backdrop-filter: blur(8px);
+		--webkit-backdrop-filter: blur(1.5px);
+		width: fit-content;
 	}
 
 	.card-details {
@@ -163,16 +163,25 @@
 		padding: 0.5rem 1rem;
 		font-size: 0.95rem;
 		line-height: 1.5;
-		color: var(--txt-2, #444);
+
+		p {
+			background-color: color-mix(in oklch, var(--bg-1) 42%, transparent 45%);
+			backdrop-filter: blur(8px);
+			--webkit-backdrop-filter: blur(1.5px);
+			width: fit-content;
+		}
 	}
 
 	a,
 	button {
+		background-color: color-mix(in oklch, var(--bg-1) 42%, transparent 45%);
 		backdrop-filter: blur(8px);
 		--webkit-backdrop-filter: blur(1.5px);
+		width: fit-content;
 		border: var(--bord);
 		padding: 0.5rem 1rem;
 		text-decoration: underline;
+		margin-left: 1rem;
 		font-weight: 500;
 	}
 </style>

@@ -82,7 +82,6 @@
 		color: var(--txt-1);
 		font-size: 1.5rem;
 		border: 2px solid var(--accent-1);
-		box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 		cursor: pointer;
 		transition:
 			transform 0.3s ease,

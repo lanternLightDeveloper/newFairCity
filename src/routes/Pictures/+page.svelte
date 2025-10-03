@@ -113,7 +113,6 @@
 		break-inside: avoid;
 		margin-bottom: 1rem;
 		overflow: hidden;
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	}
 
 	.image-card img {
@@ -141,7 +140,6 @@
 		max-width: 90vw;
 		max-height: 90vh;
 		overflow: auto;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 		text-align: center;
 		overflow: hidden;
 

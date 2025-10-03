@@ -45,33 +45,33 @@
 		Visit the websites of our generous sponsors. Learn more about these amazing companies that are
 		supporting our Fair and your community.​​
 	</p>
+</main>
 
-	<section class="grid-List double-Block">
-		{#each Sponsors as sponsor, i}
-			<div
-				tabindex="0"
-				role="button"
-				aria-label={`Details for ${sponsor.label}`}
-				onmouseenter={() => (open = i)}
-				onmouseleave={() => (open = null)}
-				onfocus={() => (open = i)}
-				onblur={() => (open = null)}
-				onkeydown={(e) => {
-					if (e.key === 'Enter' || e.key === ' ') {
-						open = i;
-						e.preventDefault();
-					}
-				}}
-			>
-				<div aria-hidden={open !== i}>
-					<div>
-						<h2>{sponsor.label}</h2>
-						<p>{sponsor.info}</p>
-						<br />
-						<a href={testLink} target="_blank" rel="noopener"> Visit </a>
-					</div>
+<section class="grid-List">
+	{#each Sponsors as sponsor, i}
+		<div
+			tabindex="0"
+			role="button"
+			aria-label={`Details for ${sponsor.label}`}
+			onmouseenter={() => (open = i)}
+			onmouseleave={() => (open = null)}
+			onfocus={() => (open = i)}
+			onblur={() => (open = null)}
+			onkeydown={(e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					open = i;
+					e.preventDefault();
+				}
+			}}
+		>
+			<div aria-hidden={open !== i}>
+				<div>
+					<h2>{sponsor.label}</h2>
+					<p>{sponsor.info}</p>
+					<br />
+					<a href={testLink} target="_blank" rel="noopener"> Visit </a>
 				</div>
 			</div>
-		{/each}
-	</section>
-</main>
+		</div>
+	{/each}
+</section>

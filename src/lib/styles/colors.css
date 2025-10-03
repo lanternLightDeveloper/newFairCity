@@ -40,7 +40,7 @@
     --border-color: color-mix(in oklch, var(--accent-2) 100%, var(--txt-1) 10%);
     --shadow:color-mix(in oklch, var(--bg-1) 70%, var(--bg-1) 10%);
     --hallow:color-mix(in oklch, var(--accent-1) 100%, transparent 100%);
-    --hallow-2:color-mix(in oklch, var(--txt-2) 100%, transparent 100%);
+    --hallow-2:color-mix(in oklch, var(--txt-1) 100%, transparent 100%);
     }
 
     @media (prefers-color-scheme: headache)   {

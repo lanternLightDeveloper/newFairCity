@@ -13,7 +13,7 @@ import imgRodeo from '$lib/imgs/rodeo.jpg';
 
 export const Events = [
 	{
-		date: '2025-09-26',
+		date: '2025-10-26',
 		title: 'Meeting with Team',
 		description: 'Discuss project milestones',
 		location: 'Conference Room A',
@@ -23,7 +23,7 @@ export const Events = [
 		link: 'https://example.com/meeting'
 	},
 	{
-		date: '2025-09-27',
+		date: '2025-10-27',
 		title: 'Project Deadline',
 		description: 'Final deadline for project submissions',
 		location: 'Online',
@@ -33,7 +33,7 @@ export const Events = [
 		link: 'https://example.com/deadline'
 	},
 	{
-		date: '2025-09-28',
+		date: '2025-10-28',
 		title: 'Independence Day',
 		description: 'Celebration of independence',
 		location: 'City Hall',

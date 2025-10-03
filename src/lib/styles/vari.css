@@ -35,7 +35,7 @@
 
 /* Shadows & lights */
 --glow-Box:       6px 4px 8px var(--hover), 0 4px 6px var(--hover);
---glow-Txt:       0 0 2px var(--txt-1);
+--glow-Txt:       0 .75px 0.25px var(--bg-1);
 --shdw-Box:       6px 4px 8px var(--shadow), 0 4px 6px var(--shadow);
 --shdw-Txt:      1px 2px 10px var(--shadow);
 

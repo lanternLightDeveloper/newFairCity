@@ -65,8 +65,10 @@ img {
 	text-align: center;
 
     margin: var(--size-4) 0;
+    @media (prefers-color-scheme: light) {
+				color: var(--bg-1);
+			}
 }
-
 
 .center-wrapper {
 	padding: 0;
@@ -75,6 +77,26 @@ img {
 	justify-content: center; 
 	align-items: center; 
 }
+
+.light-White {
+			@media (prefers-color-scheme: light) {
+				color: var(--bg-1);
+			}
+}
+
+
+.light-Back {
+    & h2, h3, p{
+
+                @media (prefers-color-scheme: light) {
+            background-color:  color-mix(in oklch, var(--bg-1 ) 42%, transparent 45%);
+			backdrop-filter: blur(8px);
+			--webkit-backdrop-filter: blur(1.5px);
+			width: fit-content; 
+        }
+    }
+}
+
 
 ul {
     list-style-type: none;

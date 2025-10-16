@@ -4,7 +4,7 @@
 	const testLink = 'https://newfaircity.netlify.app/';
 </script>
 
-<h1>Sponsors</h1>
+<h1>The 2025Sponsors</h1>
 
 <br />
 <div class="center-wrapper">

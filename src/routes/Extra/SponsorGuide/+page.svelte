@@ -5,6 +5,12 @@
 			Be a sponsor of the Kitsap Fair & Stampede and get your name in front of the community you
 			serve!
 		</p>
+
+		<div class="center-wrapper">
+			<a href="/Extra/SponsorGuide">
+				<button class="btn-Ghost"> Submit to be a sponsor today!</button>
+			</a>
+		</div>
 	</header>
 
 	<section class="double-Block">

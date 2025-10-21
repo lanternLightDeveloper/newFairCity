@@ -22,7 +22,7 @@
 	>
 </p>
 
-<ul>
+<ul class="marg_Also">
 	<li>
 		<a href="https://kitsapparks.recdesk.com/Community/Facility/Detail?facilityId=15"
 			>A: Swine Barn</a
@@ -107,6 +107,10 @@
 {/if}
 
 <style>
+	button {
+		all: unset;
+	}
+
 	.modal-overlay {
 		position: fixed;
 		display: flex;
@@ -138,4 +142,22 @@
 			color: var(--bg-1);
 		}
 	}
+
+	/* Desktop Screen */
+	@media (min-width: 1024px) {
+		img {
+			width: 80%;
+			margin-left: 10%;
+		}
+	}
+	/* 
+@media (min-width: 1440px) {
+    :is(h1, h2, h3, h4, p, .marg_Also) {
+    margin: var(--space-Lg);
+}
+
+    .blankSpace {
+        margin: var(--space-Full);
+    }
+}  */
 </style>

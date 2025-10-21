@@ -52,7 +52,7 @@
 
 		<!-- Foreground content -->
 		<section class="header-info light-White">
-			<article class="glass-Box">
+			<article class="glass-Box double-Block">
 				<p>Check out these upcoming events!</p>
 				<a href="/Extra/Tickets"><img src={Multipass} alt="kitsap fair entry ticket" /></a>
 			</article>
@@ -63,23 +63,25 @@
 		<!-- <p>We are aware of fraudulent links. Tickets should only be purchased here or at the venue.</p> -->
 	</aside>
 	<main class="grid-Main">
-		<section>
+		<section class="double-Block">
 			<h1>Thank you,</h1>
 			<p>
 				Thank you, so much for making the 2025 Kitsap Fair & Rodeo a success! You all really showed
 				us how amazing the Northwest is!
 			</p>
+		</section>
+		<section>
 			<p>
 				If you would like to submit to be a sponsor, vendor or artist please visit the <a
 					href="/Submissions">Submissions</a
 				> page or select a direct link to the guide
 			</p>
-		</section>
-		<section>
-			<button class="btn-Ghost"><a href="/Extra/SponsorGuide">Sponsor</a></button>
-			<button class="btn-Ghost"><a href="/Extra/Exhibitor">Exhibitor</a></button>
-			<button class="btn-Ghost"><a href="/Extra/VendorGuide">Vendor</a></button>
-			<button class="btn-Ghost"><a href="/Entertainment/Artist">Artist</a></button>
+			<ul>
+				<button class="btn-Ghost"><a href="/Extra/SponsorGuide">Sponsor</a></button>
+				<button class="btn-Ghost"><a href="/Extra/Exhibitor">Exhibitor</a></button>
+				<button class="btn-Ghost"><a href="/Extra/VendorGuide">Vendor</a></button>
+				<button class="btn-Ghost"><a href="/Entertainment/Artist">Artist</a></button>
+			</ul>
 		</section>
 
 		<section>
@@ -87,19 +89,21 @@
 				There are multiple facilities at the Fairgrounds that can be rented throughout the year, as
 				long as it is not during the fair. You can find a map of them below!
 			</p>
-			<button class="btn-Ghost">
-				<a href="/Facilities">Facilities</a>
-			</button>
+			<ul>
+				<button class="btn-Ghost">
+					<a href="/Facilities">Facilities</a>
+				</button>
+			</ul>
 		</section>
 
-		<section>
+		<section class="double-Block">
 			<h2>Upcoming Events</h2>
 			<p>
 				Check out the calendar below for anything happening at the fairgrounds in the near future
 			</p>
-		</section>
 
-		<Calendar />
+			<Calendar />
+		</section>
 	</main>
 	<footer class="footer">
 		<p>

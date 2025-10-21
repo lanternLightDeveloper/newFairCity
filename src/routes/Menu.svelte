@@ -22,7 +22,7 @@
 		{ label: 'Pictures', href: '/Pictures', id: 9, degree: 288 },
 		{ label: 'Sponsors', href: '/Sponsors', id: 2, degree: 36 },
 		{ label: 'Contact', href: '/Extra/Contact', id: 10, degree: 324 },
-		{ label: 'Exhibitor Guides', href: '/Extra/ExhibitorGuides', id: 12, degree: 324 },
+		{ label: 'Exhibitor Guides', href: '/Extra/Exhibitor', id: 12, degree: 324 },
 		{ label: 'Extra', href: '/Extra', id: 13, degree: 324 },
 		{ label: 'Map', href: '/Facilities', id: 11, degree: 360 }
 	];

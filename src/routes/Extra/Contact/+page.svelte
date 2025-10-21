@@ -1,6 +1,6 @@
 <h1>KFSA Contacts & Association Staff</h1>
 
-<ul>
+<ul class="marg_Also">
 	<li>
 		Event Manager: Gregg Smith, <a href="mailto:GSmith.KFSA@gmail.com">GSmith.KFSA@gmail.com</a>
 	</li>
@@ -34,6 +34,5 @@
 	ul {
 		list-style: disc;
 		padding-left: 1.5rem;
-		margin: 1.5rem 5vw;
 	}
 </style>

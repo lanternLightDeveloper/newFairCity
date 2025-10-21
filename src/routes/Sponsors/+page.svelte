@@ -4,7 +4,7 @@
 	const testLink = 'https://newfaircity.netlify.app/';
 </script>
 
-<h1>The 2025Sponsors</h1>
+<h1>The 2025 Sponsors</h1>
 
 <br />
 <div class="center-wrapper">
@@ -47,7 +47,7 @@
 	</p>
 </main>
 
-<section class="grid-List">
+<section class="grid-List blankSpace">
 	{#each Sponsors as sponsor, i}
 		<div
 			tabindex="0"

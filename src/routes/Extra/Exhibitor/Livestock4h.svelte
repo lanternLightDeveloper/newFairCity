@@ -1,15 +1,13 @@
 <h1>Livestock Guide</h1>
 
+<section>
+	<p class="alert">
+		Livestock Notice effective 2024: In compliance with the USDA Animal Disease Traceability Program
+		ALL SWINE at the Kitsap Fair will be required to have an RFID tag with an official USDA premise
+		ID, these need to be applied by the breeder at the time of purchase. (WSDA compliance)
+	</p>
+</section>
 <main class="grid-Main">
-	<section>
-		<p>
-			Livestock Notice effective 2024: In compliance with the USDA Animal Disease Traceability
-			Program ALL SWINE at the Kitsap Fair will be required to have an RFID tag with an official
-			USDA premise ID, these need to be applied by the breeder at the time of purchase. (WSDA
-			compliance)
-		</p>
-	</section>
-
 	<section>
 		<h2>FairEntry</h2>
 		<p>

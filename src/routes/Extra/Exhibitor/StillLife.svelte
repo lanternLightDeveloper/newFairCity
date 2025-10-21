@@ -61,13 +61,13 @@
 		</ul>
 	</section>
 
-	<p class="right-Block">
+	<p class="double-Block">
 		​ Any questions about the exhibitor guides, email phall.stilllife@gmail.com
 	</p>
 
-	<h2 class="right-Block">Entry Guides & Rules</h2>
+	<h2 class="double-Block">Entry Guides & Rules</h2>
 	<section
-		class="glass-flip-grid right-Block"
+		class="glass-flip-grid double-Block"
 		style={`background-image: url('${backgroundImage}');`}
 	>
 		{#each ExhibitorForms as formItems, i}

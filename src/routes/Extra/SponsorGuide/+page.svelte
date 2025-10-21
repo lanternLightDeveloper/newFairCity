@@ -108,7 +108,7 @@
 		</article>
 	</section>
 
-	<section>
+	<section class="double-Block">
 		<h2>Starlets Sponsorships</h2>
 		<dl>
 			<dt>Gold Buckle – $2,500</dt>
@@ -125,7 +125,7 @@
 		</dl>
 	</section>
 
-	<section>
+	<section class="double-Block">
 		<h2>Elite Sponsor Packages</h2>
 		<dl>
 			<dt>Blue Ribbon – $2,100</dt>

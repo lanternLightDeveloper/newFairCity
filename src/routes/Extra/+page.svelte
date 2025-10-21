@@ -1,6 +1,6 @@
 <h1>About</h1>
 <main class="grid-Main">
-	<section>
+	<section class="double-Block">
 		<p>
 			The first recorded Kitsap County Fair was held in 1923 in Port Orchard. It moved to Bremerton,
 			in 1958. In 1929, exhibitors at the Fair totaled 1,000; today there are more than 6,000, with
@@ -16,8 +16,6 @@
 			Demolition Derby, Draft Horse Show, monster trucks, and more. The complex has an annual
 			overall attendance at its various events of more than 211,000.
 		</p>
-	</section>
-	<section>
 		<p>
 			​ In January 2020, the The Kitsap Fair and Stampede Association was formed to take over the
 			responsibility of producing the annual Kitsap Fair and Rodeo. The non-profit organization is

@@ -113,7 +113,7 @@
 	</section>
 
 	<button style="all: unset; cursor: pointer">
-		<section class="kcu-banner right-Block">
+		<section class="kcu-banner">
 			<p>Kitsap credit union members can click here to recieve a discount on admission!</p>
 		</section>
 	</button>
@@ -182,7 +182,7 @@
 		<p>Sunday: proudly sponsored by Hanley Construction</p>
 	</section>
 
-	<section>
+	<section class="double-Block">
 		<p>
 			If you would like to submit to be a sponsor, vendor or artist please visit the <a
 				href="/Submissions">Submissions</a
@@ -251,7 +251,7 @@
 			left: 10%;
 
 			.glass-Box {
-				width: 50%;
+				width: fit-content;
 				height: fit-content;
 			}
 		}

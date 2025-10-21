@@ -144,7 +144,7 @@
 			left: 10%;
 
 			.glass-Box {
-				width: 50%;
+				width: fit-content;
 				height: fit-content;
 			}
 		}

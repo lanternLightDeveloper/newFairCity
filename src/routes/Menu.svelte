@@ -23,7 +23,8 @@
 		{ label: 'Sponsors', href: '/Sponsors', id: 2, degree: 36 },
 		{ label: 'Contact', href: '/Extra/Contact', id: 10, degree: 324 },
 		{ label: 'Exhibitor Guides', href: '/Extra/Exhibitor', id: 12, degree: 324 },
-		{ label: 'Extra', href: '/Extra', id: 13, degree: 324 },
+		{ label: 'Vendor Guides', href: '/Extra/VendorGuide', id: 12, degree: 324 },
+		{ label: 'About & Guides', href: '/Extra', id: 13, degree: 324 },
 		{ label: 'Map', href: '/Facilities', id: 11, degree: 360 }
 	];
 
@@ -72,7 +73,11 @@
 							{item.label}
 						</a>
 					{/each}
-					<button onclick={() => (isFairSeason = !isFairSeason)} aria-label="Toggle menu">
+					<button
+						class="btn-Ghost"
+						onclick={() => (isFairSeason = !isFairSeason)}
+						aria-label="Toggle menu"
+					>
 						<span class:open={isFairSeason}
 							>{isFairSeason ? 'Turn off fair season' : 'Turn on fair season'}</span
 						>
@@ -96,7 +101,11 @@
 							{item.label}
 						</a>
 					{/each}
-					<button onclick={() => (isFairSeason = !isFairSeason)} aria-label="Toggle menu">
+					<button
+						class="btn-Ghost"
+						onclick={() => (isFairSeason = !isFairSeason)}
+						aria-label="Toggle menu"
+					>
 						<span class:open={isFairSeason}
 							>{isFairSeason ? 'Turn off fair season' : 'Turn on fair season'}</span
 						>

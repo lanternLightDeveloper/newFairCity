@@ -111,15 +111,12 @@
 			</a>
 		</div>
 	</section>
-	<section class="kcu-banner right-Block">
-		<p class=" light-White">Kitsap credit union members can recieve a discount on admission:</p>
 
-		<div class="center-wrapper">
-			<a href="/Extra/Tickets">
-				<button class="btn-Ghost light-White">Save Money!</button>
-			</a>
-		</div>
-	</section>
+	<button style="all: unset; cursor: pointer">
+		<section class="kcu-banner right-Block">
+			<p>Kitsap credit union members can click here to recieve a discount on admission!</p>
+		</section>
+	</button>
 	<section class="double-Block">
 		<h2>Points of interest</h2>
 	</section>
@@ -183,6 +180,20 @@
 
 		<h2>XTREME BULLS SPONSOR</h2>
 		<p>Sunday: proudly sponsored by Hanley Construction</p>
+	</section>
+
+	<section>
+		<p>
+			If you would like to submit to be a sponsor, vendor or artist please visit the <a
+				href="/Submissions">Submissions</a
+			> page or select a direct link to the guide
+		</p>
+		<ul>
+			<button class="btn-Ghost"><a href="/Extra/SponsorGuide">Sponsor</a></button>
+			<button class="btn-Ghost"><a href="/Extra/Exhibitor">Exhibitor</a></button>
+			<button class="btn-Ghost"><a href="/Extra/VendorGuide">Vendor</a></button>
+			<button class="btn-Ghost"><a href="/Entertainment/Artist">Artist</a></button>
+		</ul>
 	</section>
 </main>
 
@@ -304,6 +315,8 @@
 		& p {
 			margin-top: 100px;
 			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+			background-color: #22013d9d;
+			border-radius: var(--rad-Sm);
 		}
 
 		@media only screen and (min-width: 768px) {

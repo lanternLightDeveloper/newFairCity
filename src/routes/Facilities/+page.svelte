@@ -111,6 +111,11 @@
 		all: unset;
 	}
 
+	img {
+		width: 60%;
+		margin-left: 20%;
+	}
+
 	.modal-overlay {
 		position: fixed;
 		display: flex;
@@ -128,9 +133,8 @@
 		background: var(--txt-2);
 		color: var(--bg-1);
 		border: var(--bord);
-		padding: 1rem;
-		max-width: 100vw;
-		max-height: 100vh;
+		padding: 0;
+		margin: 0;
 		overflow-y: auto;
 		text-align: center;
 
@@ -143,11 +147,27 @@
 		}
 	}
 
+	.zoomed-map {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+
+	.map-scroll-container {
+		overflow: scroll;
+
+		& img {
+			transform: scale(1.2);
+			padding: 0;
+			margin: 0;
+		}
+	}
+
 	/* Desktop Screen */
 	@media (min-width: 1024px) {
 		img {
-			width: 80%;
-			margin-left: 10%;
+			width: 60%;
+			margin-left: 20%;
 		}
 	}
 	/* 

@@ -95,6 +95,12 @@
 </aside>
 
 <main class="grid-Main">
+	<section class="double-Block">
+		<p>
+			Thank you for visiting, we hope we can help you find any information you could ask about. We
+			are excited to see you for another year of the most amazing people in Kitsap County!
+		</p>
+	</section>
 	<section
 		class="right-Block light-Back"
 		style={`background-image: url(${Sheeep}); background-size: cover; background-position: center;`}
